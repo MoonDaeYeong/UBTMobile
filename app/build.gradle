@@ -1,0 +1,147 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.nsdevil.ubtmobilev3"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 4
+        versionName "2.0.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["dagger.hilt.disableModulesHaveInstallInCheck"] = "true"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+
+        // Enable Coroutines and Flow APIs
+        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.FlowPreview"
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation name: 'posenet', ext: 'aar'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+
+    // android support libraries
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // room
+    kapt 'androidx.room:room-compiler:2.2.6'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-ktx:2.2.6'
+    implementation "androidx.room:room-rxjava2:2.2.6"
+
+    // glide
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // lifecycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+
+    // navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    // viewPager
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // work
+    implementation 'androidx.work:work-runtime-ktx:2.5.0'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+
+    // circularImageView
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+
+    // 텐서플로우 안면인식
+    implementation 'org.tensorflow:tensorflow-lite:2.3.0'
+
+    // TED Permission
+    implementation 'gun0912.ted:tedpermission:2.2.2'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    // Player
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.7'
+
+    // SignPad
+    implementation 'com.github.gcacace:signature-pad:1.3.1'
+
+    // ImageView Zoom And Out Lib
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    // WaterMark
+    implementation 'com.huangyz0918:androidwm:0.2.3'
+
+    // CreateQr
+    implementation 'com.github.SumiMakito:AwesomeQRCode:1.2.0'
+
+    // Hilt
+    kapt 'com.google.dagger:hilt-android-compiler:2.31.2-alpha'
+    implementation 'com.google.dagger:hilt-android:2.31.2-alpha'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.31.2-alpha'
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.31.2-alpha'
+
+    // Firebase Crashlytics
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-core:18.0.2'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

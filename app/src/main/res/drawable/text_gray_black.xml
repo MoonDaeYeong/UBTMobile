@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/black_effective" android:state_pressed="true" />
+    <item android:color="@color/black_effective" android:state_selected="true" />
+    <item android:color="@color/black_effective" android:state_focused="true" />
+    <item android:color="@color/gray" />
+</selector>

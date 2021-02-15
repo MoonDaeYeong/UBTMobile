@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="inQ"
+            type="com.nsdevil.ubtmobilev3.data.db.InQuestion" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="2dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_simple"
+            android:onClick="@{clickListener}">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_primary_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:check_visible="@{inQ.userCheck}"/>
+
+            <TextView
+                android:id="@+id/tv_exam_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textSize="20sp"
+                android:text="@{String.valueOf(inQ.viewOrder)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shadow"
+                app:layout_constraintBottom_toBottomOf="@id/tv_exam_number" />
+
+            <TextView
+                android:id="@+id/tv_user_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorPrimary"
+                android:ellipsize="end"
+                android:lines="1"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:text_visible="@{inQ.userAnswers}"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="가나다라, 마바사"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

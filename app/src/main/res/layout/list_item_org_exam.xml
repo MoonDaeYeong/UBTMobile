@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="orgExamContent"
+            type="com.nsdevil.ubtmobilev3.data.response.OrgExamListResponse.Content" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_simple"
+            android:onClick="@{clickListener}"
+            android:layout_margin="8dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|start"
+                android:text="@{@string/pointFormat(orgExamContent.examPrice)}"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toStartOf="@id/tv_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1,000" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="end|center"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_point"
+                app:layout_constraintTop_toTopOf="parent"
+                app:status_change_text="@{orgExamContent.examStatus}"
+                tools:text="status" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+                app:layout_constraintTop_toTopOf="@id/h_guide_1"
+                tools:src="@drawable/ic_ubt_logo" />
+
+            <TextView
+                android:id="@+id/exam_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/righteous_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="@{orgExamContent.examName}"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+                app:layout_constraintTop_toTopOf="@id/h_guide_2"
+                tools:text="ExamName" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center|end"
+                android:lines="1"
+                android:textSize="8sp"
+                app:exam_e_date="@{orgExamContent.examEdate}"
+                app:exam_s_date="@{orgExamContent.examSdate}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_guide_3"
+                tools:text="날짜" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

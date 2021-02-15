@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/oval_solid_tanslucent_primary_stroke_1_gray" android:state_pressed="true" />
+    <item android:drawable="@drawable/oval_solid_tanslucent_primary_stroke_1_gray" android:state_selected="true" />
+    <item android:drawable="@drawable/oval_solid_tanslucent_primary_stroke_1_gray" android:state_focused="true" />
+    <item android:drawable="@drawable/oval_solid_null_stroke_1_gray" />
+</selector>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B0FF</color>
+    <color name="colorPrimaryDark">#0091EA</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="shadow">#d0d8dc</color>
+    <color name="draw_color_red">#FF0000</color>
+    <color name="translucent_black">#88000000</color>
+    <color name="bg_color">#f7f7f7</color>
+    <color name="translucent_primary_dark">#550091EA</color>
+    <color name="translucent_primary">#3300B0FF</color>
+
+    <!-- grey -->
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="gray">#898989</color>
+    <color name="light_gray">#dbdbdb</color>
+
+    <!-- ZAlertDialog -->
+    <color name="float_transparent">#00000000</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="black_effective">#2a2a2a</color>
+
+    <color name="colorStatusConnected">#43A047</color>
+    <color name="colorStatusNotConnected">#D32F2F</color>
+
+    <!-- light_blue -->
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_900">#01579B</color>
+
+</resources>

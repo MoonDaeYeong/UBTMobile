@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_standByFragment"
+            app:destination="@id/standByFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_orgFragment"
+            app:destination="@id/orgFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/standByFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.StandByFragment"
+        android:label="fragment_stand_by"
+        tools:layout="@layout/fragment_stand_by" >
+        <action
+            android:id="@+id/action_standByFragment_to_examFragment"
+            app:destination="@id/examFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.ExamFragment"
+        android:label="fragment_exam"
+        tools:layout="@layout/fragment_exam" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/orgFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.OrgFragment"
+        android:label="fragment_org"
+        tools:layout="@layout/fragment_org" >
+        <argument
+            android:name="orgData"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <argument
+            android:name="subClass"
+            app:argType="string" />
+    </fragment>
+</navigation>

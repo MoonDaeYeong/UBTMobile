@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exam_nav"
+    app:startDestination="@id/examListFragment">
+
+    <fragment
+        android:id="@+id/examListFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.exam.ExamListFragment"
+        android:label="fragment_exam_list"
+        tools:layout="@layout/fragment_exam_list" >
+        <action
+            android:id="@+id/action_examListFragment_to_examTestFragment"
+            app:destination="@id/examTestFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/examTestFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.exam.ExamTestFragment"
+        android:label="fragment_exam_test"
+        tools:layout="@layout/fragment_exam_test" >
+        <argument
+            android:name="initPosition"
+            app:argType="integer" />
+    </fragment>
+</navigation>

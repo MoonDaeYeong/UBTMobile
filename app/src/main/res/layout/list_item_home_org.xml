@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="organizeData"
+            type="com.nsdevil.ubtmobilev3.data.response.HomeDataResponse.Result.Organiz" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="170dp"
+        android:layout_margin="1dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_simple"
+            android:onClick="@{clickListener}">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.18" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <ImageView
+                android:id="@+id/tv_status"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_bookmark_primary_dark"
+                android:visibility="gone"
+                app:org_is_mine="@{organizeData.my}"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="PREPARE" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:src="@drawable/ic_ubt_logo"
+                app:image_from_url="@{organizeData.organizLogo}"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+                app:layout_constraintTop_toTopOf="@id/h_guide_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="2"
+                android:padding="3dp"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:includeFontPadding="false"
+                android:text="@{organizeData.organizName}"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+                app:layout_constraintTop_toTopOf="@id/h_guide_2"
+                tools:text="시험ㄴ영러ㅣㅏ더ㅑㅐ먼이라키러ㅑㅐ더ㅣ라넝키ㅓ댜ㅐㄹ" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center|end"
+                android:text="@{organizeData.organizType}"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_guide_3"
+                tools:text="조직 타잎" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

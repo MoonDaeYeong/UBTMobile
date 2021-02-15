@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UBT Cloud Mobile</string>
+
+    <string name="text_no_connectivity">No Connection</string>
+    <string name="text_connectivity">Back Online</string>
+    <string name="pointFormat">%,d</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="permission_title">App permission required</string>
+    <string name="rationale_message"> Is required <b> Camera permission</b> for AI awareness And <b> External Storage</b> for File Save.</string>
+
+    <string name="exam_time_format">%s Minute</string>
+</resources>
