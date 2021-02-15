@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.huangyz0918:androidwm:0.2.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff35ee6a45d666a44d1a9a7227102444/jetified-androidwm-0.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff35ee6a45d666a44d1a9a7227102444/jetified-androidwm-0.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff35ee6a45d666a44d1a9a7227102444/jetified-androidwm-0.2.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huangyz0918/androidwm/0.2.3/662e10668d8583f212522342b9840ba0485e9b14/androidwm-0.2.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huangyz0918/androidwm/0.2.3/e333157e1bee20e0b7b7602f05fb18e8eedcb99f/androidwm-0.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
