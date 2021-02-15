@@ -61,7 +61,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        println("체크")
+
         permissionChk()
         handleNetworkChanges()
     }

@@ -36,9 +36,9 @@ class LoginFragment : BaseFragment() {
             tvVersion.text = String.format("Version: %s", BuildConfig.VERSION_NAME)
 
             btnLogin.setOnClickListener {
-               etEmail.setText("test17@nsdevil.com")
-               etPassword.setText("123456")
-println("체크")
+              // etEmail.setText("test17@nsdevil.com") // 테스트 계정
+              // etPassword.setText("123456") // 테스트 계정
+
                 val email = etEmail.text.toString()
                 val password = etPassword.text.toString()
 
