@@ -98,7 +98,7 @@ data class QuestionResponse(
                 @field:SerializedName("dataText")
                 val dataText: String,
                 @field:SerializedName("dataType")
-                val dataType: Any,
+                val dataType: String?,
                 @field:SerializedName("id")
                 val id: Int,
                 @field:SerializedName("media")
@@ -112,7 +112,7 @@ data class QuestionResponse(
                     @field:SerializedName("mediaType")
                     val mediaType: String?,
                     @field:SerializedName("useFlag")
-                    val useFlag: Any?
+                    val useFlag: String?
                 )
             }
         }

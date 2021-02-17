@@ -13,10 +13,12 @@ import com.nsdevil.ubtmobilev3.base.BaseFragment
 import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
 import com.nsdevil.ubtmobilev3.data.response.OrgExamListResponse
 import com.nsdevil.ubtmobilev3.databinding.FragmentOrgBinding
+import com.nsdevil.ubtmobilev3.dialog.CodeRegisterDialog
 import com.nsdevil.ubtmobilev3.dialog.TextInputDialog
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 
 @AndroidEntryPoint
 class OrgFragment : BaseFragment() {
@@ -28,7 +30,7 @@ class OrgFragment : BaseFragment() {
     private val args: OrgFragmentArgs by navArgs()
     private val organization get() = Gson().fromJson(args.orgData, HomeDataResponse.Result.Organiz::class.java)
 
-    override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
+    override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View {
         binding = FragmentOrgBinding.inflate(layoutInflater, container, false)
         context ?: return binding.root
 
@@ -54,6 +56,17 @@ class OrgFragment : BaseFragment() {
                 dialog.setTitle("Input Student Code")
                 dialog.show()
             }
+
+            fab.setOnClickListener {
+                val dialog = CodeRegisterDialog(requireContext()) { examCode ->
+                    if(!examCode.isNullOrEmpty()) {
+                        viewModel.examCodeRegister(examCode.toUpperCase(Locale.ENGLISH))
+                    }
+                }
+                dialog.show()
+                dialog.window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+                dialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+            }
         }
     }
 
@@ -78,6 +91,21 @@ class OrgFragment : BaseFragment() {
                 else
                     simpleDialog("Warning", it.message, ZAlertDialog.WARNING_TYPE)
             }
+
+            registerExamResult.observe(viewLifecycleOwner) {
+                if(it.success)
+                    simpleDialog("Success", it.message, ZAlertDialog.SUCCESS_TYPE)
+                else
+                    simpleDialog("Warning", it.message, ZAlertDialog.WARNING_TYPE)
+            }
+
+            examCodeResult.observe(viewLifecycleOwner) {
+                if(it.success) {
+                    simpleDialog("Success", "Code registration completed", ZAlertDialog.SUCCESS_TYPE)
+                } else if (!it.success) {
+                    simpleDialog("Warning", it.message.toString(), ZAlertDialog.WARNING_TYPE)
+                }
+            }
         }
     }
 
@@ -94,6 +122,7 @@ class OrgFragment : BaseFragment() {
                 dialog.setMultiEventListener(object : ZAlertDialog.MultiEventLister {
                     override fun confirmClick(dialogSelf: ZAlertDialog) {
                         dialogSelf.dismiss()
+                        viewModel.registerExam(content.examId)
                     }
                     override fun cancelClick(dialogSelf: ZAlertDialog) {
                         dialogSelf.dismiss()

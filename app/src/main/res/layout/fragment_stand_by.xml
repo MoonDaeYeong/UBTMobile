@@ -96,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Current Time"
+                        android:text="현재 시간"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -125,7 +125,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Exam Start Time"
+                        android:text="시험 시작 시간"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -154,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Remaining Time"
+                        android:text="남은 시간"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -236,7 +236,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="Exam Name"
+                    android:text="시험 이름"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_exam_name"
@@ -264,7 +264,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
-                    android:text="Name"
+                    android:text="이름"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_name"
@@ -291,7 +291,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
-                    android:text="E-mail"
+                    android:text="이메일"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_email"
@@ -338,7 +338,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="Sign"
+                    android:text="서명"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -360,7 +360,7 @@
             android:layout_height="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="START"
+            android:text="시작"
             android:textSize="21sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/h_guide_6" />

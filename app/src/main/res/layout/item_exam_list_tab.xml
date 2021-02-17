@@ -28,6 +28,6 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/righteous_regular"
         android:includeFontPadding="false"
-        tools:text="Whole Question" />
+        tools:text="전체 문제" />
 
 </LinearLayout>

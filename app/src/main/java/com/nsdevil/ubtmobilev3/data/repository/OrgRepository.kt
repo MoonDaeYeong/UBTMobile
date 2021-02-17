@@ -13,4 +13,8 @@ class OrgRepository @Inject constructor(private val ubtService: UbtService) {
     suspend fun getOrgExampleData(orgId: Int) = ubtService.getOrgExampleData(CommonUtils.tokenForm, orgId)
 
     suspend fun registerOrg(orgId: Int, studentCode: String) = ubtService.registerOrg(CommonUtils.tokenForm, orgId, studentCode)
+
+    suspend fun registerExam(examId: Int) = ubtService.registerExam(CommonUtils.tokenForm, examId)
+
+    suspend fun examCodeRegister(examCode: String) = ubtService.examCodeRegister(CommonUtils.tokenForm, examCode)
 }

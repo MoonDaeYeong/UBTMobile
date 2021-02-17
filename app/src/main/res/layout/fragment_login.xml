@@ -117,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
-                        android:hint="E-mail" />
+                        android:hint="아이디" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +134,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
-                        android:hint="Password" />
+                        android:hint="비밀번호" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,7 +142,7 @@
                     android:id="@+id/btn_login"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="Login"
+                    android:text="로그인"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@id/btn_sign_up"
                     app:layout_constraintTop_toBottomOf="@id/til_password" />
@@ -152,7 +152,7 @@
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="No account yet? Create One"
+                    android:text="회원 가입"
                     app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_2"
                     app:layout_constraintTop_toBottomOf="@id/btn_login" />
 

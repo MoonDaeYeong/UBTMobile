@@ -12,6 +12,7 @@ import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.adapter.HomeExamAdapter
 import com.nsdevil.ubtmobilev3.adapter.HomeOrgAdapter
 import com.nsdevil.ubtmobilev3.base.BaseFragment
+import com.nsdevil.ubtmobilev3.data.model.ProfileData
 import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
 import com.nsdevil.ubtmobilev3.databinding.FragmentHomeBinding
 import com.nsdevil.ubtmobilev3.dialog.CodeRegisterDialog
@@ -122,6 +123,7 @@ class HomeFragment : BaseFragment() {
             if(!userExam.examCode.isNullOrEmpty()) {
                 CommonUtils.userExam = userExam
                 navigateToStandby()
+                println("체크: " + userExam.examId)
             }
         }
         examInfoDialog.show()
@@ -154,7 +156,10 @@ class HomeFragment : BaseFragment() {
                 navigateToMore("exam","search")
                 true
             }
-            R.id.app_bar_settings -> true
+            R.id.app_bar_settings -> {
+                navigateToSetting()
+                true
+            }
 
             R.id.app_bar_exit -> {
                 findNavController().navigate(R.id.loginFragment)
@@ -167,5 +172,14 @@ class HomeFragment : BaseFragment() {
     private fun navigateToMore(category: String, subClass: String) {
         val directions = HomeFragmentDirections.actionHomeFragmentToMoreFragment(category, subClass)
         findNavController().navigate(directions)
+    }
+
+    private fun navigateToSetting() {
+        with(HomeViewModel) {
+            val profileData = ProfileData(imgUrl, userName, userEmail, point, examCount, orgCount)
+
+            val directions = HomeFragmentDirections.actionHomeFragmentToSettingFragment(Gson().toJson(profileData))
+            findNavController().navigate(directions)
+        }
     }
 }

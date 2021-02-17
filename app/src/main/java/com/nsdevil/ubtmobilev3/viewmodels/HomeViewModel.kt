@@ -3,6 +3,7 @@ package com.nsdevil.ubtmobilev3.viewmodels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.nsdevil.ubtmobilev3.base.BaseViewModel
+import com.nsdevil.ubtmobilev3.data.model.ProfileData
 import com.nsdevil.ubtmobilev3.data.repository.HomeRepository
 import com.nsdevil.ubtmobilev3.data.response.ExamCodeResponse
 import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
@@ -31,6 +32,11 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
             .subscribe({
                 viewLoading.postValue(false)
                 meDataResult.postValue(it)
+
+                imgUrl = it.image
+                userName = it.lastName
+                userEmail = it.email
+                point = it.point
             }, {
                 viewLoading.postValue(false)
                 getThrowable.postValue(it)
@@ -45,6 +51,9 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
             .subscribe({
                 viewLoading.postValue(false)
                 homeDataResult.postValue(it)
+
+                examCount = it.result.myExamCount
+                orgCount = it.result.myOrganizCount
             }, {
                 viewLoading.postValue(false)
                 getThrowable.postValue(it)
@@ -59,5 +68,14 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
             examCodeResult.postValue(result)
             viewLoading.postValue(false)
         }
+    }
+
+    companion object {
+        var imgUrl: String = ""
+        var userName: String = ""
+        var userEmail: String = ""
+        var point: Int = 0
+        var examCount: Int = 0
+        var orgCount: Int = 0
     }
 }

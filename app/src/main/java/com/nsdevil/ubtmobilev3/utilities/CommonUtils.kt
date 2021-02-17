@@ -16,6 +16,7 @@ import java.util.*
 object CommonUtils {
 
     var totalQuestionNumber = 0
+    var remainQuestionNumber = 0
 
     var tokenForm = ""
     fun setToken(tType: String, token: String) {

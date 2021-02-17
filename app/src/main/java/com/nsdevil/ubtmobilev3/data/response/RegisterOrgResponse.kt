@@ -4,5 +4,4 @@ data class RegisterOrgResponse (
     val success: Boolean,
     val message: String,
     val status: Int,
-    val result: Any?
-        )
+    val result: Any?)

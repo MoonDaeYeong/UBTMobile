@@ -54,7 +54,7 @@ class StandByFragment : BaseFragment() {
                 val signFile = File(requireContext().getExternalFilesDir(null), String.format("sign_%s.png", CommonUtils.userExam.examCode))
 
                 if(!signFile.exists()) {
-                    simpleDialog("Warning", "Please Sign", ZAlertDialog.WARNING_TYPE)
+                    simpleDialog("경고", "서명을 해주세요.", ZAlertDialog.WARNING_TYPE)
                 } else {
                     viewModel.getExamStatus()
                 }
@@ -82,10 +82,10 @@ class StandByFragment : BaseFragment() {
                 }
             }
             continueCheck.observe(viewLifecycleOwner) {
-                binding.btnStart.text = "Continue"
+                binding.btnStart.text = "계속하기"
             }
             endCheck.observe(viewLifecycleOwner) {
-                binding.btnStart.text = "End Exam"
+                binding.btnStart.text = "시험종료"
             }
 
             getExamInfo(requireContext())
@@ -96,8 +96,8 @@ class StandByFragment : BaseFragment() {
 
             status.observe(viewLifecycleOwner) {
                 if(!it.equals("start", true))
-                    simpleDialog("Warning", "The test has not started.", ZAlertDialog.WARNING_TYPE)
-                else if (binding.btnStart.text.toString().equals("Continue", true) ) {
+                    simpleDialog("경고", "시험이 아직 시작되지 않았습니다.", ZAlertDialog.WARNING_TYPE)
+                else if (binding.btnStart.text.toString().equals("계속하기", true) ) {
                     gotoExam()
                 } else {
                     countDown()

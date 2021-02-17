@@ -28,8 +28,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         loadingDialog = ZAlertDialog(this, this)
         loadingDialog.setType(ZAlertDialog.PROGRESS_TYPE)
-        loadingDialog.setMsg("Loading...")
-
+        loadingDialog.setMsg("로딩중...")
     }
 
     fun showLoading() {
@@ -52,7 +51,7 @@ abstract class BaseActivity : AppCompatActivity() {
             setTitle(title)
             setMsg(msg)
             setType(type)
-            setConfirm("Confirm")
+            setConfirm("확인")
 
             setSingleEventListener( object : ZAlertDialog.SingleEventListener {
                 override fun confirmClick(dialogSelf: ZAlertDialog) {
@@ -68,12 +67,12 @@ abstract class BaseActivity : AppCompatActivity() {
             val httpError = throwable as HttpException
             try {
                 val customErrorBody = Gson().fromJson(httpError.response()?.errorBody()?.charStream(), CustomErrorBody::class.java)
-                simpleDialog("Warning", customErrorBody.message.toString(), ZAlertDialog.WARNING_TYPE)
+                simpleDialog("경고", customErrorBody.message.toString(), ZAlertDialog.WARNING_TYPE)
             } catch (ex: Exception) {
-                simpleDialog("Warning", throwable.message.toString(), ZAlertDialog.WARNING_TYPE)
+                simpleDialog("경고", throwable.message.toString(), ZAlertDialog.WARNING_TYPE)
             }
         } else {
-            simpleDialog("Error", throwable.message.toString(), ZAlertDialog.ERROR_TYPE)
+            simpleDialog("에러", throwable.message.toString(), ZAlertDialog.ERROR_TYPE)
         }
     }
 

@@ -127,6 +127,7 @@ class ExamFragment : BaseFragment() {
             }
             getRemainCount.observe(viewLifecycleOwner) {
                 binding.tvRemainQuestionInfo.text = it.toString()
+                CommonUtils.remainQuestionNumber = it
             }
 
             uploadResultMsg.observe(viewLifecycleOwner) {
@@ -139,12 +140,13 @@ class ExamFragment : BaseFragment() {
     }
 
     private fun finishMsg() {
+        stopFaceService()
         val dialog = ZAlertDialog(requireContext(), viewLifecycleOwner)
         dialog.apply {
-            setTitle("Success")
-            setMsg("You have successfully sent your answer.")
+            setTitle("성공")
+            setMsg("답안 제출 완료.")
             setType(ZAlertDialog.SUCCESS_TYPE)
-            setConfirm("OK")
+            setConfirm("확인.")
             setSingleEventListener(object :ZAlertDialog.SingleEventListener {
                 override fun confirmClick(dialogSelf: ZAlertDialog) {
                     dialogSelf.dismiss()

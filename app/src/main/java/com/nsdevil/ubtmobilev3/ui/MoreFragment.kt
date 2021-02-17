@@ -47,7 +47,7 @@ class MoreFragment : BaseFragment() {
     private fun setBindItem() {
         binding.apply {
             when(args.category) {
-                "exam" -> tvTitle.text = "EXAMS"
+                "exam" -> tvTitle.text = "시험"
                 else -> tvTitle.text = "ORGANIZATIONS"
             }
             if(args.subClass == "search")

@@ -2,10 +2,12 @@ package com.nsdevil.ubtmobilev3.dialog
 
 import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
@@ -38,7 +40,8 @@ class ZAlertDialog(context: Context, private val lifecycleOwner: LifecycleOwner)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DialogZAlertBinding.inflate(layoutInflater)
+        binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.dialog_z_alert, null, false)
+//        binding = DialogZAlertBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         btnAction()

@@ -69,15 +69,14 @@ class TestQuestionFragment(private val position: Int) : BaseFragment() {
                 binding.inQ = it.question
                 answerAdapter.submitList(it.answersList)
             }
-
             getDataList(position).observe(viewLifecycleOwner) { it ->
                 it.forEach { inData ->
                     inData.dataText?.let { dataText ->
                         if(!dataText.isNullOrEmpty())
                             setDataText(dataText)
                     }
-
                     inData.media?.let { mediaX ->
+
                         when {
                             mediaX.mediaType.equals("image",true) -> {
                                 mediaX.fileName?.let { fileName ->
@@ -140,7 +139,7 @@ class TestQuestionFragment(private val position: Int) : BaseFragment() {
         examFragment.setQuestionPlayer(source)
 
         val coParams = LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-        coParams.height = 600
+        coParams.height = 800
         coParams.setMargins(0, 0, 0, 2)
 
         val playerView = PlayerView(requireContext())

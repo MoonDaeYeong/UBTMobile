@@ -37,7 +37,7 @@
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/AppTheme.PopupOverlay"
-                    app:title="More List" />
+                    app:title="전체 목록" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -118,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="200dp"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
                     app:layout_constraintTop_toBottomOf="@id/card_search"
                     app:spanCount="2"
                     tools:layout_editor_absoluteX="0dp"

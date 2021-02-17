@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -58,7 +57,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:fontFamily="@font/notosanscjkkrbold"
+                            android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center"
                             android:includeFontPadding="false"
                             android:text="@{meResponseData.lastName}"
@@ -70,7 +69,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:fontFamily="@font/notosanscjkkrregular"
+                            android:fontFamily="@font/josefinsans_regular"
                             android:gravity="center"
                             android:includeFontPadding="false"
                             android:text="@{meResponseData.email}"
@@ -109,7 +108,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="POINT"
+                                    android:text="포인트"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
 
@@ -135,7 +134,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="EXAMS"
+                                    android:text="시험"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -160,7 +159,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="ORGANIZATIONS"
+                                    android:text="조직"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -215,7 +214,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="My exam list"
+                            android:text="나의 시험 목록"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_my_exam"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -243,7 +242,8 @@
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="@id/h_guide_my_exam" />
+                            app:layout_constraintTop_toTopOf="@id/h_guide_my_exam"
+                            tools:listitem="@layout/list_item_home_exam"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -277,7 +277,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="Last published exam"
+                            android:text="기타 목록"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_last_exam"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -339,7 +339,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="My organizations"
+                            android:text="나의 그룹"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_my_org"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -401,7 +401,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="Other organizations"
+                            android:text="기타 조직"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_other_org"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -439,8 +439,8 @@
                     android:id="@+id/empty_view"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    app:layout_constraintTop_toBottomOf="@id/card_other_org"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_other_org" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

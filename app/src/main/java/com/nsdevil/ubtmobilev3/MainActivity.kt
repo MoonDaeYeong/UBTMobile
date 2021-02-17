@@ -24,6 +24,7 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import com.nsdevil.ubtmobilev3.base.BaseActivity
@@ -31,6 +32,7 @@ import com.nsdevil.ubtmobilev3.databinding.ActivityMainBinding
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.utilities.*
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
 
 
 @AndroidEntryPoint
@@ -55,7 +57,6 @@ class MainActivity : BaseActivity() {
                 })
             }.show()
         }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -141,5 +142,19 @@ class MainActivity : BaseActivity() {
                 Manifest.permission.INSTALL_SHORTCUT
             )
             .check()
+    }
+
+    var finishCount = 0
+    override fun onBackPressed() {
+        // super.onBackPressed()
+        if(finishCount != 0)
+            finishAndRemoveTask()
+        lifecycleScope.launchWhenResumed {
+            finishCount += 1
+            if(finishCount == 1)
+                Toast.makeText(this@MainActivity, "Press again to finish.", Toast.LENGTH_SHORT).show()
+            delay(2000L)
+            finishCount = 0
+        }
     }
 }

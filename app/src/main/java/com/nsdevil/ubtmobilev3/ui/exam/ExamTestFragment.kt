@@ -53,7 +53,7 @@ class ExamTestFragment : BaseFragment() {
             llPrev.setOnClickListener {
                 if (index <= 0) {
                     index = 0
-                    simpleDialog("Warning", "First Page", ZAlertDialog.WARNING_TYPE)
+                    simpleDialog("알림", "첫번째 페이지", ZAlertDialog.WARNING_TYPE)
                 } else {
                     index -= 1
                     updateAnswer(index)
@@ -62,7 +62,7 @@ class ExamTestFragment : BaseFragment() {
             llNext.setOnClickListener {
                 if (index >= CommonUtils.totalQuestionNumber-1) {
                     index = CommonUtils.totalQuestionNumber-1
-                    simpleDialog("Warning", "Last Page", ZAlertDialog.WARNING_TYPE)
+                    simpleDialog("알림", "마지막 페이지", ZAlertDialog.WARNING_TYPE)
                 } else {
                     index += 1
                     updateAnswer(index)
@@ -98,6 +98,6 @@ class ExamTestFragment : BaseFragment() {
 
     private fun showQuizPage(index: Int) {
         val adapter = ExamTestViewPagerAdapter(this)
-        childFragmentManager.beginTransaction().replace(R.id.container, adapter.createFragment(index)).addToBackStack(null).commit()
+        childFragmentManager.beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out).replace(R.id.container, adapter.createFragment(index)).addToBackStack(null).commit()
     }
 }

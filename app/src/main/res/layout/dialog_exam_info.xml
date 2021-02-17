@@ -19,7 +19,7 @@
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:paddingHorizontal="10dp"
-            android:layout_marginVertical="10dp"
+            android:paddingVertical="10dp"
             android:background="@drawable/dialog_light">
 
             <androidx.constraintlayout.widget.Guideline
@@ -55,7 +55,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="2dp"
-                android:fontFamily="@font/notosanscjkkrbold"
+                android:fontFamily="@font/josefinsans_bolditalic"
                 android:gravity="center|start"
                 android:includeFontPadding="false"
                 android:text="@{userExamData.examCode}"
@@ -136,7 +136,7 @@
                 android:layout_height="0dp"
                 android:layout_margin="3dp"
                 style="@style/Widget.MaterialComponents.Button"
-                android:text="Close"
+                android:text="닫기"
                 app:backgroundTint="@color/grey_60"
                 app:layout_constraintHorizontal_weight="0.4"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -148,7 +148,7 @@
                 android:id="@+id/btn_take_an_exam"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="Take an exam"
+                android:text="시험 시작"
                 android:layout_margin="3dp"
                 style="@style/Widget.MaterialComponents.Button"
                 app:layout_constraintHorizontal_weight="0.6"

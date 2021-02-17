@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment_to_moreFragment"
             app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
         android:id="@+id/standByFragment"
@@ -70,6 +73,15 @@
             app:argType="string" />
         <argument
             android:name="subClass"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <argument
+            android:name="ProfileDataString"
             app:argType="string" />
     </fragment>
 </navigation>

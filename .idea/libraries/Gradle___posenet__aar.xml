@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9601a9808ee079e3e40df624f0de9387/jetified-posenet/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4086541eb14210e0b62d5ac5f97257a9/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4086541eb14210e0b62d5ac5f97257a9/jetified-posenet/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4086541eb14210e0b62d5ac5f97257a9/jetified-posenet/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96e67f2c7726b6450988bd9efdbcc561/jetified-posenet/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96e67f2c7726b6450988bd9efdbcc561/jetified-posenet/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96e67f2c7726b6450988bd9efdbcc561/jetified-posenet/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -74,7 +74,7 @@ interface UbtService {
     @GET("mobile/organizs")
     suspend fun getAllOrg(@Header("Authorization") token: String, @Query("type") type: String, @Query("organizName") organizName: String) : AllOrgResponse
 
-    @GET("mobile/examregister?examId={examId}")
+    @GET("mobile/examregister")
     suspend fun registerExam(@Header("Authorization") token: String, @Query("examId") examId: Int) :RegisterExamResponse
 
     companion object {

@@ -16,8 +16,8 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="190dp"
-        android:layout_height="170dp"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
         android:layout_margin="1dp"
         app:cardCornerRadius="3dp"
         app:cardElevation="5dp">
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ripple_simple"
+            android:layout_margin="5dp"
             android:onClick="@{clickListener}">
 
             <androidx.constraintlayout.widget.Guideline
@@ -96,7 +97,7 @@
                 android:gravity="center"
                 android:lines="2"
                 android:padding="3dp"
-                android:fontFamily="@font/notosanscjkkrbold"
+                android:fontFamily="@font/josefinsans_bold"
                 android:includeFontPadding="false"
                 android:text="@{userExamData.examName}"
                 app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
