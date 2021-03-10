@@ -31,11 +31,14 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
             .observeOn(Schedulers.single())
             .subscribe({
                 viewLoading.postValue(false)
+
                 meDataResult.postValue(it)
 
                 imgUrl = it.image
                 userName = it.lastName
-                userEmail = it.email
+                it.email?.let { email ->
+                    userEmail = email
+                }
                 point = it.point
             }, {
                 viewLoading.postValue(false)
@@ -67,6 +70,12 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
             val result = repository.examCodeRegister(examCode)
             examCodeResult.postValue(result)
             viewLoading.postValue(false)
+        }
+    }
+
+    fun getExamCodeStatus() {
+        viewModelScope.launch {
+            repository.getExamCodeStatus()
         }
     }
 

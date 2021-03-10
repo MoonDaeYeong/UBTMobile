@@ -1,37 +1,42 @@
 package com.nsdevil.ubtmobilev3.base
 
 import androidx.fragment.app.Fragment
+import com.nsdevil.ubtmobilev3.MainActivity
 
 abstract class BaseFragment : Fragment() {
 
-    val aiAlertCheck get() = (requireActivity() as BaseActivity).aiAlertCheck
+    val aiAlertCheck get() = (requireActivity() as MainActivity).aiAlertCheck
 
     fun simpleDialog(title: String, msg: String, type: Int) {
-        (requireActivity() as BaseActivity).simpleDialog(title, msg, type)
+        (requireActivity() as MainActivity).simpleDialog(title, msg, type)
     }
     fun showLoading() {
-        (requireActivity() as BaseActivity).showLoading()
+        (requireActivity() as MainActivity).showLoading()
     }
     fun hideLoading() {
-        (requireActivity() as BaseActivity).hideLoading()
+        (requireActivity() as MainActivity).hideLoading()
     }
     fun customThrowableHandle(throwable: Throwable) {
-        (requireActivity() as BaseActivity).customThrowableHandle(throwable)
+        (requireActivity() as MainActivity).customThrowableHandle(throwable)
     }
 
     fun startFaceService() {
-        (requireActivity() as BaseActivity).startFaceService()
+        (requireActivity() as MainActivity).startFaceService()
     }
 
     fun stopFaceService() {
-        (requireActivity() as BaseActivity).stopFaceService()
+        (requireActivity() as MainActivity).stopFaceService()
     }
 
     fun registerMyReceiver() {
-        (requireActivity() as BaseActivity).registerMyReceiver()
+        (requireActivity() as MainActivity).registerMyReceiver()
     }
 
     fun unRegisterMyReceiver() {
-        (requireActivity() as BaseActivity).unRegisterMyReceiver()
+        (requireActivity() as MainActivity).unRegisterMyReceiver()
+    }
+
+    fun setAiUseCheck(check: Boolean) {
+        (requireActivity() as MainActivity).aiUseCheck = check
     }
 }

@@ -1,7 +1,6 @@
 package com.nsdevil.ubtmobilev3.data.response
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 data class HomeDataResponse (
     @field:SerializedName("msg")
@@ -15,156 +14,97 @@ data class HomeDataResponse (
         @field:SerializedName("myExamCount")
         val myExamCount: Int,
         @field:SerializedName("latestexams")
-        val latestExams: List<LatestExam>,
+        val latestexams: List<Latestexam>,
         @field:SerializedName("organizs")
         val organizs: List<Organiz>,
         @field:SerializedName("myorganizs")
         val myorganizs: List<Myorganiz>,
         @field:SerializedName("userexams")
-        val userexams: List<UserExam>,
+        val userexams: List<Userexam>,
         @field:SerializedName("myOrganizCount")
         val myOrganizCount: Int
     ) {
-        data class UserExam(
-            @field:SerializedName("organizName")
+        data class Latestexam (
             val organizName: String,
-            @field:SerializedName("examCode")
-            val examCode: String,
-            @field:SerializedName("ceatedAt")
-            val ceatedAt: String,
-            @field:SerializedName("examSdate")
-            val examSdate: String,
-            @field:SerializedName("description")
-            val description: String,
-            @field:SerializedName("resultSeeType")
-            val resultSeeType: String,
-            @field:SerializedName("variants")
-            val variants: List<String>,
-            @field:SerializedName("organizUrl")
-            val organizUrl: String,
-            @field:SerializedName("organizPort")
-            val organizPort: String,
-            @field:SerializedName("isFree")
-            val isFree: Any,
-            @field:SerializedName("coverImage")
-            val coverImage: String,
-            @field:SerializedName("examineeName")
-            val examineeName: String,
-            @field:SerializedName("organizDesc")
-            val organizDesc: String,
-            @field:SerializedName("payedDate")
-            val payedDate: String,
-            @field:SerializedName("expireDate")
-            val expireDate: String,
-            @field:SerializedName("examTotalScore")
-            val examTotalScore: Float,
-            @field:SerializedName("updatedAt")
-            val updatedAt: String,
-            @field:SerializedName("organizLogo")
             val organizLogo: String,
-            @field:SerializedName("organizId")
             val organizId: Int,
-            @field:SerializedName("examName")
-            val examName: String,
-            @field:SerializedName("examStatus")
-            val examStatus: String,
-            @field:SerializedName("examEdate")
-            val examEdate: String,
-            @field:SerializedName("phone")
-            val phone: String,
-            @field:SerializedName("examineeTotalScore")
-            val examineeTotalScore: Any,
-            @field:SerializedName("examId")
-            val examId: Int,
-            @field:SerializedName("examTime")
-            val examTime: String
-        )
-
-        data class LatestExam (
-            @field:SerializedName("organizName")
-            val organizName: String,
-            @field:SerializedName("organizLogo")
-            val organizLogo: String,
-            @field:SerializedName("organizId")
-            val organizId: Int,
-            @field:SerializedName("ceatedAt")
             val ceatedAt: String,
-            @field:SerializedName("examName")
             val examName: String,
-            @field:SerializedName("examSdate")
             val examSdate: String,
-            @field:SerializedName("examStatus")
             val examStatus: String,
-            @field:SerializedName("description")
             val description: String,
-            @field:SerializedName("examEdate")
             val examEdate: String,
-            @field:SerializedName("organizUrl")
             val organizUrl: String,
-            @field:SerializedName("organizPort")
             val organizPort: String,
-            @field:SerializedName("isFree")
-            val isFree: Any,
-            @field:SerializedName("phone")
+            val isFree: Any?,
             val phone: String,
-            @field:SerializedName("coverImage")
+            val faceLogin: Int?,
             val coverImage: String,
-            @field:SerializedName("examId")
             val examId: Int,
-            @field:SerializedName("organizDesc")
             val organizDesc: String,
-            @field:SerializedName("examTotalScore")
-            val examTotalScore: Float,
-            @field:SerializedName("examTime")
+            val examTotalScore: Double,
             val examTime: String,
-            @field:SerializedName("updatedAt")
             val updatedAt: String
         )
 
-        data class Myorganiz(
-            @field:SerializedName("organizUrl")
+        data class Organiz(
             val organizUrl: String,
-            @field:SerializedName("organizName")
             val organizName: String,
-            @field:SerializedName("organizPort")
             val organizPort: String,
-            @field:SerializedName("organizLogo")
             val organizLogo: String,
-            @field:SerializedName("organizId")
             val organizId: Int,
-            @field:SerializedName("phone")
             val phone: String,
-            @field:SerializedName("coverImage")
             val coverImage: String,
-            @field:SerializedName("isMy")
             val isMy: Boolean,
-            @field:SerializedName("description")
             val description: String,
-            @field:SerializedName("organizType")
             val organizType: String
         )
 
-        data class Organiz(
-            @field:SerializedName("organizUrl")
+        data class Myorganiz(
             val organizUrl: String,
-            @field:SerializedName("organizName")
             val organizName: String,
-            @field:SerializedName("organizPort")
             val organizPort: String,
-            @field:SerializedName("organizLogo")
             val organizLogo: String,
-            @field:SerializedName("organizId")
             val organizId: Int,
-            @field:SerializedName("phone")
             val phone: String,
-            @field:SerializedName("coverImage")
             val coverImage: String,
-            @field:SerializedName("isMy")
             val isMy: Boolean,
-            @field:SerializedName("description")
             val description: String,
-            @field:SerializedName("organizType")
             val organizType: String
+        )
+
+        data class Userexam(
+            val organizName: String,
+            val examCode: String,
+            val ceatedAt: String,
+            val examSdate: String,
+            val recording: String,
+            val description: String,
+            val resultSeeType: String,
+            val variants: List<String>,
+            val organizUrl: String,
+            val organizPort: String,
+            val isFree: Any?,
+            val coverImage: String,
+            val faceLogin: Int?,
+            val aiuse: String,
+            val examineeName: String,
+            val organizDesc: String,
+            val payedDate: String,
+            val expireDate: String,
+            val examTotalScore: Double,
+            val updatedAt: String,
+            val organizLogo: String,
+            val organizId: Int,
+            val reTake: String,
+            val examName: String,
+            val examStatus: String,
+            val realExam: Int,
+            val examEdate: String,
+            val phone: String,
+            val examineeTotalScore: Any?,
+            val examId: Int,
+            val examTime: String
         )
     }
 }

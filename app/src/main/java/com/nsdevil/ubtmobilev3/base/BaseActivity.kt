@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.nsdevil.ubtmobilev3.data.model.CustomErrorBody
@@ -24,11 +25,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     val aiAlertCheck get() = myReceiver.aiAlertCheck
 
+    var aiUseCheck = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         loadingDialog = ZAlertDialog(this, this)
         loadingDialog.setType(ZAlertDialog.PROGRESS_TYPE)
-        loadingDialog.setMsg("로딩중...")
+        loadingDialog.setMsg("Loading...")
     }
 
     fun showLoading() {
@@ -51,7 +54,7 @@ abstract class BaseActivity : AppCompatActivity() {
             setTitle(title)
             setMsg(msg)
             setType(type)
-            setConfirm("확인")
+            setConfirm("Confirm")
 
             setSingleEventListener( object : ZAlertDialog.SingleEventListener {
                 override fun confirmClick(dialogSelf: ZAlertDialog) {
@@ -67,12 +70,12 @@ abstract class BaseActivity : AppCompatActivity() {
             val httpError = throwable as HttpException
             try {
                 val customErrorBody = Gson().fromJson(httpError.response()?.errorBody()?.charStream(), CustomErrorBody::class.java)
-                simpleDialog("경고", customErrorBody.message.toString(), ZAlertDialog.WARNING_TYPE)
+                simpleDialog("Warning", customErrorBody.message.toString(), ZAlertDialog.WARNING_TYPE)
             } catch (ex: Exception) {
-                simpleDialog("경고", throwable.message.toString(), ZAlertDialog.WARNING_TYPE)
+                Toast.makeText(this, throwable.toString(), Toast.LENGTH_LONG).show()
             }
         } else {
-            simpleDialog("에러", throwable.message.toString(), ZAlertDialog.ERROR_TYPE)
+            simpleDialog("Error", throwable.message.toString(), ZAlertDialog.ERROR_TYPE)
         }
     }
 
@@ -87,11 +90,17 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     fun startFaceService() {
+        if(!aiUseCheck)
+            return
+
         val intent = Intent(applicationContext, PoseNetService::class.java)
         startService(intent)
     }
 
     fun stopFaceService() {
+        if(!aiUseCheck)
+            return
+
         var chkStartService = false
         val manager = (getSystemService(ACTIVITY_SERVICE) as ActivityManager)
         for (service in manager.getRunningServices(Int.MAX_VALUE)) {
@@ -106,12 +115,18 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     fun registerMyReceiver() {
+        if(!aiUseCheck)
+            return
+
         val intentFilter = IntentFilter("com.nsdevil.ubt_headpos_test.intent.action.MESSAGE_PROCESSED")
         intentFilter.addCategory(Intent.CATEGORY_DEFAULT)
         if (myReceiver != null) registerReceiver(myReceiver, intentFilter)
     }
 
     fun unRegisterMyReceiver() {
+        if(!aiUseCheck)
+            return
+
         if (myReceiver != null) unregisterReceiver(myReceiver)
     }
 }

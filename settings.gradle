@@ -1,2 +1,3 @@
+include ':mathview-lib'
 include ':app'
 rootProject.name = "UBTMobilev3"

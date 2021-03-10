@@ -22,16 +22,9 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.85" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/v_guide_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.15" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number"
-            android:layout_width="0dp"
+            android:layout_width="40dp"
             android:layout_height="0dp"
             android:layout_margin="3dp"
             android:background="@drawable/bg_number_button"
@@ -40,9 +33,10 @@
             android:text="@{answer.optionNumber}"
             android:textColor="@drawable/text_gray_black"
             android:textSize="17sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
             app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="@id/v_guide_1"
+            app:layout_constraintEnd_toStartOf="@id/et_answer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="1" />
@@ -57,7 +51,7 @@
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintStart_toEndOf="@id/btn_number"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="answer" />
 

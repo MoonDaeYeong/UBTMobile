@@ -27,6 +27,7 @@ import com.nsdevil.ubtmobilev3.databinding.FragmentTestQuestionBinding
 import com.nsdevil.ubtmobilev3.ui.ExamFragment
 import com.nsdevil.ubtmobilev3.utilities.CommonUtils
 import com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel
+import com.nsdevil.ubtmobilev3.views.MathView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_stand_by.*
 import kotlinx.coroutines.delay
@@ -72,11 +73,12 @@ class TestQuestionFragment(private val position: Int) : BaseFragment() {
             getDataList(position).observe(viewLifecycleOwner) { it ->
                 it.forEach { inData ->
                     inData.dataText?.let { dataText ->
-                        if(!dataText.isNullOrEmpty())
-                            setDataText(dataText)
+                        when(inData.dataType) {
+                            "text" -> setDataText(dataText)
+                            "math" -> setMathText(dataText)
+                        }
                     }
                     inData.media?.let { mediaX ->
-
                         when {
                             mediaX.mediaType.equals("image",true) -> {
                                 mediaX.fileName?.let { fileName ->
@@ -109,13 +111,31 @@ class TestQuestionFragment(private val position: Int) : BaseFragment() {
         binding.llDataRoot.addView(dataTextView)
     }
 
+    private fun setMathText(text: String) {
+        val coParams = LinearLayout.LayoutParams (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        coParams.setMargins(0,0,0,10)
+        val mathView = MathView(requireContext())
+        mathView.layoutParams = coParams
+
+        val sb = StringBuilder(text)
+        val newSb = java.lang.StringBuilder()
+        sb.forEach {
+            if (it.toString() == "\\")
+                newSb.append("\\"+it.toString())
+             else
+                newSb.append(it)
+        }
+        mathView.setText(newSb.toString())
+        binding.llDataRoot.addView(mathView)
+    }
+
     private fun imageViewer(source: String) {
         val coParams = LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT )
         coParams.setMargins(0, 0, 0, 5)
 
         val imageView = PhotoView(requireContext())
         imageView.layoutParams = coParams
-        val file = File(requireContext().filesDir, source)
+        val file = File(requireContext().filesDir, "question/$source")
         Glide.with(requireContext()).load(file).into(imageView)
 
         binding.llDataRoot.addView(imageView)

@@ -108,7 +108,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="포인트"
+                                    android:text="Point"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
 
@@ -134,7 +134,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="시험"
+                                    android:text="Exams"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -159,7 +159,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="조직"
+                                    android:text="Organizations"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -214,7 +214,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="나의 시험 목록"
+                            android:text="My Exam List"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_my_exam"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -277,7 +277,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="기타 목록"
+                            android:text="Other list"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_last_exam"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -339,7 +339,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="나의 그룹"
+                            android:text="My Organizations"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_my_org"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -401,7 +401,7 @@
                             android:fontFamily="@font/josefinsans_bold"
                             android:gravity="center|start"
                             android:includeFontPadding="false"
-                            android:text="기타 조직"
+                            android:text="Other Organizations"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/h_guide_other_org"
                             app:layout_constraintTop_toTopOf="parent" />

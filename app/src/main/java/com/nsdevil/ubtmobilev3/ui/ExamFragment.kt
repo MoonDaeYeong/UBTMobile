@@ -85,7 +85,7 @@ class ExamFragment : BaseFragment() {
     }
 
     fun setQuestionPlayer(source: String) {
-        val file = File(requireContext().filesDir, source)
+        val file = File(requireContext().filesDir, "question/$source")
         val mediaSource = prepareExoPlayerFromFileUri(Uri.parse(file.absolutePath))
 
         questionPlayer.prepare(mediaSource)
@@ -94,7 +94,7 @@ class ExamFragment : BaseFragment() {
 
     fun setAnswerPlayer(source: List<String>) {
         for (i in source.indices) {
-            val file = File(requireContext().filesDir, source[i])
+            val file = File(requireContext().filesDir, "answer/"+source[i])
             val mediaSource = prepareExoPlayerFromFileUri(Uri.parse(file.absolutePath))
 
             answerListPlayer[i].prepare(mediaSource)

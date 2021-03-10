@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="서명 패드"
+                android:text="Sign Pad"
                 android:gravity="center"
                 android:fontFamily="@font/josefinsans_bold"
                 android:includeFontPadding="false"
@@ -55,7 +55,7 @@
                     android:id="@+id/btn_delete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="삭제"
+                    android:text="Delete"
                     android:layout_gravity="end|bottom"
                     android:textColor="@color/draw_color_red"
                     style="@style/Widget.MaterialComponents.Button.TextButton"/>
@@ -65,7 +65,7 @@
                 android:id="@+id/btn_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="확인"
+                android:text="Confirmation"
                 app:layout_constraintTop_toTopOf="@id/h_guide_2"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 

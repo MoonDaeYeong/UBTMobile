@@ -11,6 +11,7 @@ data class InAnswer (
     var questionType: String,
     val id: Int,
     val order: Int,
+    var answerType: String,
     var checkCount: Int,
     var questionId: Int,
     var examCode: String,

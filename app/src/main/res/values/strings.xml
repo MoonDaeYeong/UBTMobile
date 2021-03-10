@@ -11,4 +11,5 @@
     <string name="rationale_message"> Is required <b> Camera permission</b> for AI awareness And <b> External Storage</b> for File Save.</string>
 
     <string name="exam_time_format">%s 분</string>
+
 </resources>

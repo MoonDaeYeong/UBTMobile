@@ -96,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="현재 시간"
+                        android:text="Current Time"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -125,7 +125,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="시험 시작 시간"
+                        android:text="Start Time"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -135,8 +135,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textSize="23sp"
-                        tools:text="12:34:56" />
-
+                        android:text="00:00:00" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -154,7 +153,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="남은 시간"
+                        android:text="Remain Time"
                         android:textColor="@color/gray"
                         android:textSize="12sp" />
 
@@ -164,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textSize="23sp"
-                        tools:text="12:34:56" />
+                        android:text="00:00:00" />
 
                 </LinearLayout>
 
@@ -236,7 +235,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="시험 이름"
+                    android:text="Exam Name"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_exam_name"
@@ -264,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
-                    android:text="이름"
+                    android:text="Name"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_name"
@@ -291,7 +290,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
-                    android:text="이메일"
+                    android:text="E-mail"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@id/et_email"
@@ -338,7 +337,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="서명"
+                    android:text="Sign"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -360,7 +359,7 @@
             android:layout_height="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="시작"
+            android:text="Start"
             android:textSize="21sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/h_guide_6" />
@@ -396,6 +395,8 @@
                         android:layout_marginBottom="5dp"
                         android:textSize="18sp"
                         android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         tools:text="fileName" />
 
                     <ProgressBar

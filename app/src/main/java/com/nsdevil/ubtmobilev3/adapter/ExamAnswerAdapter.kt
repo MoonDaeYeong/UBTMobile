@@ -8,10 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.exoplayer2.ui.PlayerView
 import com.nsdevil.ubtmobilev3.data.db.InAnswer
-import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerAudioBinding
-import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerBinding
-import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerImgBinding
-import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerTextBinding
+import com.nsdevil.ubtmobilev3.databinding.*
 
 class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private val itemPlayer: (PlayerView, List<InAnswer>, Int) -> Unit) : ListAdapter<InAnswer, RecyclerView.ViewHolder>(ExamAnswerItemDiffCallback()) {
 
@@ -20,8 +17,8 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
         val getAnswerTextView = ExamAnswerTextViewHolder(ListItemAnswerTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         val getAnswerImgView = ExamAnswerImgViewHolder(ListItemAnswerImgBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         val getAnswerAudioView = ExamAnswerAudioViewHolder(ListItemAnswerAudioBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-
-        return when(viewType) { 2-> getAnswerTextView 3-> getAnswerImgView 4-> getAnswerAudioView else -> getAnswerView }
+        val getAnswerMathView = ExamAnswerMathViewHolder(ListItemAnswerMathBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return when(viewType) { 2-> getAnswerTextView 3-> getAnswerImgView 4-> getAnswerAudioView 5-> getAnswerMathView else -> getAnswerView }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -30,6 +27,7 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
             2 -> (holder as ExamAnswerTextViewHolder).bind(item)
             3 -> (holder as ExamAnswerImgViewHolder).bind(item)
             4 -> (holder as ExamAnswerAudioViewHolder).bind(item)
+            5 -> (holder as ExamAnswerMathViewHolder).bind(item)
             else -> (holder as ExamAnswerViewHolder).bind(item)
         }
     }
@@ -38,6 +36,7 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
         return if(currentList[position].questionType == "2") 2
         else if (!currentList[position].fileName.isNullOrEmpty() && currentList[position].mediaType.equals("image", true)) 3
         else if (!currentList[position].fileName.isNullOrEmpty() && currentList[position].mediaType.equals("audio", true)) 4
+        else if (currentList[position].answerType == "math") 5
         else super.getItemViewType(position)
     }
 
@@ -69,6 +68,35 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
         fun bind(item: InAnswer) {
             binding.apply {
                 answer = item
+                executePendingBindings()
+            }
+        }
+    }
+
+    inner class ExamAnswerMathViewHolder(private val binding: ListItemAnswerMathBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.setClickListener {
+                binding.answer?.let { answer ->
+                    answer.userChk = !answer.userChk
+                    subscribeButton(answer)
+                }
+            }
+        }
+
+        fun bind(item: InAnswer) {
+            binding.apply {
+                answer = item
+
+                val sb = StringBuilder(item.answer)
+                val newSb = java.lang.StringBuilder()
+                sb.forEach {
+                    if (it.toString() == "\\")
+                        newSb.append("\\"+it.toString())
+                    else
+                        newSb.append(it)
+                }
+
+                mathView.setText(newSb.toString())
                 executePendingBindings()
             }
         }

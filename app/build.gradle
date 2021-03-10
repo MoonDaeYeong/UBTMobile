@@ -15,10 +15,10 @@ android {
 
     defaultConfig {
         applicationId "com.nsdevil.ubtmobilev3"
-        minSdkVersion 22
+        minSdkVersion 24
         targetSdkVersion 30
-        versionCode 5
-        versionName "2.0.5"
+        versionCode 10
+        versionName "2.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions {

@@ -13,6 +13,8 @@ class StandByRepository @Inject constructor(private val ubtService: UbtService, 
 
     val examCode = CommonUtils.userExam.examCode
 
+    fun requestFile(fileName: String) = ubtService.requestFile(CommonUtils.tokenForm, fileName)
+
     suspend fun getQuestionSus(examId: Int) = ubtService.questionsSus(CommonUtils.tokenForm, examId)
 
     suspend fun getExamStatus() = ubtService.getExamStatus(CommonUtils.tokenForm, CommonUtils.userExam.examId)
@@ -45,6 +47,7 @@ class StandByRepository @Inject constructor(private val ubtService: UbtService, 
                 inA[j].questionId = questions[i].id
                 inA[j].checkCount = questions[i].checkCount
                 inA[j].examQACode = inQ[i].examQACode
+                inA[j].answerType = inQ[i].answerType
 
                 if(!questions[i].answers[j].media?.fileName.isNullOrEmpty()) {
                     inA[j].fileName = questions[i].answers[j].media?.fileName

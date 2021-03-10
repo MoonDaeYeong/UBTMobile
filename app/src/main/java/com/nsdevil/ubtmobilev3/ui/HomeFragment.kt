@@ -91,16 +91,13 @@ class HomeFragment : BaseFragment() {
 
                 myExamAdapter.submitList(it.result.userexams)
 
-                val examType = object : TypeToken<List<HomeDataResponse.Result.UserExam>>(){}.type
-                val lastExam:List<HomeDataResponse.Result.UserExam> = Gson().fromJson(
-                    Gson().toJson( it.result.latestExams ), examType )
+                val examType = object : TypeToken<List<HomeDataResponse.Result.Userexam>>(){}.type
+                val lastExam:List<HomeDataResponse.Result.Userexam> = Gson().fromJson(
+                    Gson().toJson( it.result.latestexams ), examType )
                 lastExamAdapter.submitList(lastExam)
 
                 val orgType = object : TypeToken<List<HomeDataResponse.Result.Organiz>>(){}.type
-                val myOrg: List<HomeDataResponse.Result.Organiz> = Gson().fromJson(
-                    Gson().toJson(it.result.myorganizs),
-                    orgType
-                )
+                val myOrg: List<HomeDataResponse.Result.Organiz> = Gson().fromJson( Gson().toJson(it.result.myorganizs), orgType )
                 myOrgAdapter.submitList(myOrg)
 
                 otherOrgAdapter.submitList(it.result.organizs)
@@ -108,22 +105,24 @@ class HomeFragment : BaseFragment() {
 
             examCodeResult.observe(viewLifecycleOwner) {
                 if(it.success) {
-                    simpleDialog("Success", "Code registration completed", ZAlertDialog.SUCCESS_TYPE)
+                    simpleDialog("Success", "ExamCode Register", ZAlertDialog.SUCCESS_TYPE)
                     getHomeData()
                 } else if (!it.success) {
-                    simpleDialog("Warning", it.message.toString(), ZAlertDialog.WARNING_TYPE)
+                    simpleDialog("Fail", it.message.toString(), ZAlertDialog.WARNING_TYPE)
                 }
             }
         }
-
     }
 
-    private fun examItemClick(userExam: HomeDataResponse.Result.UserExam) {
+    private fun examItemClick(userExam: HomeDataResponse.Result.Userexam) {
         val examInfoDialog = ExamInfoDialog(requireContext(), userExam) {
             if(!userExam.examCode.isNullOrEmpty()) {
                 CommonUtils.userExam = userExam
+                    if(userExam.aiuse.equals("true", true))
+                        setAiUseCheck(true)
+                    else
+                        setAiUseCheck(false)
                 navigateToStandby()
-                println("체크: " + userExam.examId)
             }
         }
         examInfoDialog.show()

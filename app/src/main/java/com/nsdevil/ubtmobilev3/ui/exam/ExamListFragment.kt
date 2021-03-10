@@ -60,10 +60,10 @@ class ExamListFragment : BaseFragment() {
                 override fun onTabSelected(tab: TabLayout.Tab?) {
                     tab?.let {
                         when(it.position) {
-                            WHOLE_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "전체문제"
-                            COMPLETED_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "푼 문제"
-                            UNCOMPLETED_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "안푼 문제"
-                            CHECK_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "체크한 문제"
+                            WHOLE_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "Whole"
+                            COMPLETED_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "Completed"
+                            UNCOMPLETED_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "UnCompleted"
+                            CHECK_PAGE_INDEX -> binding.tvTabCategoryInfo.text = "Checked"
                         }
                     }
                 }
@@ -74,7 +74,7 @@ class ExamListFragment : BaseFragment() {
     }
 
     private fun setCustomTab(position: Int) : View {
-        binding.tvTabCategoryInfo.text = "전체 문제"
+        binding.tvTabCategoryInfo.text = "Whole"
 
         val views = layoutInflater.inflate(R.layout.item_exam_list_tab, null, false)
         val img = views.findViewById<MaterialButton>(R.id.iv_tab_img)
@@ -83,23 +83,23 @@ class ExamListFragment : BaseFragment() {
         when(position) {
             WHOLE_PAGE_INDEX -> {
                 img.setBackgroundResource(R.drawable.bg_whole_question_button)
-                text.text = "전체 문제"
+                text.text = "Whole"
             }
             COMPLETED_PAGE_INDEX -> {
                 img.setBackgroundResource(R.drawable.bg_completed_button)
-                text.text = "푼 문제"
+                text.text = "Completed"
             }
             UNCOMPLETED_PAGE_INDEX -> {
                 img.setBackgroundResource(R.drawable.bg_uncompleted_button)
-                text.text = "안푼 문제"
+                text.text = "UnCompleted"
             }
             CHECK_PAGE_INDEX -> {
                 img.setBackgroundResource(R.drawable.bg_check_button)
-                text.text = "체크한 문제"
+                text.text = "Checked"
             }
             else -> {
                 img.setBackgroundResource(R.drawable.bg_whole_question_button)
-                text.text = "전체 문제"
+                text.text = "Whole"
             }
         }
         return  views
@@ -108,15 +108,15 @@ class ExamListFragment : BaseFragment() {
     private fun onShowSubmitDialog() {
         with(CommonUtils) {
             if(remainQuestionNumber != 0) {
-                simpleDialog("경고", "남은문제를 풀어주세요.", ZAlertDialog.WARNING_TYPE)
+                simpleDialog("Warning", "Solve the remaining problems.", ZAlertDialog.WARNING_TYPE)
             } else {
                 val dialog = ZAlertDialog(requireContext(), viewLifecycleOwner)
                 dialog.apply {
-                    setTitle("경고")
-                    setMsg("제출하면 시험이 종료되고, 다시 푸실수 없습니다.")
+                    setTitle("Warning")
+                    setMsg("Once submitted, the exam will end and you will not be able to take it again.")
                     setType(ZAlertDialog.WARNING_TYPE)
-                    setConfirm("확인")
-                    setCancel("취소")
+                    setConfirm("Confirm")
+                    setCancel("Cancel")
                     setMultiEventListener(object : ZAlertDialog.MultiEventLister {
                         override fun confirmClick(dialogSelf: ZAlertDialog) {
                             examFragment.submitTest()

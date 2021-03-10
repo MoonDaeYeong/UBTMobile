@@ -12,7 +12,7 @@
 
         <variable
             name="userExamData"
-            type="com.nsdevil.ubtmobilev3.data.response.HomeDataResponse.Result.UserExam" />
+            type="com.nsdevil.ubtmobilev3.data.response.HomeDataResponse.Result.Userexam" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -96,9 +96,7 @@
                 android:ellipsize="end"
                 android:gravity="center"
                 android:lines="2"
-                android:padding="3dp"
-                android:fontFamily="@font/josefinsans_bold"
-                android:includeFontPadding="false"
+                android:textStyle="bold"
                 android:text="@{userExamData.examName}"
                 app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
                 app:layout_constraintTop_toTopOf="@id/h_guide_2"

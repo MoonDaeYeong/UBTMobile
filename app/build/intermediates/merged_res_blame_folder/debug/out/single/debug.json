@@ -1,0 +1,554 @@
+[
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_completed_pressed.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_completed_pressed.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_exam_info.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_exam_info.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_italic.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_italic.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_regular.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_regular.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_semibolditalic.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_semibolditalic.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_more_org.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_more_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_regular.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\roboto_regular.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_phone_forwarded_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_phone_forwarded_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\navigation_main_nav.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\navigation\\main_nav.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_number_button.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_number_button.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_settings_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_refresh_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_refresh_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bookmark_primary_dark.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_bookmark_primary_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_success_bow.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\success_bow.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_exam_list_tab.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\item_exam_list_tab.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_exam_list.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_list.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_ropasans_regular.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\ropasans_regular.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_red.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_check_red.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_ubt_logo.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_ubt_logo.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_ubt.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_ubt.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval_solid_primary.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\oval_solid_primary.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_shadow_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\top_shadow_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_success_tick.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_success_tick.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_thin.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_thin.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_preview_popup_title_bg.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\preview_popup_title_bg.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_whole_question_button.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_whole_question_button.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_volume_up.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_volume_up.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_exam_preview_a_txt.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_a_txt.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_warning_circle.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\warning_circle.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_show_all.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_show_all.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ripple_simple.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ripple_simple.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_check.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_uncompleted_pressed.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_uncompleted_pressed.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_righteous_regular.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\righteous_regular.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer_img.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_img.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_modal_in.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\modal_in.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer_text.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_text.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_lightitalic.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_lightitalic.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\menu_home_bottom_menu.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\menu\\home_bottom_menu.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval_solid_tanslucent_primary_stroke_1_gray.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\oval_solid_tanslucent_primary_stroke_1_gray.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_left.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\slide_left.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_category.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_category.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_exam_preview_a.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_a.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_back_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_arrow_back_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_error_center_x.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\error_center_x.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_test_question.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_test_question.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_audio_player.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\item_audio_player.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_shadow.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\top_shadow.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_error_circle.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\error_circle.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_thinitalic.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_thinitalic.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_progressbar.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\custom_progressbar.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_solid_null_stroke_1_shadow.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\rect_solid_null_stroke_1_shadow.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer_audio.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_audio.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_check_default.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_check_default.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_whole_question_default.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_whole_question_default.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_warning_sign.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\warning_sign.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval_solid_null_stroke_1_gray.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\oval_solid_null_stroke_1_gray.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_check_pressed.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_check_pressed.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_more_exam.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_more_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading_ubt.gif.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\loading_ubt.gif"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_exam_preview_q.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_q.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\menu_org_bottom_menu.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\menu\\org_bottom_menu.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_check_button.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_check_button.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_error_profile.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\error_profile.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_org.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_uncompleted_default.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_uncompleted_default.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sign_pad.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_sign_pad.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_semibold.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_semibold.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_gray_black.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\text_gray_black.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_all_question.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_all_question.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_code_register.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_code_register.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_add_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_more.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_more.jpg.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_more.jpg"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_exam_test.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam_test.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_prev_black.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_prev_black.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_success_circle.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\success_circle.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_test_preview.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_test_preview.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_volume_mute.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_volume_mute.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_bold.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_bold.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_org_exam.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_org_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_home_exam.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_home_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_bolditalic.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_bolditalic.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_data_text.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\item_data_text.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_z_alert.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_z_alert.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_home_org.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_home_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bookmark_border_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_bookmark_border_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_text_input.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_text_input.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sign_up.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_sign_up.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_primary_dark.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_check_primary_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_stand_by.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_stand_by.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_uncompleted.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_uncompleted.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_completed_default.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_completed_default.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_edit_profile.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_edit_profile.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_exam_list.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam_list.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_search_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_light.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\dialog_light.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_solid_white_corners_1_stroke_1_grey.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\rect_solid_white_corners_1_stroke_1_grey.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_exit_to_app_white.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_exit_to_app_white.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_uncompleted_button.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_uncompleted_button.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer_math.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_math.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_light.ttf.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\font\\josefinsans_light.ttf"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_whole_question_pressed.png.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\btn_whole_question_pressed.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\navigation_exam_nav.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\navigation\\exam_nav.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_modal_out.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\modal_out.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_next_black.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_next_black.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_completed_button.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\bg_completed_button.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval_solid_null_stroke_10_red.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\oval_solid_null_stroke_10_red.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_preview.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_preview.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_exam.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_right.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\anim\\slide_right.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_audio_controller.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\item_audio_controller.xml"
+    }
+]

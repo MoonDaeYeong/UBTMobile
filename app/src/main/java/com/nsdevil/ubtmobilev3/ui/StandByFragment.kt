@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.adapter.bindGetUserImg
 import com.nsdevil.ubtmobilev3.base.BaseFragment
 import com.nsdevil.ubtmobilev3.databinding.FragmentStandByBinding
@@ -54,7 +55,9 @@ class StandByFragment : BaseFragment() {
                 val signFile = File(requireContext().getExternalFilesDir(null), String.format("sign_%s.png", CommonUtils.userExam.examCode))
 
                 if(!signFile.exists()) {
-                    simpleDialog("경고", "서명을 해주세요.", ZAlertDialog.WARNING_TYPE)
+                    simpleDialog("Warning", "Please Sign.", ZAlertDialog.WARNING_TYPE)
+                } else if (viewModel.continueCheck.value) {
+                    gotoExam()
                 } else {
                     viewModel.getExamStatus()
                 }
@@ -71,7 +74,10 @@ class StandByFragment : BaseFragment() {
     private fun subscribeUi() {
         with(viewModel) {
             viewLoading.observe(viewLifecycleOwner) { if(it) showLoading() else hideLoading() }
-            getThrowable.observe(viewLifecycleOwner) { customThrowableHandle(it) }
+            getThrowable.observe(viewLifecycleOwner) {
+                customThrowableHandle(it)
+                findNavController().navigate(R.id.homeFragment)
+            }
 
             readyCheck.asLiveData().observe(viewLifecycleOwner) {
                 if(it) {
@@ -81,23 +87,24 @@ class StandByFragment : BaseFragment() {
                     binding.btnStart.isEnabled = false
                 }
             }
-            continueCheck.observe(viewLifecycleOwner) {
-                binding.btnStart.text = "계속하기"
+            continueCheck.asLiveData().observe(viewLifecycleOwner) {
+                if(it)
+                    binding.btnStart.text = "Continue"
             }
             endCheck.observe(viewLifecycleOwner) {
-                binding.btnStart.text = "시험종료"
+                binding.btnStart.text = "End Exam"
             }
 
             getExamInfo(requireContext())
 
-            downloadFileNameList.observe(viewLifecycleOwner) {
-                downloadData(it, this@StandByFragment::progressChecker)
+            downloadZipFileName.observe(viewLifecycleOwner) {
+                downloadZipFile(this@StandByFragment::progressChecker, it)
             }
 
             status.observe(viewLifecycleOwner) {
                 if(!it.equals("start", true))
-                    simpleDialog("경고", "시험이 아직 시작되지 않았습니다.", ZAlertDialog.WARNING_TYPE)
-                else if (binding.btnStart.text.toString().equals("계속하기", true) ) {
+                    simpleDialog("Warning", "The test is not in the starting state.", ZAlertDialog.WARNING_TYPE)
+                else if (binding.btnStart.text.toString().equals("Continue", true) ) {
                     gotoExam()
                 } else {
                     countDown()

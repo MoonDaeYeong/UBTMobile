@@ -7,31 +7,27 @@ import com.nsdevil.ubtmobilev3.api.UbtService
 import com.nsdevil.ubtmobilev3.base.BaseViewModel
 import com.nsdevil.ubtmobilev3.data.db.InExamInfo
 import com.nsdevil.ubtmobilev3.data.repository.StandByRepository
-import com.nsdevil.ubtmobilev3.utilities.ANSWER_DATA_API_URL
-import com.nsdevil.ubtmobilev3.utilities.CommonUtils
-import com.nsdevil.ubtmobilev3.utilities.ProgressResponseBody
-import com.nsdevil.ubtmobilev3.utilities.QUESTION_DATA_API_URL
+import com.nsdevil.ubtmobilev3.utilities.*
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.Flowable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import java.io.BufferedInputStream
 import java.io.File
 import java.io.InputStream
+import java.nio.channels.Channels
+import java.nio.charset.Charset
+import java.util.zip.ZipFile
 import javax.inject.Inject
 
 @HiltViewModel
 class StandByViewModel @Inject constructor (private val repository: StandByRepository) : BaseViewModel() {
 
     val readyCheck = MutableStateFlow(false)
-    val continueCheck = MutableLiveData<Boolean>()
+    val continueCheck = MutableStateFlow(false)
     val endCheck = MutableLiveData<Boolean>()
 
     private val exceptionHandler = CoroutineExceptionHandler { _, error ->
@@ -52,7 +48,7 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
             } else {
                 when {
                     examInfo.totalTime != examInfo.remainTime && !examInfo.submissionYN -> {
-                        continueCheck.postValue(true)
+                        continueCheck.value = true
                         readyCheck.value = true
                     }
                     examInfo.submissionYN -> {
@@ -67,7 +63,7 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
         }
     }
 
-    val downloadFileNameList = MutableLiveData<List<String>>()
+    val downloadZipFileName = MutableLiveData<String>()
     private suspend fun createExamInfo() {
         val secondTime = CommonUtils.userExam.examTime.toInt() * 60
         val examData = CommonUtils.userExam
@@ -77,67 +73,41 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
         val questions = repository.getQuestionSus(CommonUtils.userExam.examId).result.questions
         repository.initInsertReadyData(questions)
 
-        val downloadFileList: MutableList<String> = mutableListOf()
-        repository.getMediaList().forEach { mediaX ->
-            if(!mediaX.fileName.isNullOrEmpty())
-                downloadFileList.add("q"+mediaX.fileName)
-        }
-        repository.getInAnswerList().forEach { answer ->
-            if(!answer.fileName.isNullOrEmpty())
-                downloadFileList.add("a"+ answer.fileName)
-        }
-        if(!downloadFileList.isNullOrEmpty()) {
-            downloadFileNameList.postValue(downloadFileList)
-        } else {
-            readyCheck.value = true
-        }
+        val zipName = repository.getQuestionSus(CommonUtils.userExam.examId).result.zipName
+        downloadZipFileName.postValue(zipName)
     }
 
-    fun downloadData(fileNameList: List<String>, onAttachmentDownloadUpdate: (Int, String) -> Unit) {
-        var fileCount = 0
-        CompositeDisposable().add(
-            Flowable.fromIterable(fileNameList).subscribeOn(Schedulers.io()).observeOn(Schedulers.single()).flatMap { singleFile ->
-                val base = if (singleFile.substring(0,1) == "a") ANSWER_DATA_API_URL else QUESTION_DATA_API_URL
-                val newName = singleFile.substring(1, singleFile.length)
-
-                Retrofit.Builder().addCallAdapterFactory(RxJava2CallAdapterFactory.create()).baseUrl(base).client(createOkHttpProgressClient(onAttachmentDownloadUpdate, newName))
-                    .build()
-                    .create(UbtService::class.java)
-                    .requestFile(CommonUtils.tokenForm, newName)
-                    .subscribeOn(Schedulers.io()).observeOn(Schedulers.single()).map {
-                        val newFile = File(_context.filesDir, newName)
-                        it.byteStream().saveToFile(newFile.absolutePath)
-                    }
-            }.subscribe({
-                fileCount += 1
-                if(fileCount == fileNameList.size) {
-                    readyCheck.value = true
-                }
+    fun downloadZipFile(onAttachmentDownloadUpdate: (Int, String) -> Unit, fileName: String) {
+        val newFileName = fileName.substring(fileName.lastIndexOf("_")+1, fileName.length)
+        val newFile = File(_context.filesDir, newFileName)
+        if(!newFile.exists())
+            CompositeDisposable().add (
+                UbtService.downloadCreate(onAttachmentDownloadUpdate, newFileName).requestFile(CommonUtils.tokenForm, fileName).subscribeOn(Schedulers.single()).observeOn(Schedulers.io()).subscribe({
+                    it.byteStream().saveToFile(newFile.absolutePath)
             }, {
                 getThrowable.postValue(it)
             })
         )
+        else
+            readyCheck.value = true
     }
-
 
     private fun InputStream.saveToFile(file: String) = use { input ->
         File(file).outputStream().use { output ->
             input.copyTo(output)
-        }
-    }
+            val rbc = Channels.newChannel(input)
+            output.channel.transferFrom(rbc, 0, Long.MAX_VALUE)
+            output.close()
 
-    private fun createOkHttpProgressClient(onAttachmentDownloadUpdate: (Int, String) -> Unit, fileName: String) : OkHttpClient {
-        val builder = OkHttpClient.Builder()
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.level = HttpLoggingInterceptor.Level.BASIC
-        builder.addInterceptor(interceptor)
-        builder.addInterceptor { chain ->
-            val originalReponse = chain.proceed(chain.request())
-            originalReponse.newBuilder().body(originalReponse.body?.let {
-                ProgressResponseBody(it, onAttachmentDownloadUpdate, fileName)
-            }).build()
+            val newPath = File(file).parentFile.path
+            val questionFolder = File(newPath, "question")
+            if(!questionFolder.exists())
+                questionFolder.mkdirs()
+            val answerFolder = File(newPath, "answer")
+            if(!answerFolder.exists())
+                answerFolder.mkdirs()
+            unZip(file, newPath)
         }
-        return builder.build()
     }
 
     val status = MutableLiveData<String>()
@@ -146,6 +116,19 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
             viewLoading.postValue(true)
             status.postValue(repository.getExamStatus().result.status)
             viewLoading.postValue(false)
+        }
+    }
+
+    private fun unZip(zipFilePath: String, targetPath: String) {
+        ZipFile(zipFilePath).use { zip ->
+            zip.entries().asSequence().forEach { entry ->
+                zip.getInputStream(entry).use { input ->
+                    File(targetPath, entry.name).outputStream().use { output ->
+                        input.copyTo(output)
+                    }
+                }
+            }
+            readyCheck.value = true
         }
     }
 

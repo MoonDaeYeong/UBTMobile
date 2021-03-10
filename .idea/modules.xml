@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UBTMobilev3.iml" filepath="$PROJECT_DIR$/.idea/modules/UBTMobilev3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/UBTMobilev3.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/UBTMobilev3.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mathview-lib/UBTMobilev3.mathview-lib.iml" filepath="$PROJECT_DIR$/.idea/modules/mathview-lib/UBTMobilev3.mathview-lib.iml" />
     </modules>
   </component>
 </project>

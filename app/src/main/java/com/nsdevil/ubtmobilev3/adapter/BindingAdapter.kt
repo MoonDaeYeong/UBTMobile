@@ -133,7 +133,7 @@ fun bindCheckAnswer(btn: AppCompatButton, userCheck: Boolean?) {
 @BindingAdapter("img_file")
 fun bindImgFile(iv: ImageView, imgFile: String?) {
     if(!imgFile.isNullOrEmpty()) {
-        val file = File(iv.context.filesDir, imgFile)
+        val file = File(iv.context.filesDir, "answer/$imgFile")
         Glide.with(iv.context).load(file).placeholder(R.drawable.error_profile).into(iv)
         iv.visibility = View.VISIBLE
 

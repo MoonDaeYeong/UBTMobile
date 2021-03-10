@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="
+              width=device-width,
+              height=device-height,
+              initial-scale=1,
+              user-scalable=0"/>
+    <title></title>
+</head>
+<body>
+<!--<math-field disabled>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</math-field>-->
+<div class="mathfield" disabled id="mf"></div>
+<div id="setdata"></div>
+<div id="setdata2"></div>
+<script type="text/javascript"
+        src="./scripts/mathlive.min.js"></script>
+<script>
+	 const mf = MathLive.makeMathField('mf', {
+                smartMode: true,
+                onContentDidChange: (mf) => {
+
+                },
+            });
+  function showFormula (formula) {
+    mf.$latex(formula);
+  }
+
+</script>
+</body>
+</html>

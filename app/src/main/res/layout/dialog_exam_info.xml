@@ -7,7 +7,7 @@
 
         <variable
             name="userExamData"
-            type="com.nsdevil.ubtmobilev3.data.response.HomeDataResponse.Result.UserExam" />
+            type="com.nsdevil.ubtmobilev3.data.response.HomeDataResponse.Result.Userexam" />
     </data>
 
     <FrameLayout
@@ -18,9 +18,9 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
+            android:background="@drawable/dialog_light"
             android:paddingHorizontal="10dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/dialog_light">
+            android:paddingVertical="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h_guide_1"
@@ -113,11 +113,11 @@
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:padding="5dp"
-                tools:text="end of exam"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
                 app:layout_constraintTop_toBottomOf="@id/tv_exam_name"
-                app:status_change_info_text="@{userExamData.examStatus}" />
+                app:status_change_info_text="@{userExamData.examStatus}"
+                tools:text="end of exam" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -132,30 +132,32 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_close"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="3dp"
-                style="@style/Widget.MaterialComponents.Button"
-                android:text="닫기"
+                android:text="Close"
+                android:textStyle="bold"
                 app:backgroundTint="@color/grey_60"
-                app:layout_constraintHorizontal_weight="0.4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/btn_take_an_exam"
+                app:layout_constraintHorizontal_weight="0.4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/h_guide_4" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_take_an_exam"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="시험 시작"
                 android:layout_margin="3dp"
-                style="@style/Widget.MaterialComponents.Button"
+                android:text="Take an exam"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_weight="0.6"
                 app:layout_constraintStart_toEndOf="@id/btn_close"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/h_guide_4"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="@id/h_guide_4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

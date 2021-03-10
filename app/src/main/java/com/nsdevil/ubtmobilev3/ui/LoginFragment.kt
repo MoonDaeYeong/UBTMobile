@@ -31,22 +31,24 @@ class LoginFragment : BaseFragment() {
     }
 
     private fun setBindItem() {
-
         binding.apply {
             tvVersion.text = String.format("Version: %s", BuildConfig.VERSION_NAME)
 
             btnLogin.setOnClickListener {
-             //  etEmail.setText("dickytri199@gmail.com") // 테스트 계정
-             //  etPassword.setText("654321") // 테스트 계정
+              // etEmail.setText("dickytri199@gmail.com") // 테스트 계정
+              // etPassword.setText("654321") // 테스트 계정
+
+              // etEmail.setText("test1@nsdevil.com") // 테스트 계정
+              // etPassword.setText("123456") // 테스트 계정
 
                 val email = etEmail.text.toString()
                 val password = etPassword.text.toString()
 
-                if(!validate(email,password)) {
+                if(!validate(email, password)) {
                     btnLogin.isEnabled = true
                 } else {
                     btnLogin.isEnabled = false
-                    viewModel.login(email,password)
+                    viewModel.login(email, password)
                 }
             }
 
@@ -55,8 +57,8 @@ class LoginFragment : BaseFragment() {
                 findNavController().navigate(directions)
             }
         }
-
     }
+
     private fun subscribeUi() {
         with(viewModel) {
             viewLoading.observe(viewLifecycleOwner) { if(it) showLoading() else hideLoading() }
@@ -66,7 +68,7 @@ class LoginFragment : BaseFragment() {
             }
 
             loginResult.observe(viewLifecycleOwner) {
-                CommonUtils.setToken(it.tokenType,it.accessToken)
+                CommonUtils.setToken(it.tokenType, it.accessToken)
                 println("체크: " + CommonUtils.tokenForm)
                 navigateToHomeFragment()
             }

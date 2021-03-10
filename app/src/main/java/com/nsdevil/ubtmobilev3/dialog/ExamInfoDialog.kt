@@ -8,7 +8,7 @@ import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
 import com.nsdevil.ubtmobilev3.databinding.DialogExamInfoBinding
 
-class ExamInfoDialog (context: Context, private val userExam: HomeDataResponse.Result.UserExam, private val confirmClick:() -> Unit) : AlertDialog(context, R.style.AlertDialogLightX) {
+class ExamInfoDialog (context: Context, private val userExam: HomeDataResponse.Result.Userexam, private val confirmClick:() -> Unit) : AlertDialog(context, R.style.AlertDialogLightX) {
 
     private lateinit var binding: DialogExamInfoBinding
 

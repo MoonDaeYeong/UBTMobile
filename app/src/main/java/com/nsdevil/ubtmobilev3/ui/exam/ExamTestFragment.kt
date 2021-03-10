@@ -69,6 +69,7 @@ class ExamTestFragment : BaseFragment() {
                 }
             }
             llCheck.setOnClickListener {
+                updateAnswer(index)
                 viewModel.updateUserCheck(index)
             }
         }

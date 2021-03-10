@@ -14,4 +14,6 @@ class HomeRepository @Inject constructor(private val ubtService: UbtService) {
     fun getHomeData() = ubtService.homeData(CommonUtils.tokenForm)
 
     suspend fun examCodeRegister(examCode: String) = ubtService.examCodeRegister(CommonUtils.tokenForm, examCode)
+
+    suspend fun getExamCodeStatus() = ubtService.getExamCodeStatus(CommonUtils.tokenForm)
 }

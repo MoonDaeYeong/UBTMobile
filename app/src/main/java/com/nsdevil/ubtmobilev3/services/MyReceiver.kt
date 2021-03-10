@@ -25,14 +25,14 @@ class MyReceiver : BroadcastReceiver() {
         }
 
         if (headCount == 0) {
-            onFaceDialog(context, "고개를 돌리지 마세요.")
+            onFaceDialog(context, "Don't turn your head.")
         } else if (facialCount == 0) {
-            onFaceDialog(context, "자리를 비우지 마세요.")
+            onFaceDialog(context, "Don't leave your seat.")
         }
     }
 
     private fun onFaceDialog(ctx: Context, msg: String) {
-        val zDialog = AiAlertDialog(ctx, "경고", msg, ZAlertDialog.WARNING_TYPE)
+        val zDialog = AiAlertDialog(ctx, "Warning", msg, ZAlertDialog.WARNING_TYPE)
         zDialog.setSingleEventListener(object : AiAlertDialog.SingleEventListener {
             override fun confirmClick(dialogSelf: AiAlertDialog) {
                 onShowCheck = false

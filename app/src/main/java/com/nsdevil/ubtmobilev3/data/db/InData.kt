@@ -8,6 +8,7 @@ import com.nsdevil.ubtmobilev3.data.response.QuestionResponse
 data class InData(
     val dataOrder: Int?,
     val dataText: String?,
+    val dataType: String?,
     @PrimaryKey
     val id: Int,
     var viewOrder: Int,

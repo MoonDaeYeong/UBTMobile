@@ -47,7 +47,7 @@ class MoreFragment : BaseFragment() {
     private fun setBindItem() {
         binding.apply {
             when(args.category) {
-                "exam" -> tvTitle.text = "시험"
+                "exam" -> tvTitle.text = "EXAMS"
                 else -> tvTitle.text = "ORGANIZATIONS"
             }
             if(args.subClass == "search")
@@ -93,8 +93,8 @@ class MoreFragment : BaseFragment() {
     }
 
     private fun examItemClick(myExam: AllMyExamResponse.Content) {
-        val type = object : TypeToken<HomeDataResponse.Result.UserExam>(){}.type
-        val userExam: HomeDataResponse.Result.UserExam = Gson().fromJson(Gson().toJson(myExam), type)
+        val type = object : TypeToken<HomeDataResponse.Result.Userexam>(){}.type
+        val userExam: HomeDataResponse.Result.Userexam = Gson().fromJson(Gson().toJson(myExam), type)
         examInfoDialog(userExam)
     }
 
@@ -102,10 +102,16 @@ class MoreFragment : BaseFragment() {
 
     }
 
-    private fun examInfoDialog(userExam: HomeDataResponse.Result.UserExam) {
+    private fun examInfoDialog(userExam: HomeDataResponse.Result.Userexam) {
         val examInfoDialog = ExamInfoDialog(requireContext(), userExam) {
             if(!userExam.examCode.isNullOrEmpty()) {
                 CommonUtils.userExam = userExam
+
+                if(userExam.aiuse.equals("true", true))
+                    setAiUseCheck(true)
+                else
+                    setAiUseCheck(false)
+
                 navigateToStandby()
             }
         }

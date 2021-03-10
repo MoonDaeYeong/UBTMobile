@@ -23,7 +23,7 @@ object CommonUtils {
         tokenForm = "$tType $token"
     }
 
-    lateinit var userExam: HomeDataResponse.Result.UserExam
+    lateinit var userExam: HomeDataResponse.Result.Userexam
     lateinit var meResponse: MeResponse
 
     fun clockString(secondTime:Int) : String {

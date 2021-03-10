@@ -82,8 +82,8 @@ class SignUpFragment : BaseFragment() {
         } else {
             binding.etEmail.error = null
         }
-        if(pw.isNullOrEmpty() || pw.length < 5 || pw.length > 11) {
-            binding.etPassword.error = "between 5 and 11 alphanumeric characters"
+        if(pw.isNullOrEmpty() || pw.length < 6 || pw.length > 10) {
+            binding.etPassword.error = "between 6 and 10 alphanumeric characters"
             valid = false
         } else {
             binding.etPassword.error = null

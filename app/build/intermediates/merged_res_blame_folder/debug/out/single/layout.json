@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_exam_list.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_list.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_exam_preview_q.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_q.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_home_exam.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_home_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_category.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_category.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_text_input.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_text_input.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_exam_info.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_exam_info.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_sign_pad.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_sign_pad.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_exam_preview_a_txt.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_a_txt.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_up.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_sign_up.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_answer_text.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_text.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_setting.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_home_org.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_home_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_answer.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_more_exam.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_more_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_org_exam.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_org_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_more.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_stand_by.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_stand_by.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_code_register.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_code_register.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_exam_preview_a.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_exam_preview_a.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_test_question.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_test_question.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_more_org.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_more_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_exam_test.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam_test.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_answer_img.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_img.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_z_alert.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_z_alert.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_org.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_org.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_answer_math.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_math.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_exam.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_exam_list.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_exam_list.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_answer_audio.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_audio.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_test_preview.xml",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_test_preview.xml"
+    }
+]

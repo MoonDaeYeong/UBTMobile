@@ -94,7 +94,7 @@
             android:layout_marginEnd="10dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="프리뷰"
+            android:text="Preview"
             app:icon="@drawable/ic_preview"
             app:iconTint="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
@@ -126,7 +126,7 @@
             android:layout_height="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="제출"
+            android:text="submission"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/h_guide_3" />

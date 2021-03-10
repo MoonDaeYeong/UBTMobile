@@ -6,13 +6,13 @@ data class MeResponse (
     @field:SerializedName("id")
     val id: Int,
     @field:SerializedName("username")
-    val username: String,
+    val username: String?,
     @field:SerializedName("firstName")
     val firstName: String,
     @field:SerializedName("lastName")
     val lastName: String,
     @field:SerializedName("email")
-    val email: String,
+    val email: String?,
     @field:SerializedName("phone")
     val phone: String,
     @field:SerializedName("userStatus")
