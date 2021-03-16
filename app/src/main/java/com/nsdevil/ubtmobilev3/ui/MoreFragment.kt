@@ -99,7 +99,9 @@ class MoreFragment : BaseFragment() {
     }
 
     private fun orgItemClick(org: AllOrgResponse.Content) {
-
+        val sendBun = Bundle()
+        sendBun.putString("orgData", Gson().toJson(org))
+        findNavController().navigate(R.id.orgFragment, sendBun)
     }
 
     private fun examInfoDialog(userExam: HomeDataResponse.Result.Userexam) {

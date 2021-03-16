@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
 import com.nsdevil.ubtmobilev3.databinding.ListItemHomeExamBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeExamAdapter(val itemClick: (HomeDataResponse.Result.Userexam) -> Unit) : ListAdapter<HomeDataResponse.Result.Userexam, RecyclerView.ViewHolder>(HomeExamItemDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

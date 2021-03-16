@@ -48,7 +48,11 @@
         android:id="@+id/examFragment"
         android:name="com.nsdevil.ubtmobilev3.ui.ExamFragment"
         android:label="fragment_exam"
-        tools:layout="@layout/fragment_exam" />
+        tools:layout="@layout/fragment_exam" >
+        <action
+            android:id="@+id/action_examFragment_to_examFinishFragment"
+            app:destination="@id/examFinishFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.nsdevil.ubtmobilev3.ui.SignUpFragment"
@@ -82,6 +86,24 @@
         tools:layout="@layout/fragment_setting" >
         <argument
             android:name="ProfileDataString"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/examFinishFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.ExamFinishFragment"
+        android:label="fragment_exam_finish"
+        tools:layout="@layout/fragment_exam_finish" >
+        <action
+            android:id="@+id/action_examFinishFragment_to_surveyFragment"
+            app:destination="@id/surveyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.nsdevil.ubtmobilev3.ui.SurveyFragment"
+        android:label="fragment_survey"
+        tools:layout="@layout/fragment_survey" >
+        <argument
+            android:name="surveyData"
             app:argType="string" />
     </fragment>
 </navigation>

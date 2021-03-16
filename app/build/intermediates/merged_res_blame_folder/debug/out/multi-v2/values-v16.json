@@ -4,17 +4,7 @@
             "outputFile": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\9184d877ca526e43d364745914e922e1\\core-1.3.2\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\035010fd9c896fa9dd81e7be4d23cdf6\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\d919914e579ac7caacaf2c55d070a73e\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\ad7ad55f08d1279256d8969dd7c1fbc8\\core-1.3.2\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

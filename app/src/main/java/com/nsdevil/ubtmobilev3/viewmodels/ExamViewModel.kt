@@ -79,19 +79,19 @@ class ExamViewModel @Inject constructor (private val repository: ExamRepository)
         if (answerResult.success) {
             val resultId = answerResult.result.resultId.toRequestBody("multipart/form-data".toMediaTypeOrNull())
             val fileUploadResult = repository.uploadResultFile(resultId, aiBodyPart, signBodyPart)
-            uploadResultMsg.postValue(UploadReturnData(true, "응시 답안 업로드 성공", "TEXT"))
+            uploadResultMsg.postValue(UploadReturnData(true, "Success of uploading the test answer", "TEXT"))
             sendResultCheck = if (fileUploadResult.success) {
                 repository.updateSubmitCheck()
-                uploadResultMsg.postValue(UploadReturnData(true, "파일 업로드 성공", "FILE"))
+                uploadResultMsg.postValue(UploadReturnData(true, "File upload success", "FILE"))
                 timerJob?.cancel()
                 false
             } else {
-                uploadResultMsg.postValue(UploadReturnData(false, "파일 업로드 실패", "FILE"))
+                uploadResultMsg.postValue(UploadReturnData(false, "File upload failure", "FILE"))
                 timerJob?.cancel()
                 false
             }
         } else {
-            uploadResultMsg.postValue(UploadReturnData(false, "응시 답안 업로드 실패", "TEXT"))
+            uploadResultMsg.postValue(UploadReturnData(false, "Failed to upload test answer", "TEXT"))
             sendResultCheck = false
         }
         viewLoading.postValue(false)

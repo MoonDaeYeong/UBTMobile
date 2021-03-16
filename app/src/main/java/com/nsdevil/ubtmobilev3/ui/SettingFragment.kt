@@ -23,7 +23,7 @@ class SettingFragment : BaseFragment() {
 
     private val args : SettingFragmentArgs by navArgs()
 
-    private val profileForm: ProfileData get() = Gson().fromJson(args.ProfileDataString, ProfileData::class.java)
+    val profileForm: ProfileData get() = Gson().fromJson(args.ProfileDataString, ProfileData::class.java)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View {
         binding = FragmentSettingBinding.inflate(inflater,container,false)
@@ -31,37 +31,8 @@ class SettingFragment : BaseFragment() {
 
         (activity as AppCompatActivity).setSupportActionBar(binding.bar)
         setHasOptionsMenu(true)
-        setBindItem()
 
         return binding.root
-    }
-
-    private fun setBindItem() {
-        binding.apply {
-            profileData = profileForm
-
-            btnUserInfo.setOnClickListener {
-
-            }
-
-            btnPasswordChange.setOnClickListener {
-
-            }
-
-            var aiOptionCheck = true
-            btnAiOption.setOnClickListener {
-                if(aiOptionCheck) {
-                    aiOptionCheck = false
-                    btnAiOption.text = "중지"
-                    btnAiOption.setBackgroundColor(requireContext().getColorRes(R.color.error_stroke_color))
-                } else {
-                    aiOptionCheck = true
-                    btnAiOption.text = "실행"
-                    btnAiOption.setBackgroundColor(requireContext().getColorRes(R.color.colorPrimary))
-                }
-                setAiUseCheck(aiOptionCheck)
-            }
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

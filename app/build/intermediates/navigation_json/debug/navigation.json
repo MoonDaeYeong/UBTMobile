@@ -8,5 +8,10 @@
     "name": "main_nav",
     "navigationXmlIds": [],
     "deepLinks": []
+  },
+  {
+    "name": "setting_nav",
+    "navigationXmlIds": [],
+    "deepLinks": []
   }
 ]

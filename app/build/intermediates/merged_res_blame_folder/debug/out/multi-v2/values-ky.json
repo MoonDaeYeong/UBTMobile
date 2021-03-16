@@ -4,7 +4,58 @@
             "outputFile": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\1f38dd97d6e989358f25f8ee531f52ad\\material-1.3.0\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\d919914e579ac7caacaf2c55d070a73e\\appcompat-1.2.0\\res\\values-ky\\values-ky.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,325,437,522,627,744,823,901,992,1085,1180,1274,1374,1467,1562,1657,1748,1839,1920,2026,2131,2229,2336,2439,2554,2715,2817",
+                        "endColumns": "110,108,111,84,104,116,78,77,90,92,94,93,99,92,94,94,90,90,80,105,104,97,106,102,114,160,101,81",
+                        "endOffsets": "211,320,432,517,622,739,818,896,987,1080,1175,1269,1369,1462,1557,1652,1743,1834,1915,2021,2126,2224,2331,2434,2549,2710,2812,2894"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,130",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "270,381,490,602,687,792,909,988,1066,1157,1250,1345,1439,1539,1632,1727,1822,1913,2004,2085,2191,2296,2394,2501,2604,2719,2880,10572",
+                        "endColumns": "110,108,111,84,104,116,78,77,90,92,94,93,99,92,94,94,90,90,80,105,104,97,106,102,114,160,101,81",
+                        "endOffsets": "376,485,597,682,787,904,983,1061,1152,1245,1340,1434,1534,1627,1722,1817,1908,1999,2080,2186,2291,2389,2496,2599,2714,2875,2977,10649"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\b163a0fcfdcfa8e80ea306d2f1a0a76e\\navigation-ui-2.3.4\\res\\values-ky\\values-ky.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,165",
+                        "endColumns": "109,117",
+                        "endOffsets": "160,278"
+                    },
+                    "to": {
+                        "startLines": "127,128",
+                        "startColumns": "4,4",
+                        "startOffsets": "10262,10372",
+                        "endColumns": "109,117",
+                        "endOffsets": "10367,10485"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\152ba2e696f9409d7972d6f35d4def59\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "220",
+                        "endOffsets": "467"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3393",
+                        "endColumns": "220",
+                        "endOffsets": "3609"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\be3254e3029d128360ed01d6a0e4f9b9\\material-1.3.0\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +74,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\f320e3c3da771cf70fbf6b3c43aa267c\\jetified-exoplayer-ui-2.11.7\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\2eb09fe122cfefec3edde10581eaf991\\jetified-exoplayer-ui-2.11.7\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,24 +91,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\035010fd9c896fa9dd81e7be4d23cdf6\\appcompat-1.2.0\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,325,437,522,627,744,823,901,992,1085,1180,1274,1374,1467,1562,1657,1748,1839,1920,2026,2131,2229,2336,2439,2554,2715,2817",
-                        "endColumns": "110,108,111,84,104,116,78,77,90,92,94,93,99,92,94,94,90,90,80,105,104,97,106,102,114,160,101,81",
-                        "endOffsets": "211,320,432,517,622,739,818,896,987,1080,1175,1269,1369,1462,1557,1652,1743,1834,1915,2021,2126,2224,2331,2434,2549,2710,2812,2894"
-                    },
-                    "to": {
-                        "startLines": "6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,130",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "270,381,490,602,687,792,909,988,1066,1157,1250,1345,1439,1539,1632,1727,1822,1913,2004,2085,2191,2296,2394,2501,2604,2719,2880,10572",
-                        "endColumns": "110,108,111,84,104,116,78,77,90,92,94,93,99,92,94,94,90,90,80,105,104,97,106,102,114,160,101,81",
-                        "endOffsets": "376,485,597,682,787,904,983,1061,1152,1245,1340,1434,1534,1627,1722,1817,1908,1999,2080,2186,2291,2389,2496,2599,2714,2875,2977,10649"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\9184d877ca526e43d364745914e922e1\\core-1.3.2\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\ad7ad55f08d1279256d8969dd7c1fbc8\\core-1.3.2\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -71,40 +105,6 @@
                         "startOffsets": "10654",
                         "endColumns": "100",
                         "endOffsets": "10750"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\894915bec94c297cbe86d4f64e8c655f\\navigation-ui-2.3.3\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,165",
-                        "endColumns": "109,117",
-                        "endOffsets": "160,278"
-                    },
-                    "to": {
-                        "startLines": "127,128",
-                        "startColumns": "4,4",
-                        "startOffsets": "10262,10372",
-                        "endColumns": "109,117",
-                        "endOffsets": "10367,10485"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\f3af15d9cdefba83084fb6870ae477c1\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "220",
-                        "endOffsets": "467"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3393",
-                        "endColumns": "220",
-                        "endOffsets": "3609"
                     }
                 }
             ]

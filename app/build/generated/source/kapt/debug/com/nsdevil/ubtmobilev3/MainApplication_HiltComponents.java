@@ -3,6 +3,7 @@ package com.nsdevil.ubtmobilev3;
 import com.nsdevil.ubtmobilev3.di.DatabaseModule;
 import com.nsdevil.ubtmobilev3.di.NetworkModule;
 import com.nsdevil.ubtmobilev3.dialog.TestPreviewDialog_GeneratedInjector;
+import com.nsdevil.ubtmobilev3.ui.ExamFinishFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.ExamFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.HomeFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.LoginFragment_GeneratedInjector;
@@ -11,16 +12,22 @@ import com.nsdevil.ubtmobilev3.ui.OrgFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.SettingFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.SignUpFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.StandByFragment_GeneratedInjector;
+import com.nsdevil.ubtmobilev3.ui.SurveyFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.exam.CategoryFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.exam.ExamTestFragment_GeneratedInjector;
 import com.nsdevil.ubtmobilev3.ui.exam.TestQuestionFragment_GeneratedInjector;
+import com.nsdevil.ubtmobilev3.ui.setting.EditProfileFragment_GeneratedInjector;
+import com.nsdevil.ubtmobilev3.ui.setting.PassChangeFragment_GeneratedInjector;
+import com.nsdevil.ubtmobilev3.viewmodels.ExamFinishViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel_HiltModules;
+import com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel_HiltModules;
 import com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel_HiltModules;
+import com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -158,6 +165,7 @@ public final class MainApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ExamFinishViewModel_HiltModules.KeyModule.class,
           ExamViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
@@ -166,8 +174,10 @@ public final class MainApplication_HiltComponents {
           ViewModelCBuilderModule.class,
           MoreViewModel_HiltModules.KeyModule.class,
           OrgViewModel_HiltModules.KeyModule.class,
+          SettingViewModel_HiltModules.KeyModule.class,
           SignUpViewModel_HiltModules.KeyModule.class,
-          StandByViewModel_HiltModules.KeyModule.class
+          StandByViewModel_HiltModules.KeyModule.class,
+          SurveyViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -202,14 +212,17 @@ public final class MainApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ExamFinishViewModel_HiltModules.BindsModule.class,
           ExamViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
           LoginViewModel_HiltModules.BindsModule.class,
           MoreViewModel_HiltModules.BindsModule.class,
           OrgViewModel_HiltModules.BindsModule.class,
+          SettingViewModel_HiltModules.BindsModule.class,
           SignUpViewModel_HiltModules.BindsModule.class,
-          StandByViewModel_HiltModules.BindsModule.class
+          StandByViewModel_HiltModules.BindsModule.class,
+          SurveyViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped
@@ -235,6 +248,7 @@ public final class MainApplication_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements TestPreviewDialog_GeneratedInjector,
+      ExamFinishFragment_GeneratedInjector,
       ExamFragment_GeneratedInjector,
       HomeFragment_GeneratedInjector,
       LoginFragment_GeneratedInjector,
@@ -243,9 +257,12 @@ public final class MainApplication_HiltComponents {
       SettingFragment_GeneratedInjector,
       SignUpFragment_GeneratedInjector,
       StandByFragment_GeneratedInjector,
+      SurveyFragment_GeneratedInjector,
       CategoryFragment_GeneratedInjector,
       ExamTestFragment_GeneratedInjector,
       TestQuestionFragment_GeneratedInjector,
+      EditProfileFragment_GeneratedInjector,
+      PassChangeFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

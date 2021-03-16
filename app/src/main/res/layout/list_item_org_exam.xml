@@ -17,7 +17,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="200dp"
         android:layout_margin="2dp"
         app:cardCornerRadius="2dp"
         app:cardElevation="5dp">
@@ -34,14 +34,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.2" />
+                app:layout_constraintGuide_percent="0.12" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h_guide_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.75" />
+                app:layout_constraintGuide_percent="0.6" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h_guide_3"
@@ -92,11 +92,11 @@
                 android:fontFamily="@font/righteous_regular"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:lines="1"
+                android:maxLines="3"
                 android:text="@{orgExamContent.examName}"
                 app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
                 app:layout_constraintTop_toTopOf="@id/h_guide_2"
-                tools:text="ExamName" />
+                tools:text="ExamName \n sdfsdfsd \n sdfsdfsdf \n sdfsd" />
 
             <TextView
                 android:layout_width="match_parent"

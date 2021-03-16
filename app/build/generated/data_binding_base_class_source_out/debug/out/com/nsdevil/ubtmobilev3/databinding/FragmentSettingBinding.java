@@ -4,20 +4,13 @@ package com.nsdevil.ubtmobilev3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.fragment.app.FragmentContainerView;
 import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.button.MaterialButton;
 import com.nsdevil.ubtmobilev3.R;
-import com.nsdevil.ubtmobilev3.data.model.ProfileData;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -26,66 +19,13 @@ public abstract class FragmentSettingBinding extends ViewDataBinding {
   public final BottomAppBar bar;
 
   @NonNull
-  public final Button btnAiOption;
-
-  @NonNull
-  public final MaterialButton btnPasswordChange;
-
-  @NonNull
-  public final MaterialButton btnUserInfo;
-
-  @NonNull
-  public final CardView cardContent;
-
-  @NonNull
-  public final CardView cardTitle;
-
-  @NonNull
-  public final ImageView ivPicture;
-
-  @NonNull
-  public final LinearLayout llExams;
-
-  @NonNull
-  public final LinearLayout llOrganiztions;
-
-  @NonNull
-  public final LinearLayout llPoint;
-
-  @NonNull
-  public final TextView tvUserEmail;
-
-  @NonNull
-  public final TextView tvUserName;
-
-  @Bindable
-  protected ProfileData mProfileData;
+  public final FragmentContainerView settingNavHost;
 
   protected FragmentSettingBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      BottomAppBar bar, Button btnAiOption, MaterialButton btnPasswordChange,
-      MaterialButton btnUserInfo, CardView cardContent, CardView cardTitle, ImageView ivPicture,
-      LinearLayout llExams, LinearLayout llOrganiztions, LinearLayout llPoint, TextView tvUserEmail,
-      TextView tvUserName) {
+      BottomAppBar bar, FragmentContainerView settingNavHost) {
     super(_bindingComponent, _root, _localFieldCount);
     this.bar = bar;
-    this.btnAiOption = btnAiOption;
-    this.btnPasswordChange = btnPasswordChange;
-    this.btnUserInfo = btnUserInfo;
-    this.cardContent = cardContent;
-    this.cardTitle = cardTitle;
-    this.ivPicture = ivPicture;
-    this.llExams = llExams;
-    this.llOrganiztions = llOrganiztions;
-    this.llPoint = llPoint;
-    this.tvUserEmail = tvUserEmail;
-    this.tvUserName = tvUserName;
-  }
-
-  public abstract void setProfileData(@Nullable ProfileData profileData);
-
-  @Nullable
-  public ProfileData getProfileData() {
-    return mProfileData;
+    this.settingNavHost = settingNavHost;
   }
 
   @NonNull

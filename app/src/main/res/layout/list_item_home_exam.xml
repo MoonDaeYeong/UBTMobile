@@ -17,7 +17,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="180dp"
-        android:layout_height="150dp"
+        android:layout_height="210dp"
         android:layout_margin="1dp"
         app:cardCornerRadius="3dp"
         app:cardElevation="5dp">
@@ -95,12 +95,12 @@
                 android:layout_height="0dp"
                 android:ellipsize="end"
                 android:gravity="center"
-                android:lines="2"
+                android:lines="3"
                 android:textStyle="bold"
                 android:text="@{userExamData.examName}"
                 app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
                 app:layout_constraintTop_toTopOf="@id/h_guide_2"
-                tools:text="시험ㄴ영러ㅣㅏ더ㅑㅐ먼이라키러ㅑㅐ더ㅣ라넝키ㅓ댜ㅐㄹ" />
+                tools:text="시험ㄴ영러ㅣㅏ더ㅑㅐ먼이라키러ㅑㅐ더ㅣ라넝키ㅓ댜ㅐㄹ다까라 헤이 그사람" />
 
             <TextView
                 android:layout_width="match_parent"

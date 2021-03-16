@@ -117,11 +117,13 @@ class HomeFragment : BaseFragment() {
     private fun examItemClick(userExam: HomeDataResponse.Result.Userexam) {
         val examInfoDialog = ExamInfoDialog(requireContext(), userExam) {
             if(!userExam.examCode.isNullOrEmpty()) {
+
                 CommonUtils.userExam = userExam
                     if(userExam.aiuse.equals("true", true))
                         setAiUseCheck(true)
                     else
                         setAiUseCheck(false)
+
                 navigateToStandby()
             }
         }

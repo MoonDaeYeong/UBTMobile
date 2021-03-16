@@ -1,10 +1,7 @@
 package com.nsdevil.ubtmobilev3.api
 
+import com.nsdevil.ubtmobilev3.data.request.*
 import com.nsdevil.ubtmobilev3.data.response.ExamStatusResponse
-import com.nsdevil.ubtmobilev3.data.request.HeadPosRequest
-import com.nsdevil.ubtmobilev3.data.request.LoginRequest
-import com.nsdevil.ubtmobilev3.data.request.SignUpRequest
-import com.nsdevil.ubtmobilev3.data.request.SubmissionRequest
 import com.nsdevil.ubtmobilev3.data.response.*
 import com.nsdevil.ubtmobilev3.utilities.ProgressResponseBody
 import com.nsdevil.ubtmobilev3.utilities.UBT_API_URL
@@ -19,7 +16,6 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
-import java.io.File
 import java.util.concurrent.TimeUnit
 
 interface UbtService {
@@ -81,6 +77,25 @@ interface UbtService {
 
     @GET("api/mobile/examcodes")
     suspend fun getExamCodeStatus(@Header("Authorization") token: String) : AllMyExamResponse
+
+    @Multipart
+    @POST("api/users/modify")
+    suspend fun editProfile(@Header("Authorization") token: String, @Part("firstname") firstname: RequestBody, @Part("lastname") lastname: RequestBody, @Part("phone") phone: RequestBody): EditProfileResponse
+
+    @Multipart
+    @POST("api/users/modify")
+    suspend fun changePicture(@Header("Authorization") token: String, @Part image: MultipartBody.Part): EditProfileResponse
+
+    @Headers("accept: application/json", "content-type: application/json")
+    @POST("api/users/password/update")
+    suspend fun changePassword(@Header("Authorization") token: String, @Body params: PasswordRequest) : ChangePassResponse
+
+    @GET("api/mobile/exam/surveys")
+    suspend fun getSurveyItem(@Header("Authorization") token: String, @Query("examId") examId: Int): SurveyResponse
+
+    @Headers("accept: application/json", "content-type: application/json")
+    @POST("api/mobile/exam/survey/upload")
+    suspend fun sendSurvey(@Header("Authorization") token: String, @Body params: SurveyRequest) : SendSurveyResponse
 
     companion object {
         fun create(): UbtService {

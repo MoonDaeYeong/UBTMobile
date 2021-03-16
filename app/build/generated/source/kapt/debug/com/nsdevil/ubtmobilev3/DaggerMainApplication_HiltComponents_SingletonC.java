@@ -14,13 +14,16 @@ import com.nsdevil.ubtmobilev3.data.db.InAnswerDao;
 import com.nsdevil.ubtmobilev3.data.db.InDataDao;
 import com.nsdevil.ubtmobilev3.data.db.InExamInfoDao;
 import com.nsdevil.ubtmobilev3.data.db.InQuestionDao;
+import com.nsdevil.ubtmobilev3.data.repository.ExamFinishRepository;
 import com.nsdevil.ubtmobilev3.data.repository.ExamRepository;
 import com.nsdevil.ubtmobilev3.data.repository.HomeRepository;
 import com.nsdevil.ubtmobilev3.data.repository.LoginRepository;
 import com.nsdevil.ubtmobilev3.data.repository.MoreRepository;
 import com.nsdevil.ubtmobilev3.data.repository.OrgRepository;
+import com.nsdevil.ubtmobilev3.data.repository.SettingRepository;
 import com.nsdevil.ubtmobilev3.data.repository.SignUpRepository;
 import com.nsdevil.ubtmobilev3.data.repository.StandByRepository;
+import com.nsdevil.ubtmobilev3.data.repository.SurveyRepository;
 import com.nsdevil.ubtmobilev3.di.DatabaseModule;
 import com.nsdevil.ubtmobilev3.di.DatabaseModule_ProvideAnswerDaoFactory;
 import com.nsdevil.ubtmobilev3.di.DatabaseModule_ProvideAppDatabaseFactory;
@@ -30,6 +33,7 @@ import com.nsdevil.ubtmobilev3.di.DatabaseModule_ProvideQuestionDaoFactory;
 import com.nsdevil.ubtmobilev3.di.NetworkModule;
 import com.nsdevil.ubtmobilev3.di.NetworkModule_ProvideUbtServiceFactory;
 import com.nsdevil.ubtmobilev3.dialog.TestPreviewDialog;
+import com.nsdevil.ubtmobilev3.ui.ExamFinishFragment;
 import com.nsdevil.ubtmobilev3.ui.ExamFragment;
 import com.nsdevil.ubtmobilev3.ui.HomeFragment;
 import com.nsdevil.ubtmobilev3.ui.LoginFragment;
@@ -38,9 +42,14 @@ import com.nsdevil.ubtmobilev3.ui.OrgFragment;
 import com.nsdevil.ubtmobilev3.ui.SettingFragment;
 import com.nsdevil.ubtmobilev3.ui.SignUpFragment;
 import com.nsdevil.ubtmobilev3.ui.StandByFragment;
+import com.nsdevil.ubtmobilev3.ui.SurveyFragment;
 import com.nsdevil.ubtmobilev3.ui.exam.CategoryFragment;
 import com.nsdevil.ubtmobilev3.ui.exam.ExamTestFragment;
 import com.nsdevil.ubtmobilev3.ui.exam.TestQuestionFragment;
+import com.nsdevil.ubtmobilev3.ui.setting.EditProfileFragment;
+import com.nsdevil.ubtmobilev3.ui.setting.PassChangeFragment;
+import com.nsdevil.ubtmobilev3.viewmodels.ExamFinishViewModel;
+import com.nsdevil.ubtmobilev3.viewmodels.ExamFinishViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel;
 import com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel;
@@ -51,10 +60,14 @@ import com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel;
 import com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel;
 import com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel;
+import com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel;
 import com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel;
 import com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel;
+import com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
 import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
@@ -85,24 +98,38 @@ import javax.inject.Provider;
 public final class DaggerMainApplication_HiltComponents_SingletonC extends MainApplication_HiltComponents.SingletonC {
   private final ApplicationContextModule applicationContextModule;
 
-  private final DatabaseModule databaseModule;
-
   private final NetworkModule networkModule;
 
-  private volatile Object appDatabase = new MemoizedSentinel();
+  private final DatabaseModule databaseModule;
 
   private volatile Object ubtService = new MemoizedSentinel();
+
+  private volatile Object appDatabase = new MemoizedSentinel();
 
   private DaggerMainApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam, DatabaseModule databaseModuleParam,
       NetworkModule networkModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
-    this.databaseModule = databaseModuleParam;
     this.networkModule = networkModuleParam;
+    this.databaseModule = databaseModuleParam;
   }
 
   public static Builder builder() {
     return new Builder();
+  }
+
+  private UbtService ubtService() {
+    Object local = ubtService;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = ubtService;
+        if (local instanceof MemoizedSentinel) {
+          local = NetworkModule_ProvideUbtServiceFactory.provideUbtService(networkModule);
+          ubtService = DoubleCheck.reentrantCheck(ubtService, local);
+        }
+      }
+    }
+    return (UbtService) local;
   }
 
   private AppDatabase appDatabase() {
@@ -133,20 +160,6 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
 
   private InAnswerDao inAnswerDao() {
     return DatabaseModule_ProvideAnswerDaoFactory.provideAnswerDao(databaseModule, appDatabase());
-  }
-
-  private UbtService ubtService() {
-    Object local = ubtService;
-    if (local instanceof MemoizedSentinel) {
-      synchronized (local) {
-        local = ubtService;
-        if (local instanceof MemoizedSentinel) {
-          local = NetworkModule_ProvideUbtServiceFactory.provideUbtService(networkModule);
-          ubtService = DoubleCheck.reentrantCheck(ubtService, local);
-        }
-      }
-    }
-    return (UbtService) local;
   }
 
   @Override
@@ -260,7 +273,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       }
 
       private Set<String> keySetSetOfString() {
-        return SetBuilder.<String>newSetBuilder(7).add(ExamViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MoreViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OrgViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SignUpViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(StandByViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+        return SetBuilder.<String>newSetBuilder(10).add(ExamFinishViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ExamViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MoreViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OrgViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SettingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SignUpViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(StandByViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SurveyViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
       }
 
       @Override
@@ -308,6 +321,10 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
         }
 
         @Override
+        public void injectExamFinishFragment(ExamFinishFragment examFinishFragment) {
+        }
+
+        @Override
         public void injectExamFragment(ExamFragment examFragment) {
         }
 
@@ -340,6 +357,10 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
         }
 
         @Override
+        public void injectSurveyFragment(SurveyFragment surveyFragment) {
+        }
+
+        @Override
         public void injectCategoryFragment(CategoryFragment categoryFragment) {
         }
 
@@ -349,6 +370,14 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
 
         @Override
         public void injectTestQuestionFragment(TestQuestionFragment testQuestionFragment) {
+        }
+
+        @Override
+        public void injectEditProfileFragment(EditProfileFragment editProfileFragment) {
+        }
+
+        @Override
+        public void injectPassChangeFragment(PassChangeFragment passChangeFragment) {
         }
 
         @Override
@@ -424,6 +453,8 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
     }
 
     private final class ViewModelCImpl extends MainApplication_HiltComponents.ViewModelC {
+      private volatile Provider<ExamFinishViewModel> examFinishViewModelProvider;
+
       private volatile Provider<ExamViewModel> examViewModelProvider;
 
       private volatile Provider<HomeViewModel> homeViewModelProvider;
@@ -434,12 +465,33 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
 
       private volatile Provider<OrgViewModel> orgViewModelProvider;
 
+      private volatile Provider<SettingViewModel> settingViewModelProvider;
+
       private volatile Provider<SignUpViewModel> signUpViewModelProvider;
 
       private volatile Provider<StandByViewModel> standByViewModelProvider;
 
+      private volatile Provider<SurveyViewModel> surveyViewModelProvider;
+
       private ViewModelCImpl(SavedStateHandle savedStateHandle) {
 
+      }
+
+      private ExamFinishRepository examFinishRepository() {
+        return new ExamFinishRepository(DaggerMainApplication_HiltComponents_SingletonC.this.ubtService());
+      }
+
+      private ExamFinishViewModel examFinishViewModel() {
+        return new ExamFinishViewModel(examFinishRepository());
+      }
+
+      private Provider<ExamFinishViewModel> examFinishViewModelProvider() {
+        Object local = examFinishViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(0);
+          examFinishViewModelProvider = (Provider<ExamFinishViewModel>) local;
+        }
+        return (Provider<ExamFinishViewModel>) local;
       }
 
       private ExamRepository examRepository() {
@@ -453,7 +505,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<ExamViewModel> examViewModelProvider() {
         Object local = examViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(0);
+          local = new SwitchingProvider<>(1);
           examViewModelProvider = (Provider<ExamViewModel>) local;
         }
         return (Provider<ExamViewModel>) local;
@@ -470,7 +522,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<HomeViewModel> homeViewModelProvider() {
         Object local = homeViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(1);
+          local = new SwitchingProvider<>(2);
           homeViewModelProvider = (Provider<HomeViewModel>) local;
         }
         return (Provider<HomeViewModel>) local;
@@ -487,7 +539,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<LoginViewModel> loginViewModelProvider() {
         Object local = loginViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(2);
+          local = new SwitchingProvider<>(3);
           loginViewModelProvider = (Provider<LoginViewModel>) local;
         }
         return (Provider<LoginViewModel>) local;
@@ -504,7 +556,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<MoreViewModel> moreViewModelProvider() {
         Object local = moreViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(3);
+          local = new SwitchingProvider<>(4);
           moreViewModelProvider = (Provider<MoreViewModel>) local;
         }
         return (Provider<MoreViewModel>) local;
@@ -521,10 +573,27 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<OrgViewModel> orgViewModelProvider() {
         Object local = orgViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(4);
+          local = new SwitchingProvider<>(5);
           orgViewModelProvider = (Provider<OrgViewModel>) local;
         }
         return (Provider<OrgViewModel>) local;
+      }
+
+      private SettingRepository settingRepository() {
+        return new SettingRepository(DaggerMainApplication_HiltComponents_SingletonC.this.ubtService());
+      }
+
+      private SettingViewModel settingViewModel() {
+        return new SettingViewModel(settingRepository());
+      }
+
+      private Provider<SettingViewModel> settingViewModelProvider() {
+        Object local = settingViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(6);
+          settingViewModelProvider = (Provider<SettingViewModel>) local;
+        }
+        return (Provider<SettingViewModel>) local;
       }
 
       private SignUpRepository signUpRepository() {
@@ -538,7 +607,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<SignUpViewModel> signUpViewModelProvider() {
         Object local = signUpViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(5);
+          local = new SwitchingProvider<>(7);
           signUpViewModelProvider = (Provider<SignUpViewModel>) local;
         }
         return (Provider<SignUpViewModel>) local;
@@ -555,15 +624,32 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
       private Provider<StandByViewModel> standByViewModelProvider() {
         Object local = standByViewModelProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(6);
+          local = new SwitchingProvider<>(8);
           standByViewModelProvider = (Provider<StandByViewModel>) local;
         }
         return (Provider<StandByViewModel>) local;
       }
 
+      private SurveyRepository surveyRepository() {
+        return new SurveyRepository(DaggerMainApplication_HiltComponents_SingletonC.this.ubtService());
+      }
+
+      private SurveyViewModel surveyViewModel() {
+        return new SurveyViewModel(surveyRepository());
+      }
+
+      private Provider<SurveyViewModel> surveyViewModelProvider() {
+        Object local = surveyViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(9);
+          surveyViewModelProvider = (Provider<SurveyViewModel>) local;
+        }
+        return (Provider<SurveyViewModel>) local;
+      }
+
       @Override
       public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-        return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(7).put("com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel", (Provider) examViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel", (Provider) homeViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel", (Provider) loginViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel", (Provider) moreViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel", (Provider) orgViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel", (Provider) signUpViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel", (Provider) standByViewModelProvider()).build();
+        return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(10).put("com.nsdevil.ubtmobilev3.viewmodels.ExamFinishViewModel", (Provider) examFinishViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel", (Provider) examViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel", (Provider) homeViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel", (Provider) loginViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel", (Provider) moreViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel", (Provider) orgViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel", (Provider) settingViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel", (Provider) signUpViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel", (Provider) standByViewModelProvider()).put("com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel", (Provider) surveyViewModelProvider()).build();
       }
 
       private final class SwitchingProvider<T> implements Provider<T> {
@@ -577,26 +663,35 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
         @Override
         public T get() {
           switch (id) {
-            case 0: // com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel 
+            case 0: // com.nsdevil.ubtmobilev3.viewmodels.ExamFinishViewModel 
+            return (T) ViewModelCImpl.this.examFinishViewModel();
+
+            case 1: // com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel 
             return (T) ViewModelCImpl.this.examViewModel();
 
-            case 1: // com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel 
+            case 2: // com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel 
             return (T) ViewModelCImpl.this.homeViewModel();
 
-            case 2: // com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel 
+            case 3: // com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel 
             return (T) ViewModelCImpl.this.loginViewModel();
 
-            case 3: // com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel 
+            case 4: // com.nsdevil.ubtmobilev3.viewmodels.MoreViewModel 
             return (T) ViewModelCImpl.this.moreViewModel();
 
-            case 4: // com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel 
+            case 5: // com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel 
             return (T) ViewModelCImpl.this.orgViewModel();
 
-            case 5: // com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel 
+            case 6: // com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel 
+            return (T) ViewModelCImpl.this.settingViewModel();
+
+            case 7: // com.nsdevil.ubtmobilev3.viewmodels.SignUpViewModel 
             return (T) ViewModelCImpl.this.signUpViewModel();
 
-            case 6: // com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel 
+            case 8: // com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel 
             return (T) ViewModelCImpl.this.standByViewModel();
+
+            case 9: // com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel 
+            return (T) ViewModelCImpl.this.surveyViewModel();
 
             default: throw new AssertionError(id);
           }

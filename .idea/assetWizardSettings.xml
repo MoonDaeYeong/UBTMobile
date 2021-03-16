@@ -307,7 +307,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../Android/sdk/icons/material/materialicons/preview/baseline_preview_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../Android/sdk/icons/material/materialicons/camera_alt/baseline_camera_alt_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -317,8 +317,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_re" />
+                            <entry key="color" value="45c358" />
+                            <entry key="outputName" value="ic_baseline_camera_alt_24" />
                             <entry key="sourceFile" value="D:\bg_more.svg" />
                           </map>
                         </option>

@@ -23,8 +23,6 @@ import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.utilities.CommonUtils
 import com.nsdevil.ubtmobilev3.viewmodels.ExamViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.internal.lifecycle.HiltViewModelFactory
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -58,7 +56,7 @@ class ExamFragment : BaseFragment() {
         }
 
         questionPlayer = SimpleExoPlayer.Builder(requireContext()).build()
-        answerListPlayer = listOf(
+        answerListPlayer = listOf (
             SimpleExoPlayer.Builder(requireContext()).build(),
             SimpleExoPlayer.Builder(requireContext()).build(),
             SimpleExoPlayer.Builder(requireContext()).build(),
@@ -143,14 +141,16 @@ class ExamFragment : BaseFragment() {
         stopFaceService()
         val dialog = ZAlertDialog(requireContext(), viewLifecycleOwner)
         dialog.apply {
-            setTitle("성공")
-            setMsg("답안 제출 완료.")
+            setTitle("Success")
+            setMsg("Completion of submitting your answer")
             setType(ZAlertDialog.SUCCESS_TYPE)
-            setConfirm("확인.")
+            setConfirm("Confirm")
             setSingleEventListener(object :ZAlertDialog.SingleEventListener {
                 override fun confirmClick(dialogSelf: ZAlertDialog) {
                     dialogSelf.dismiss()
-                    findNavController().popBackStack(R.id.homeFragment, true)
+                   // findNavController().popBackStack(R.id.homeFragment, true)
+                    val directions = ExamFragmentDirections.actionExamFragmentToExamFinishFragment()
+                    findNavController().navigate(directions)
                 }
             })
         }.show()

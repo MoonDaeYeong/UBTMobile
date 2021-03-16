@@ -108,7 +108,7 @@ class ExamListFragment : BaseFragment() {
     private fun onShowSubmitDialog() {
         with(CommonUtils) {
             if(remainQuestionNumber != 0) {
-                simpleDialog("Warning", "Solve the remaining problems.", ZAlertDialog.WARNING_TYPE)
+                simpleDialog("Warning", "Solve the remaining questions.", ZAlertDialog.WARNING_TYPE)
             } else {
                 val dialog = ZAlertDialog(requireContext(), viewLifecycleOwner)
                 dialog.apply {

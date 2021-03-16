@@ -23,7 +23,11 @@ public class BR {
 
   public static final int profileData = 10;
 
-  public static final int questionAnswer = 11;
+  public static final int question = 11;
 
-  public static final int userExamData = 12;
+  public static final int questionAnswer = 12;
+
+  public static final int surveyAnswer = 13;
+
+  public static final int userExamData = 14;
 }

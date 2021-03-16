@@ -14,16 +14,22 @@ import com.nsdevil.ubtmobilev3.databinding.DialogTestPreviewBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.DialogTextInputBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.DialogZAlertBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentCategoryBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentEditProfileBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentExamBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentExamFinishBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentExamListBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentExamTestBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentHomeBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentLoginBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentMoreBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentOrgBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentPassChangeBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentSettingBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentSettingHomeBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentSignUpBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentStandByBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentSurveyBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.FragmentSurveyItemBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.FragmentTestQuestionBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerAudioBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.ListItemAnswerBindingImpl;
@@ -39,6 +45,9 @@ import com.nsdevil.ubtmobilev3.databinding.ListItemHomeOrgBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.ListItemMoreExamBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.ListItemMoreOrgBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.ListItemOrgExamBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.ListItemSurveyAnswerBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.ListItemSurveyAnswerTxtBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.ListItemSurveyQuestionBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -66,57 +75,75 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTCATEGORY = 8;
 
-  private static final int LAYOUT_FRAGMENTEXAM = 9;
+  private static final int LAYOUT_FRAGMENTEDITPROFILE = 9;
 
-  private static final int LAYOUT_FRAGMENTEXAMLIST = 10;
+  private static final int LAYOUT_FRAGMENTEXAM = 10;
 
-  private static final int LAYOUT_FRAGMENTEXAMTEST = 11;
+  private static final int LAYOUT_FRAGMENTEXAMFINISH = 11;
 
-  private static final int LAYOUT_FRAGMENTHOME = 12;
+  private static final int LAYOUT_FRAGMENTEXAMLIST = 12;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 13;
+  private static final int LAYOUT_FRAGMENTEXAMTEST = 13;
 
-  private static final int LAYOUT_FRAGMENTMORE = 14;
+  private static final int LAYOUT_FRAGMENTHOME = 14;
 
-  private static final int LAYOUT_FRAGMENTORG = 15;
+  private static final int LAYOUT_FRAGMENTLOGIN = 15;
 
-  private static final int LAYOUT_FRAGMENTSETTING = 16;
+  private static final int LAYOUT_FRAGMENTMORE = 16;
 
-  private static final int LAYOUT_FRAGMENTSIGNUP = 17;
+  private static final int LAYOUT_FRAGMENTORG = 17;
 
-  private static final int LAYOUT_FRAGMENTSTANDBY = 18;
+  private static final int LAYOUT_FRAGMENTPASSCHANGE = 18;
 
-  private static final int LAYOUT_FRAGMENTTESTQUESTION = 19;
+  private static final int LAYOUT_FRAGMENTSETTING = 19;
 
-  private static final int LAYOUT_LISTITEMANSWER = 20;
+  private static final int LAYOUT_FRAGMENTSETTINGHOME = 20;
 
-  private static final int LAYOUT_LISTITEMANSWERAUDIO = 21;
+  private static final int LAYOUT_FRAGMENTSIGNUP = 21;
 
-  private static final int LAYOUT_LISTITEMANSWERIMG = 22;
+  private static final int LAYOUT_FRAGMENTSTANDBY = 22;
 
-  private static final int LAYOUT_LISTITEMANSWERMATH = 23;
+  private static final int LAYOUT_FRAGMENTSURVEY = 23;
 
-  private static final int LAYOUT_LISTITEMANSWERTEXT = 24;
+  private static final int LAYOUT_FRAGMENTSURVEYITEM = 24;
 
-  private static final int LAYOUT_LISTITEMEXAMLIST = 25;
+  private static final int LAYOUT_FRAGMENTTESTQUESTION = 25;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWA = 26;
+  private static final int LAYOUT_LISTITEMANSWER = 26;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWATXT = 27;
+  private static final int LAYOUT_LISTITEMANSWERAUDIO = 27;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWQ = 28;
+  private static final int LAYOUT_LISTITEMANSWERIMG = 28;
 
-  private static final int LAYOUT_LISTITEMHOMEEXAM = 29;
+  private static final int LAYOUT_LISTITEMANSWERMATH = 29;
 
-  private static final int LAYOUT_LISTITEMHOMEORG = 30;
+  private static final int LAYOUT_LISTITEMANSWERTEXT = 30;
 
-  private static final int LAYOUT_LISTITEMMOREEXAM = 31;
+  private static final int LAYOUT_LISTITEMEXAMLIST = 31;
 
-  private static final int LAYOUT_LISTITEMMOREORG = 32;
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWA = 32;
 
-  private static final int LAYOUT_LISTITEMORGEXAM = 33;
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWATXT = 33;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(33);
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWQ = 34;
+
+  private static final int LAYOUT_LISTITEMHOMEEXAM = 35;
+
+  private static final int LAYOUT_LISTITEMHOMEORG = 36;
+
+  private static final int LAYOUT_LISTITEMMOREEXAM = 37;
+
+  private static final int LAYOUT_LISTITEMMOREORG = 38;
+
+  private static final int LAYOUT_LISTITEMORGEXAM = 39;
+
+  private static final int LAYOUT_LISTITEMSURVEYANSWER = 40;
+
+  private static final int LAYOUT_LISTITEMSURVEYANSWERTXT = 41;
+
+  private static final int LAYOUT_LISTITEMSURVEYQUESTION = 42;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(42);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
@@ -127,16 +154,22 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_text_input, LAYOUT_DIALOGTEXTINPUT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_z_alert, LAYOUT_DIALOGZALERT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_category, LAYOUT_FRAGMENTCATEGORY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_edit_profile, LAYOUT_FRAGMENTEDITPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_exam, LAYOUT_FRAGMENTEXAM);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_exam_finish, LAYOUT_FRAGMENTEXAMFINISH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_exam_list, LAYOUT_FRAGMENTEXAMLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_exam_test, LAYOUT_FRAGMENTEXAMTEST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_more, LAYOUT_FRAGMENTMORE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_org, LAYOUT_FRAGMENTORG);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_pass_change, LAYOUT_FRAGMENTPASSCHANGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_setting, LAYOUT_FRAGMENTSETTING);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_setting_home, LAYOUT_FRAGMENTSETTINGHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_sign_up, LAYOUT_FRAGMENTSIGNUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_stand_by, LAYOUT_FRAGMENTSTANDBY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_survey, LAYOUT_FRAGMENTSURVEY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_survey_item, LAYOUT_FRAGMENTSURVEYITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.fragment_test_question, LAYOUT_FRAGMENTTESTQUESTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_answer, LAYOUT_LISTITEMANSWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_answer_audio, LAYOUT_LISTITEMANSWERAUDIO);
@@ -152,6 +185,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_more_exam, LAYOUT_LISTITEMMOREEXAM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_more_org, LAYOUT_LISTITEMMOREORG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_org_exam, LAYOUT_LISTITEMORGEXAM);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_survey_answer, LAYOUT_LISTITEMSURVEYANSWER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_survey_answer_txt, LAYOUT_LISTITEMSURVEYANSWERTXT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.list_item_survey_question, LAYOUT_LISTITEMSURVEYQUESTION);
   }
 
   @Override
@@ -211,11 +247,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_category is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTEDITPROFILE: {
+          if ("layout/fragment_edit_profile_0".equals(tag)) {
+            return new FragmentEditProfileBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_edit_profile is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTEXAM: {
           if ("layout/fragment_exam_0".equals(tag)) {
             return new FragmentExamBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_exam is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTEXAMFINISH: {
+          if ("layout/fragment_exam_finish_0".equals(tag)) {
+            return new FragmentExamFinishBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_exam_finish is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTEXAMLIST: {
           if ("layout/fragment_exam_list_0".equals(tag)) {
@@ -253,11 +301,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_org is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTPASSCHANGE: {
+          if ("layout/fragment_pass_change_0".equals(tag)) {
+            return new FragmentPassChangeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_pass_change is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTSETTING: {
           if ("layout/fragment_setting_0".equals(tag)) {
             return new FragmentSettingBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_setting is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTSETTINGHOME: {
+          if ("layout/fragment_setting_home_0".equals(tag)) {
+            return new FragmentSettingHomeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_setting_home is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTSIGNUP: {
           if ("layout/fragment_sign_up_0".equals(tag)) {
@@ -270,6 +330,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentStandByBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_stand_by is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTSURVEY: {
+          if ("layout/fragment_survey_0".equals(tag)) {
+            return new FragmentSurveyBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_survey is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTSURVEYITEM: {
+          if ("layout/fragment_survey_item_0".equals(tag)) {
+            return new FragmentSurveyItemBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_survey_item is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTTESTQUESTION: {
           if ("layout/fragment_test_question_0".equals(tag)) {
@@ -361,6 +433,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for list_item_org_exam is invalid. Received: " + tag);
         }
+        case  LAYOUT_LISTITEMSURVEYANSWER: {
+          if ("layout/list_item_survey_answer_0".equals(tag)) {
+            return new ListItemSurveyAnswerBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for list_item_survey_answer is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LISTITEMSURVEYANSWERTXT: {
+          if ("layout/list_item_survey_answer_txt_0".equals(tag)) {
+            return new ListItemSurveyAnswerTxtBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for list_item_survey_answer_txt is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LISTITEMSURVEYQUESTION: {
+          if ("layout/list_item_survey_question_0".equals(tag)) {
+            return new ListItemSurveyQuestionBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for list_item_survey_question is invalid. Received: " + tag);
+        }
       }
     }
     return null;
@@ -407,7 +497,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(13);
+    static final SparseArray<String> sKeys = new SparseArray<String>(15);
 
     static {
       sKeys.put(0, "_all");
@@ -421,13 +511,15 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(8, "orgExamContent");
       sKeys.put(9, "organizeData");
       sKeys.put(10, "profileData");
-      sKeys.put(11, "questionAnswer");
-      sKeys.put(12, "userExamData");
+      sKeys.put(11, "question");
+      sKeys.put(12, "questionAnswer");
+      sKeys.put(13, "surveyAnswer");
+      sKeys.put(14, "userExamData");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(33);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(42);
 
     static {
       sKeys.put("layout/activity_main_0", com.nsdevil.ubtmobilev3.R.layout.activity_main);
@@ -438,16 +530,22 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/dialog_text_input_0", com.nsdevil.ubtmobilev3.R.layout.dialog_text_input);
       sKeys.put("layout/dialog_z_alert_0", com.nsdevil.ubtmobilev3.R.layout.dialog_z_alert);
       sKeys.put("layout/fragment_category_0", com.nsdevil.ubtmobilev3.R.layout.fragment_category);
+      sKeys.put("layout/fragment_edit_profile_0", com.nsdevil.ubtmobilev3.R.layout.fragment_edit_profile);
       sKeys.put("layout/fragment_exam_0", com.nsdevil.ubtmobilev3.R.layout.fragment_exam);
+      sKeys.put("layout/fragment_exam_finish_0", com.nsdevil.ubtmobilev3.R.layout.fragment_exam_finish);
       sKeys.put("layout/fragment_exam_list_0", com.nsdevil.ubtmobilev3.R.layout.fragment_exam_list);
       sKeys.put("layout/fragment_exam_test_0", com.nsdevil.ubtmobilev3.R.layout.fragment_exam_test);
       sKeys.put("layout/fragment_home_0", com.nsdevil.ubtmobilev3.R.layout.fragment_home);
       sKeys.put("layout/fragment_login_0", com.nsdevil.ubtmobilev3.R.layout.fragment_login);
       sKeys.put("layout/fragment_more_0", com.nsdevil.ubtmobilev3.R.layout.fragment_more);
       sKeys.put("layout/fragment_org_0", com.nsdevil.ubtmobilev3.R.layout.fragment_org);
+      sKeys.put("layout/fragment_pass_change_0", com.nsdevil.ubtmobilev3.R.layout.fragment_pass_change);
       sKeys.put("layout/fragment_setting_0", com.nsdevil.ubtmobilev3.R.layout.fragment_setting);
+      sKeys.put("layout/fragment_setting_home_0", com.nsdevil.ubtmobilev3.R.layout.fragment_setting_home);
       sKeys.put("layout/fragment_sign_up_0", com.nsdevil.ubtmobilev3.R.layout.fragment_sign_up);
       sKeys.put("layout/fragment_stand_by_0", com.nsdevil.ubtmobilev3.R.layout.fragment_stand_by);
+      sKeys.put("layout/fragment_survey_0", com.nsdevil.ubtmobilev3.R.layout.fragment_survey);
+      sKeys.put("layout/fragment_survey_item_0", com.nsdevil.ubtmobilev3.R.layout.fragment_survey_item);
       sKeys.put("layout/fragment_test_question_0", com.nsdevil.ubtmobilev3.R.layout.fragment_test_question);
       sKeys.put("layout/list_item_answer_0", com.nsdevil.ubtmobilev3.R.layout.list_item_answer);
       sKeys.put("layout/list_item_answer_audio_0", com.nsdevil.ubtmobilev3.R.layout.list_item_answer_audio);
@@ -463,6 +561,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/list_item_more_exam_0", com.nsdevil.ubtmobilev3.R.layout.list_item_more_exam);
       sKeys.put("layout/list_item_more_org_0", com.nsdevil.ubtmobilev3.R.layout.list_item_more_org);
       sKeys.put("layout/list_item_org_exam_0", com.nsdevil.ubtmobilev3.R.layout.list_item_org_exam);
+      sKeys.put("layout/list_item_survey_answer_0", com.nsdevil.ubtmobilev3.R.layout.list_item_survey_answer);
+      sKeys.put("layout/list_item_survey_answer_txt_0", com.nsdevil.ubtmobilev3.R.layout.list_item_survey_answer_txt);
+      sKeys.put("layout/list_item_survey_question_0", com.nsdevil.ubtmobilev3.R.layout.list_item_survey_question);
     }
   }
 }

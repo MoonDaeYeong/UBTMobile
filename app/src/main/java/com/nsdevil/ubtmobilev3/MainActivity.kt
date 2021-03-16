@@ -7,6 +7,7 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Intent
 import android.content.IntentSender
+import android.content.pm.PackageManager
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.Bitmap
@@ -43,6 +44,10 @@ class MainActivity : BaseActivity() {
     private val permissionListener: PermissionListener = object : PermissionListener {
         override fun onPermissionGranted() {
             createShortCut()
+
+            val deviceHasCameraFlag = this@MainActivity.packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)
+            if(!deviceHasCameraFlag)
+                simpleDialog("Warning", "This device cannot use the camera. Please replace.", ZAlertDialog.WARNING_TYPE)
         }
         override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
             val dialog = ZAlertDialog(this@MainActivity, this@MainActivity)

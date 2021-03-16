@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-data class SignUpViewModel @Inject constructor (private val repository: SignUpRepository) : BaseViewModel() {
+class SignUpViewModel @Inject constructor (private val repository: SignUpRepository) : BaseViewModel() {
 
     private val exceptionHandler = CoroutineExceptionHandler { _, error ->
         getThrowable.postValue(error)

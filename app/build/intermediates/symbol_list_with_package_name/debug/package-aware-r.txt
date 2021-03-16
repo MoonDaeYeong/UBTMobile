@@ -1831,8 +1831,10 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bg_check_button
 drawable bg_completed_button
+drawable bg_exam_end
 drawable bg_more
 drawable bg_number_button
+drawable bg_rectangle_grey_blue
 drawable bg_uncompleted_button
 drawable bg_whole_question_button
 drawable btn_check_default
@@ -2159,6 +2161,7 @@ drawable ic_arrow_back_white
 drawable ic_backspace_black_24dp
 drawable ic_bookmark_border_white
 drawable ic_bookmark_primary_dark
+drawable ic_camera
 drawable ic_check
 drawable ic_check_primary_dark
 drawable ic_check_red
@@ -2224,6 +2227,7 @@ drawable oval_solid_null_stroke_1_gray
 drawable oval_solid_primary
 drawable oval_solid_tanslucent_primary_stroke_1_gray
 drawable preview_popup_title_bg
+drawable profile_back
 drawable rect_solid_null_stroke_1_shadow
 drawable rect_solid_white_corners_1_stroke_1_grey
 drawable ripple_simple
@@ -2374,6 +2378,8 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_examFinishFragment_to_surveyFragment
+id action_examFragment_to_examFinishFragment
 id action_examListFragment_to_examTestFragment
 id action_homeFragment_to_moreFragment
 id action_homeFragment_to_orgFragment
@@ -2387,6 +2393,8 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settingHomeFragment_to_editProfileFragment
+id action_settingHomeFragment_to_passChangeFragment
 id action_standByFragment_to_examFragment
 id action_text
 id actions
@@ -2411,6 +2419,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id b_horizontal_1
+id b_name_bottom
 id bar
 id barrier
 id barrier_header_b
@@ -2427,6 +2437,7 @@ id btn_back_to_login
 id btn_close
 id btn_confirm
 id btn_delete
+id btn_go_home
 id btn_join
 id btn_login
 id btn_my_exam_more
@@ -2435,12 +2446,15 @@ id btn_number
 id btn_other_exam_more
 id btn_other_org_more
 id btn_password_change
+id btn_picture
 id btn_preview
+id btn_save_change
 id btn_search
 id btn_sign
 id btn_sign_up
 id btn_start
 id btn_submission
+id btn_survey
 id btn_take_an_exam
 id btn_user_info
 id buttonPanel
@@ -2455,6 +2469,7 @@ id card_my_org
 id card_other_org
 id card_search
 id card_title
+id ccp
 id center
 id center_horizontal
 id center_vertical
@@ -2517,6 +2532,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editProfileFragment
 id editText_search
 id edit_query
 id elastic
@@ -2528,13 +2544,18 @@ id enterAlways
 id enterAlwaysCollapsed
 id error
 id et_answer
+id et_current_pw
 id et_email
 id et_exam_code
 id et_exam_name
 id et_name
+id et_new_pw
 id et_password
+id et_phone_number
+id et_repeat_pw
 id et_search
 id et_text_code
+id examFinishFragment
 id examFragment
 id examListFragment
 id examTestFragment
@@ -2758,6 +2779,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passChangeFragment
 id password_toggle
 id path
 id pathRelative
@@ -2797,6 +2819,8 @@ id rv_my_org
 id rv_other_org
 id rv_preview
 id rv_preview_a
+id rv_questions
+id rv_survey_answer
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2821,6 +2845,9 @@ id select_dialog_listview
 id selected
 id selection_type
 id settingFragment
+id settingHomeFragment
+id setting_nav
+id setting_nav_host
 id shortcut
 id showCustom
 id showHome
@@ -2861,6 +2888,7 @@ id submenuarrow
 id submit_area
 id success
 id surface_view
+id surveyFragment
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2902,9 +2930,13 @@ id ti_exam_list_1
 id ti_exam_list_2
 id ti_exam_list_3
 id ti_exam_list_4
+id til_current_pw
 id til_email
 id til_name
+id til_new_pw
 id til_password
+id til_phone_number
+id til_repeat_pw
 id time
 id title
 id titleDividerNoCustom
@@ -2940,7 +2972,9 @@ id tv_exam_status
 id tv_exam_time
 id tv_file_name
 id tv_header
+id tv_memo
 id tv_name
+id tv_no_survey
 id tv_number
 id tv_point
 id tv_progress_info
@@ -2951,6 +2985,7 @@ id tv_remain_question_info
 id tv_remain_time
 id tv_start_time
 id tv_status
+id tv_survey_info
 id tv_tab_category_info
 id tv_tab_text
 id tv_title
@@ -2968,6 +3003,7 @@ id up
 id useLogo
 id v_guide_1
 id v_guide_2
+id v_guide_3
 id v_inner_guide_1
 id v_inner_guide_2
 id video_decoder_gl_surface_view
@@ -2978,6 +3014,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id vp_exam_list
+id vp_survey_list
 id when_playing
 id withText
 id withinBounds
@@ -3082,15 +3119,20 @@ layout fastscroll__default_bubble
 layout fragment_category
 layout fragment_edit_profile
 layout fragment_exam
+layout fragment_exam_finish
 layout fragment_exam_list
 layout fragment_exam_test
 layout fragment_home
 layout fragment_login
 layout fragment_more
 layout fragment_org
+layout fragment_pass_change
 layout fragment_setting
+layout fragment_setting_home
 layout fragment_sign_up
 layout fragment_stand_by
+layout fragment_survey
+layout fragment_survey_item
 layout fragment_test_question
 layout item_audio_controller
 layout item_audio_player
@@ -3114,6 +3156,9 @@ layout list_item_home_org
 layout list_item_more_exam
 layout list_item_more_org
 layout list_item_org_exam
+layout list_item_survey_answer
+layout list_item_survey_answer_txt
+layout list_item_survey_question
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3196,6 +3241,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation exam_nav
 navigation main_nav
+navigation setting_nav
 plurals mtrl_badge_content_description
 raw a_new_lang_template
 raw ccp_afrikaans
