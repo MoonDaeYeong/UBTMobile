@@ -22,10 +22,16 @@ import java.lang.Object;
 
 public abstract class FragmentStandByBinding extends ViewDataBinding {
   @NonNull
+  public final MaterialButton btnRetake;
+
+  @NonNull
   public final MaterialButton btnSign;
 
   @NonNull
   public final MaterialButton btnStart;
+
+  @NonNull
+  public final MaterialButton btnTimeAdd;
 
   @NonNull
   public final TextInputEditText etEmail;
@@ -115,18 +121,20 @@ public abstract class FragmentStandByBinding extends ViewDataBinding {
   public final Guideline vInnerGuide2;
 
   protected FragmentStandByBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton btnSign, MaterialButton btnStart, TextInputEditText etEmail,
-      TextInputEditText etExamName, TextInputEditText etName, FrameLayout flCountDown,
-      FrameLayout flProgress, Guideline hGuide1, Guideline hGuide2, Guideline hGuide3,
-      Guideline hGuide4, Guideline hGuide5, Guideline hGuide6, ImageView ivPicture,
-      LinearLayout llCurrentTime, LinearLayout llRemainTime, LinearLayout llStartTime,
-      ProgressBar prIndicator, TextView tvCountDown, TextView tvDesc, TextView tvEmail,
-      TextView tvExamName, TextView tvFileName, TextView tvName, TextView tvProgressInfo,
-      TextView tvRemainTime, TextView tvStartTime, Guideline vGuide1, Guideline vGuide2,
-      Guideline vInnerGuide1, Guideline vInnerGuide2) {
+      MaterialButton btnRetake, MaterialButton btnSign, MaterialButton btnStart,
+      MaterialButton btnTimeAdd, TextInputEditText etEmail, TextInputEditText etExamName,
+      TextInputEditText etName, FrameLayout flCountDown, FrameLayout flProgress, Guideline hGuide1,
+      Guideline hGuide2, Guideline hGuide3, Guideline hGuide4, Guideline hGuide5, Guideline hGuide6,
+      ImageView ivPicture, LinearLayout llCurrentTime, LinearLayout llRemainTime,
+      LinearLayout llStartTime, ProgressBar prIndicator, TextView tvCountDown, TextView tvDesc,
+      TextView tvEmail, TextView tvExamName, TextView tvFileName, TextView tvName,
+      TextView tvProgressInfo, TextView tvRemainTime, TextView tvStartTime, Guideline vGuide1,
+      Guideline vGuide2, Guideline vInnerGuide1, Guideline vInnerGuide2) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnRetake = btnRetake;
     this.btnSign = btnSign;
     this.btnStart = btnStart;
+    this.btnTimeAdd = btnTimeAdd;
     this.etEmail = etEmail;
     this.etExamName = etExamName;
     this.etName = etName;

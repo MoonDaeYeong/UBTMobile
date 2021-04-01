@@ -35,7 +35,7 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
                 meDataResult.postValue(it)
 
                 imgUrl = it.image
-                userName = it.lastName
+                userName = it.firstName
                 it.email?.let { email ->
                     userEmail = email
                 }
@@ -80,11 +80,11 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
     }
 
     companion object {
-        var imgUrl: String = ""
-        var userName: String = ""
-        var userEmail: String = ""
-        var point: Int = 0
-        var examCount: Int = 0
-        var orgCount: Int = 0
+        var imgUrl: String? = ""
+        var userName: String? = ""
+        var userEmail: String? = ""
+        var point: Int? = 0
+        var examCount: Int? = 0
+        var orgCount: Int? = 0
     }
 }

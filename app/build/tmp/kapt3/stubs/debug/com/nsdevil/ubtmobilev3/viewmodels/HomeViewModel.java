@@ -13,15 +13,18 @@ public final class HomeViewModel extends com.nsdevil.ubtmobilev3.base.BaseViewMo
     @org.jetbrains.annotations.NotNull()
     private final androidx.lifecycle.MutableLiveData<com.nsdevil.ubtmobilev3.data.response.ExamCodeResponse> examCodeResult = null;
     private final com.nsdevil.ubtmobilev3.data.repository.HomeRepository repository = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.Nullable()
     private static java.lang.String imgUrl = "";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.Nullable()
     private static java.lang.String userName = "";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.Nullable()
     private static java.lang.String userEmail = "";
-    private static int point = 0;
-    private static int examCount = 0;
-    private static int orgCount = 0;
+    @org.jetbrains.annotations.Nullable()
+    private static java.lang.Integer point = 0;
+    @org.jetbrains.annotations.Nullable()
+    private static java.lang.Integer examCount = 0;
+    @org.jetbrains.annotations.Nullable()
+    private static java.lang.Integer orgCount = 0;
     @org.jetbrains.annotations.NotNull()
     public static final com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel.Companion Companion = null;
     
@@ -59,55 +62,61 @@ public final class HomeViewModel extends com.nsdevil.ubtmobilev3.base.BaseViewMo
         super();
     }
     
-    @kotlin.Metadata(mv = {1, 4, 2}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0011\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001a\u0010\u000f\u001a\u00020\u0004X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0010\u0010\u0006\"\u0004\b\u0011\u0010\bR\u001a\u0010\u0012\u001a\u00020\u0004X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0006\"\u0004\b\u0014\u0010\bR\u001a\u0010\u0015\u001a\u00020\nX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\f\"\u0004\b\u0017\u0010\u000eR\u001a\u0010\u0018\u001a\u00020\nX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\f\"\u0004\b\u001a\u0010\u000e\u00a8\u0006\u001b"}, d2 = {"Lcom/nsdevil/ubtmobilev3/viewmodels/HomeViewModel$Companion;", "", "()V", "examCount", "", "getExamCount", "()I", "setExamCount", "(I)V", "imgUrl", "", "getImgUrl", "()Ljava/lang/String;", "setImgUrl", "(Ljava/lang/String;)V", "orgCount", "getOrgCount", "setOrgCount", "point", "getPoint", "setPoint", "userEmail", "getUserEmail", "setUserEmail", "userName", "getUserName", "setUserName", "app_debug"})
+    @kotlin.Metadata(mv = {1, 4, 2}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0011\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001c\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001e\u0010\u0010\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0011\u0010\u0006\"\u0004\b\u0012\u0010\bR\u001e\u0010\u0013\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0014\u0010\u0006\"\u0004\b\u0015\u0010\bR\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0017\u0010\r\"\u0004\b\u0018\u0010\u000fR\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\r\"\u0004\b\u001b\u0010\u000f\u00a8\u0006\u001c"}, d2 = {"Lcom/nsdevil/ubtmobilev3/viewmodels/HomeViewModel$Companion;", "", "()V", "examCount", "", "getExamCount", "()Ljava/lang/Integer;", "setExamCount", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "imgUrl", "", "getImgUrl", "()Ljava/lang/String;", "setImgUrl", "(Ljava/lang/String;)V", "orgCount", "getOrgCount", "setOrgCount", "point", "getPoint", "setPoint", "userEmail", "getUserEmail", "setUserEmail", "userName", "getUserName", "setUserName", "app_debug"})
     public static final class Companion {
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.Nullable()
         public final java.lang.String getImgUrl() {
             return null;
         }
         
-        public final void setImgUrl(@org.jetbrains.annotations.NotNull()
+        public final void setImgUrl(@org.jetbrains.annotations.Nullable()
         java.lang.String p0) {
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.Nullable()
         public final java.lang.String getUserName() {
             return null;
         }
         
-        public final void setUserName(@org.jetbrains.annotations.NotNull()
+        public final void setUserName(@org.jetbrains.annotations.Nullable()
         java.lang.String p0) {
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.Nullable()
         public final java.lang.String getUserEmail() {
             return null;
         }
         
-        public final void setUserEmail(@org.jetbrains.annotations.NotNull()
+        public final void setUserEmail(@org.jetbrains.annotations.Nullable()
         java.lang.String p0) {
         }
         
-        public final int getPoint() {
-            return 0;
+        @org.jetbrains.annotations.Nullable()
+        public final java.lang.Integer getPoint() {
+            return null;
         }
         
-        public final void setPoint(int p0) {
+        public final void setPoint(@org.jetbrains.annotations.Nullable()
+        java.lang.Integer p0) {
         }
         
-        public final int getExamCount() {
-            return 0;
+        @org.jetbrains.annotations.Nullable()
+        public final java.lang.Integer getExamCount() {
+            return null;
         }
         
-        public final void setExamCount(int p0) {
+        public final void setExamCount(@org.jetbrains.annotations.Nullable()
+        java.lang.Integer p0) {
         }
         
-        public final int getOrgCount() {
-            return 0;
+        @org.jetbrains.annotations.Nullable()
+        public final java.lang.Integer getOrgCount() {
+            return null;
         }
         
-        public final void setOrgCount(int p0) {
+        public final void setOrgCount(@org.jetbrains.annotations.Nullable()
+        java.lang.Integer p0) {
         }
         
         private Companion() {

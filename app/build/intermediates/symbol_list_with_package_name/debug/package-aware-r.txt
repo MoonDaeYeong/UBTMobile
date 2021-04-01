@@ -2432,7 +2432,6 @@ id blocking
 id bottom
 id bottom_to_top
 id bounce
-id btn_ai_option
 id btn_back_to_login
 id btn_close
 id btn_confirm
@@ -2448,6 +2447,7 @@ id btn_other_org_more
 id btn_password_change
 id btn_picture
 id btn_preview
+id btn_retake
 id btn_save_change
 id btn_search
 id btn_sign
@@ -2456,6 +2456,7 @@ id btn_start
 id btn_submission
 id btn_survey
 id btn_take_an_exam
+id btn_time_add
 id btn_user_info
 id buttonPanel
 id cache_measures
@@ -2543,6 +2544,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id error
+id et_admin_code
 id et_answer
 id et_current_pw
 id et_email
@@ -2930,6 +2932,7 @@ id ti_exam_list_1
 id ti_exam_list_2
 id ti_exam_list_3
 id ti_exam_list_4
+id til_admin_code
 id til_current_pw
 id til_email
 id til_name
@@ -2937,6 +2940,7 @@ id til_new_pw
 id til_password
 id til_phone_number
 id til_repeat_pw
+id til_seconds
 id time
 id title
 id titleDividerNoCustom
@@ -3103,6 +3107,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_add_time
 layout dialog_code_register
 layout dialog_exam_info
 layout dialog_sign_pad

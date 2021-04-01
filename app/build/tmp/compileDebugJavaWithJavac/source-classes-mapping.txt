@@ -1,5 +1,7 @@
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
+com/nsdevil/ubtmobilev3/databinding/DialogAddTimeBindingImpl.java
+ com.nsdevil.ubtmobilev3.databinding.DialogAddTimeBindingImpl
 com/nsdevil/ubtmobilev3/ui/Hilt_SettingFragment.java
  com.nsdevil.ubtmobilev3.ui.Hilt_SettingFragment
 com/nsdevil/ubtmobilev3/BR.java
@@ -142,6 +144,9 @@ com/nsdevil/ubtmobilev3/data/repository/StandByRepository_Factory.java
 com/nsdevil/ubtmobilev3/data/db/InExamInfoDao_Impl.java
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$1
+ com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$10
+ com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$11
+ com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$12
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$2
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$3
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$4
@@ -149,6 +154,7 @@ com/nsdevil/ubtmobilev3/data/db/InExamInfoDao_Impl.java
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$6
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$7
  com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$8
+ com.nsdevil.ubtmobilev3.data.db.InExamInfoDao_Impl$9
 com/nsdevil/ubtmobilev3/ui/Hilt_ExamFinishFragment.java
  com.nsdevil.ubtmobilev3.ui.Hilt_ExamFinishFragment
 com/nsdevil/ubtmobilev3/databinding/FragmentExamListBinding.java
@@ -371,6 +377,8 @@ com/nsdevil/ubtmobilev3/viewmodels/LoginViewModel_Factory.java
  com.nsdevil.ubtmobilev3.viewmodels.LoginViewModel_Factory
 com/nsdevil/ubtmobilev3/databinding/FragmentStandByBinding.java
  com.nsdevil.ubtmobilev3.databinding.FragmentStandByBinding
+com/nsdevil/ubtmobilev3/databinding/DialogAddTimeBinding.java
+ com.nsdevil.ubtmobilev3.databinding.DialogAddTimeBinding
 com/nsdevil/ubtmobilev3/data/db/InDataDao_Impl.java
  com.nsdevil.ubtmobilev3.data.db.InDataDao_Impl
  com.nsdevil.ubtmobilev3.data.db.InDataDao_Impl$1

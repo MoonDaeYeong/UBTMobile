@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.nsdevil.ubtmobilev3.MainActivity
 import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.adapter.HomeExamAdapter
 import com.nsdevil.ubtmobilev3.adapter.HomeOrgAdapter
@@ -34,6 +35,8 @@ class HomeFragment : BaseFragment() {
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         context ?: return binding.root
+
+        (requireActivity() as MainActivity).backPossible = false
 
         (activity as AppCompatActivity).setSupportActionBar(binding.bar)
         setHasOptionsMenu(true)
@@ -117,12 +120,17 @@ class HomeFragment : BaseFragment() {
     private fun examItemClick(userExam: HomeDataResponse.Result.Userexam) {
         val examInfoDialog = ExamInfoDialog(requireContext(), userExam) {
             if(!userExam.examCode.isNullOrEmpty()) {
-
                 CommonUtils.userExam = userExam
+
                     if(userExam.aiuse.equals("true", true))
                         setAiUseCheck(true)
                     else
                         setAiUseCheck(false)
+
+                if(userExam.reTake.equals("no", true))
+                    setReTakeCheck(false)
+                else
+                    setReTakeCheck(true)
 
                 navigateToStandby()
             }

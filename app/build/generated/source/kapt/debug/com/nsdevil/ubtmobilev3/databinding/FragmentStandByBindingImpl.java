@@ -37,14 +37,16 @@ public class FragmentStandByBindingImpl extends FragmentStandByBinding  {
         sViewsWithIds.put(R.id.tv_email, 21);
         sViewsWithIds.put(R.id.et_email, 22);
         sViewsWithIds.put(R.id.btn_sign, 23);
-        sViewsWithIds.put(R.id.tv_desc, 24);
-        sViewsWithIds.put(R.id.btn_start, 25);
-        sViewsWithIds.put(R.id.fl_progress, 26);
-        sViewsWithIds.put(R.id.tv_file_name, 27);
-        sViewsWithIds.put(R.id.pr_indicator, 28);
-        sViewsWithIds.put(R.id.tv_progress_info, 29);
-        sViewsWithIds.put(R.id.fl_count_down, 30);
-        sViewsWithIds.put(R.id.tv_count_down, 31);
+        sViewsWithIds.put(R.id.btn_retake, 24);
+        sViewsWithIds.put(R.id.btn_time_add, 25);
+        sViewsWithIds.put(R.id.tv_desc, 26);
+        sViewsWithIds.put(R.id.btn_start, 27);
+        sViewsWithIds.put(R.id.fl_progress, 28);
+        sViewsWithIds.put(R.id.tv_file_name, 29);
+        sViewsWithIds.put(R.id.pr_indicator, 30);
+        sViewsWithIds.put(R.id.tv_progress_info, 31);
+        sViewsWithIds.put(R.id.fl_count_down, 32);
+        sViewsWithIds.put(R.id.tv_count_down, 33);
     }
     // views
     @NonNull
@@ -55,17 +57,19 @@ public class FragmentStandByBindingImpl extends FragmentStandByBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentStandByBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 32, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 34, sIncludes, sViewsWithIds));
     }
     private FragmentStandByBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (com.google.android.material.button.MaterialButton) bindings[24]
             , (com.google.android.material.button.MaterialButton) bindings[23]
+            , (com.google.android.material.button.MaterialButton) bindings[27]
             , (com.google.android.material.button.MaterialButton) bindings[25]
             , (com.google.android.material.textfield.TextInputEditText) bindings[22]
             , (com.google.android.material.textfield.TextInputEditText) bindings[18]
             , (com.google.android.material.textfield.TextInputEditText) bindings[20]
-            , (android.widget.FrameLayout) bindings[30]
-            , (android.widget.FrameLayout) bindings[26]
+            , (android.widget.FrameLayout) bindings[32]
+            , (android.widget.FrameLayout) bindings[28]
             , (androidx.constraintlayout.widget.Guideline) bindings[1]
             , (androidx.constraintlayout.widget.Guideline) bindings[2]
             , (androidx.constraintlayout.widget.Guideline) bindings[3]
@@ -76,14 +80,14 @@ public class FragmentStandByBindingImpl extends FragmentStandByBinding  {
             , (android.widget.LinearLayout) bindings[9]
             , (android.widget.LinearLayout) bindings[12]
             , (android.widget.LinearLayout) bindings[10]
-            , (android.widget.ProgressBar) bindings[28]
-            , (android.widget.TextView) bindings[31]
-            , (android.widget.TextView) bindings[24]
+            , (android.widget.ProgressBar) bindings[30]
+            , (android.widget.TextView) bindings[33]
+            , (android.widget.TextView) bindings[26]
             , (android.widget.TextView) bindings[21]
             , (android.widget.TextView) bindings[17]
-            , (android.widget.TextView) bindings[27]
-            , (android.widget.TextView) bindings[19]
             , (android.widget.TextView) bindings[29]
+            , (android.widget.TextView) bindings[19]
+            , (android.widget.TextView) bindings[31]
             , (android.widget.TextView) bindings[13]
             , (android.widget.TextView) bindings[11]
             , (androidx.constraintlayout.widget.Guideline) bindings[7]

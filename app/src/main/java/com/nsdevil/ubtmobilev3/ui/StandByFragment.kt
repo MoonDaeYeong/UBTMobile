@@ -5,17 +5,23 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.nsdevil.ubtmobilev3.MainActivity
 import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.adapter.bindGetUserImg
 import com.nsdevil.ubtmobilev3.base.BaseFragment
 import com.nsdevil.ubtmobilev3.databinding.FragmentStandByBinding
+import com.nsdevil.ubtmobilev3.dialog.AddTimeDialog
 import com.nsdevil.ubtmobilev3.dialog.SignPadDialog
+import com.nsdevil.ubtmobilev3.dialog.TextInputDialog
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.utilities.CommonUtils
+import com.nsdevil.ubtmobilev3.utilities.hide
+import com.nsdevil.ubtmobilev3.utilities.show
 import com.nsdevil.ubtmobilev3.viewmodels.StandByViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -36,12 +42,13 @@ class StandByFragment : BaseFragment() {
         binding = FragmentStandByBinding.inflate(inflater,container, false)
         context ?: return binding.root
 
+        (requireActivity() as MainActivity).backPossible = true
+
         setBindItem()
         subscribeUi()
 
         return binding.root
     }
-
 
     private fun setBindItem() {
         binding.apply {
@@ -68,6 +75,27 @@ class StandByFragment : BaseFragment() {
                 if(!signDialog.isShowing)
                     signDialog.show()
             }
+
+            if((requireActivity() as MainActivity).reTakeCheck)
+                btnRetake.show()
+            else
+                btnRetake.hide()
+
+            btnRetake.setOnClickListener {
+                viewModel.reTake().observe(viewLifecycleOwner) {
+                    simpleDialog("SUCCESS", it, ZAlertDialog.SUCCESS_TYPE)
+                    viewModel.readyCheck.value = true
+                    viewModel.endCheck.postValue(false)
+                    btnStart.text = "START"
+                }
+            }
+
+            btnTimeAdd.setOnClickListener {
+                val addTimeDialog = AddTimeDialog(requireContext()) {
+                    viewModel.updateAddTime(it.toInt() * 60)
+                }
+                addTimeDialog.show()
+            }
         }
     }
 
@@ -92,7 +120,8 @@ class StandByFragment : BaseFragment() {
                     binding.btnStart.text = "Continue"
             }
             endCheck.observe(viewLifecycleOwner) {
-                binding.btnStart.text = "End Exam"
+                if(it)
+                    binding.btnStart.text = "End Exam"
             }
 
             getExamInfo(requireContext())

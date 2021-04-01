@@ -25,12 +25,15 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import com.nsdevil.ubtmobilev3.base.BaseActivity
 import com.nsdevil.ubtmobilev3.databinding.ActivityMainBinding
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
+import com.nsdevil.ubtmobilev3.ui.StandByFragment
 import com.nsdevil.ubtmobilev3.utilities.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
@@ -40,6 +43,8 @@ import kotlinx.coroutines.delay
 class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    var backPossible = false
 
     private val permissionListener: PermissionListener = object : PermissionListener {
         override fun onPermissionGranted() {
@@ -151,15 +156,18 @@ class MainActivity : BaseActivity() {
 
     var finishCount = 0
     override fun onBackPressed() {
-        // super.onBackPressed()
-        if(finishCount != 0)
-            finishAndRemoveTask()
-        lifecycleScope.launchWhenResumed {
-            finishCount += 1
-            if(finishCount == 1)
-                Toast.makeText(this@MainActivity, "Press again to finish.", Toast.LENGTH_SHORT).show()
-            delay(2000L)
-            finishCount = 0
+        if(backPossible)
+            super.onBackPressed()
+        else {
+            if(finishCount != 0)
+                finishAndRemoveTask()
+            lifecycleScope.launchWhenResumed {
+                finishCount += 1
+                if(finishCount == 1)
+                    Toast.makeText(this@MainActivity, "Press again to finish.", Toast.LENGTH_SHORT).show()
+                delay(2000L)
+                finishCount = 0
+            }
         }
     }
 }

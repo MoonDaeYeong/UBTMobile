@@ -74,6 +74,7 @@ import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
 import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
 import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
@@ -272,17 +273,23 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
 
       }
 
-      private Set<String> keySetSetOfString() {
-        return SetBuilder.<String>newSetBuilder(10).add(ExamFinishViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ExamViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MoreViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OrgViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SettingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SignUpViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(StandByViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SurveyViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
-      }
-
       @Override
       public void injectMainActivity(MainActivity mainActivity) {
       }
 
       @Override
       public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
-        return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerMainApplication_HiltComponents_SingletonC.this.applicationContextModule), keySetSetOfString(), new ViewModelCBuilder(), Collections.<ViewModelProvider.Factory>emptySet(), Collections.<ViewModelProvider.Factory>emptySet());
+        return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerMainApplication_HiltComponents_SingletonC.this.applicationContextModule), getViewModelKeys(), new ViewModelCBuilder(), Collections.<ViewModelProvider.Factory>emptySet(), Collections.<ViewModelProvider.Factory>emptySet());
+      }
+
+      @Override
+      public Set<String> getViewModelKeys() {
+        return SetBuilder.<String>newSetBuilder(10).add(ExamFinishViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ExamViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MoreViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OrgViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SettingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SignUpViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(StandByViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SurveyViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      }
+
+      @Override
+      public ViewModelComponentBuilder getViewModelComponentBuilder() {
+        return new ViewModelCBuilder();
       }
 
       @Override

@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.nsdevil.ubtmobilev3"
-4    android:versionCode="12"
-5    android:versionName="2.1.2" >
+4    android:versionCode="14"
+5    android:versionName="2.1.4" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
@@ -40,17 +40,17 @@
 21-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:14:9-32
 22
 23    <uses-permission android:name="android.permission.WAKE_LOCK" />
-23-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:25:5-68
-23-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:25:22-65
+23-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:25:5-68
+23-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:25:22-65
 24    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-24-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:27:5-81
-24-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:27:22-78
+24-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:27:5-81
+24-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:27:22-78
 25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-25-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:28:5-77
-25-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:28:22-74
+25-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:28:5-77
+25-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:28:22-74
 26    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-26-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
-26-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
+26-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
+26-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
 27
 28    <application
 28-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:16:5-48:19
@@ -59,7 +59,7 @@
 30        android:allowBackup="true"
 30-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:18:9-35
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.3.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad7ad55f08d1279256d8969dd7c1fbc8\core-1.3.2\AndroidManifest.xml:24:18-86
+31-->[androidx.core:core:1.3.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5a6ef9f54f61d4cd89aa1eac4970267d\core-1.3.2\AndroidManifest.xml:24:18-86
 32        android:debuggable="true"
 33        android:extractNativeLibs="false"
 34        android:icon="@mipmap/ic_launcher"
@@ -72,406 +72,405 @@
 37-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:21:9-54
 38        android:supportsRtl="true"
 38-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:22:9-35
-39        android:testOnly="true"
-40        android:theme="@style/Theme.UBTMobilev3"
-40-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:24:9-49
-41        android:usesCleartextTraffic="true" >
-41-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:25:9-44
-42        <activity
-42-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:27:9-40:20
-43            android:name="com.nsdevil.ubtmobilev3.MainActivity"
-43-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:27:19-47
-44            android:screenOrientation="userPortrait"
-44-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:28:13-53
-45            android:windowSoftInputMode="adjustPan" >
-45-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:29:13-52
-46            <intent-filter>
-46-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:31:13-39:29
-47                <action android:name="android.intent.action.MAIN" />
-47-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:32:17-69
-47-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:32:25-66
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:34:17-77
-49-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:34:27-74
-50
-51                <!--
-52                <category android:name="android.intent.category.HOME"/>
-53                <category android:name="android.intent.category.DEFAULT"/>
-54                -->
-55
-56            </intent-filter>
-57        </activity>
-58
-59        <service
-59-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:42:9-44:38
-60            android:name="com.nsdevil.ubtmobilev3.services.PoseNetService"
-60-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:43:13-52
-61            android:enabled="true" />
-61-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:44:13-35
-62
-63        <receiver android:name="com.nsdevil.ubtmobilev3.services.MyReceiver" />
-63-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:46:9-57
-63-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:46:19-54
-64
-65        <service
-65-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:24:9-30:19
-66            android:name="com.google.firebase.components.ComponentDiscoveryService"
-66-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:25:13-84
-67            android:directBootAware="true"
-67-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
-68            android:exported="false" >
-68-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:26:13-37
-69            <meta-data
-69-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:27:13-29:85
-70                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
-70-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:28:17-130
-71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\a497605803a7471b126cc0723776c7a8\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:29:17-82
-72            <meta-data
-72-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\6902187a12d6b2ae938744d66bee1651\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:11:13-13:85
-73                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
-73-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\6902187a12d6b2ae938744d66bee1651\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:12:17-126
-74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\6902187a12d6b2ae938744d66bee1651\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:13:17-82
-75            <meta-data
-75-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\e9fe04d26401a763cffdd0b7600a3ecc\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:15:13-17:85
-76                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-76-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\e9fe04d26401a763cffdd0b7600a3ecc\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:16:17-113
-77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\e9fe04d26401a763cffdd0b7600a3ecc\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:17:17-82
-78            <meta-data
-78-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\197a78f85734a53c8f8b6ef764cd16e3\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:18:13-20:85
-79                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-79-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\197a78f85734a53c8f8b6ef764cd16e3\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:19:17-115
-80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\197a78f85734a53c8f8b6ef764cd16e3\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:20:17-82
-81            <meta-data
-81-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\37b198a01089d7e019733d2f12f88e0a\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
-82                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-82-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\37b198a01089d7e019733d2f12f88e0a\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
-83                android:value="com.google.firebase.components.ComponentRegistrar" />
-83-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\37b198a01089d7e019733d2f12f88e0a\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
-84            <meta-data
-84-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\b4b9d0b37a6fdabe92d44ddae43e233a\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
-85                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-85-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\b4b9d0b37a6fdabe92d44ddae43e233a\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
-86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\b4b9d0b37a6fdabe92d44ddae43e233a\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
-87            <!--
-88                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-89                clients to use it as well, by defining this registrar in their own core/common library.
-90            -->
-91            <meta-data
-91-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
-92                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-92-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
-94        </service>
-95
-96        <activity
-96-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad2e2dd82aa5c3809a55caa936f030d9\jetified-tedpermission-2.2.2\AndroidManifest.xml:10:9-14:67
-97            android:name="com.gun0912.tedpermission.TedPermissionActivity"
-97-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad2e2dd82aa5c3809a55caa936f030d9\jetified-tedpermission-2.2.2\AndroidManifest.xml:11:13-75
-98            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
-98-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad2e2dd82aa5c3809a55caa936f030d9\jetified-tedpermission-2.2.2\AndroidManifest.xml:12:13-144
-99            android:screenOrientation="unspecified"
-99-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad2e2dd82aa5c3809a55caa936f030d9\jetified-tedpermission-2.2.2\AndroidManifest.xml:13:13-52
-100            android:theme="@style/Theme.Transparent.Permission" />
-100-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ad2e2dd82aa5c3809a55caa936f030d9\jetified-tedpermission-2.2.2\AndroidManifest.xml:14:13-64
-101
-102        <provider
-102-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:31:9-37:35
-103            android:name="androidx.work.impl.WorkManagerInitializer"
-103-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:32:13-69
-104            android:authorities="com.nsdevil.ubtmobilev3.workmanager-init"
-104-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:33:13-68
-105            android:directBootAware="false"
-105-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:34:13-44
-106            android:exported="false"
-106-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:35:13-37
-107            android:multiprocess="true" />
-107-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:36:13-40
-108
-109        <service
-109-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:39:9-44:35
-110            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-110-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:40:13-88
-111            android:directBootAware="false"
-111-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:41:13-44
-112            android:enabled="@bool/enable_system_alarm_service_default"
-112-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:42:13-72
-113            android:exported="false" />
-113-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:43:13-37
-114        <service
-114-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:45:9-51:35
-115            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-115-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:46:13-84
-116            android:directBootAware="false"
-116-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:47:13-44
-117            android:enabled="@bool/enable_system_job_service_default"
-117-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:48:13-70
-118            android:exported="true"
-118-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:49:13-36
-119            android:permission="android.permission.BIND_JOB_SERVICE" />
-119-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:50:13-69
-120        <service
-120-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:52:9-57:35
-121            android:name="androidx.work.impl.foreground.SystemForegroundService"
-121-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:53:13-81
-122            android:directBootAware="false"
-122-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:54:13-44
-123            android:enabled="@bool/enable_system_foreground_service_default"
-123-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:55:13-77
-124            android:exported="false" />
-124-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:56:13-37
-125
-126        <receiver
-126-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:59:9-64:35
-127            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-127-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:60:13-88
-128            android:directBootAware="false"
-128-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:61:13-44
-129            android:enabled="true"
-129-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:62:13-35
-130            android:exported="false" />
-130-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:63:13-37
-131        <receiver
-131-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:65:9-75:20
-132            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-132-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:66:13-106
-133            android:directBootAware="false"
-133-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:67:13-44
-134            android:enabled="false"
-134-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:68:13-36
-135            android:exported="false" >
-135-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:69:13-37
-136            <intent-filter>
-136-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:71:13-74:29
-137                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-137-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:72:17-87
-137-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:72:25-84
-138                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-138-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:73:17-90
-138-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:73:25-87
-139            </intent-filter>
-140        </receiver>
-141        <receiver
-141-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:76:9-86:20
-142            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-142-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:77:13-104
-143            android:directBootAware="false"
-143-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:78:13-44
-144            android:enabled="false"
-144-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:79:13-36
-145            android:exported="false" >
-145-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:80:13-37
-146            <intent-filter>
-146-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:82:13-85:29
-147                <action android:name="android.intent.action.BATTERY_OKAY" />
-147-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:83:17-77
-147-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:83:25-74
-148                <action android:name="android.intent.action.BATTERY_LOW" />
-148-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:84:17-76
-148-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:84:25-73
-149            </intent-filter>
-150        </receiver>
-151        <receiver
-151-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:87:9-97:20
-152            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-152-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:88:13-104
-153            android:directBootAware="false"
-153-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:89:13-44
-154            android:enabled="false"
-154-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:90:13-36
-155            android:exported="false" >
-155-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:91:13-37
-156            <intent-filter>
-156-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:93:13-96:29
-157                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-157-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:94:17-83
-157-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:94:25-80
-158                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-158-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:95:17-82
-158-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:95:25-79
-159            </intent-filter>
-160        </receiver>
-161        <receiver
-161-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:98:9-107:20
-162            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-162-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:99:13-103
-163            android:directBootAware="false"
-163-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:100:13-44
-164            android:enabled="false"
-164-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:101:13-36
-165            android:exported="false" >
-165-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:102:13-37
-166            <intent-filter>
-166-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:104:13-106:29
-167                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-167-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:105:17-79
-167-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:105:25-76
-168            </intent-filter>
-169        </receiver>
-170        <receiver
-170-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:108:9-119:20
-171            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-171-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:109:13-88
-172            android:directBootAware="false"
-172-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:110:13-44
-173            android:enabled="false"
-173-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:111:13-36
-174            android:exported="false" >
-174-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:112:13-37
-175            <intent-filter>
-175-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:114:13-118:29
-176                <action android:name="android.intent.action.BOOT_COMPLETED" />
-176-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:115:17-79
-176-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:115:25-76
-177                <action android:name="android.intent.action.TIME_SET" />
-177-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:116:17-73
-177-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:116:25-70
-178                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-178-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:117:17-81
-178-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:117:25-78
-179            </intent-filter>
-180        </receiver>
-181        <receiver
-181-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:120:9-129:20
-182            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-182-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:121:13-99
-183            android:directBootAware="false"
-183-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:122:13-44
-184            android:enabled="@bool/enable_system_alarm_service_default"
-184-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:123:13-72
-185            android:exported="false" >
-185-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:124:13-37
-186            <intent-filter>
-186-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:126:13-128:29
-187                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-187-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:127:17-98
-187-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:127:25-95
-188            </intent-filter>
-189        </receiver>
-190        <receiver
-190-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:130:9-140:20
-191            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-191-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:131:13-78
-192            android:directBootAware="false"
-192-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:132:13-44
-193            android:enabled="true"
-193-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:133:13-35
-194            android:exported="true"
-194-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:134:13-36
-195            android:permission="android.permission.DUMP" >
-195-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:135:13-57
-196            <intent-filter>
-196-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:137:13-139:29
-197                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-197-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:138:17-88
-197-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c63c559970179e39218b3fe6563018ce\work-runtime-2.5.0\AndroidManifest.xml:138:25-85
-198            </intent-filter>
-199        </receiver>
-200
-201        <service
-201-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\00891daf4701e3c35100c4e2f696a229\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
-202            android:name="androidx.room.MultiInstanceInvalidationService"
-202-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\00891daf4701e3c35100c4e2f696a229\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
-203            android:directBootAware="true"
-203-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\00891daf4701e3c35100c4e2f696a229\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
-204            android:exported="false" />
-204-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\00891daf4701e3c35100c4e2f696a229\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
-205        <service
-205-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
-206            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-206-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
-207            android:exported="false" >
-207-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
-208            <meta-data
-208-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
-209                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-209-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
-210                android:value="cct" />
-210-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\2e51e48dcc9b858a5bfb53bfd1dd3809\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
-211        </service>
-212
-213        <provider
-213-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
-214            android:name="com.google.firebase.provider.FirebaseInitProvider"
-214-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
-215            android:authorities="com.nsdevil.ubtmobilev3.firebaseinitprovider"
-215-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
-216            android:directBootAware="true"
-216-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
-217            android:exported="false"
-217-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
-218            android:initOrder="100" />
-218-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9995ce4d508b72ca2bfe3ef450c3497b\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
-219
-220        <receiver
-220-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
-221            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-221-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
-222            android:enabled="true"
-222-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
-223            android:exported="false" >
-223-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
-224        </receiver>
-225
-226        <service
-226-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
-227            android:name="com.google.android.gms.measurement.AppMeasurementService"
-227-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
-228            android:enabled="true"
-228-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
-229            android:exported="false" />
-229-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
-230        <service
-230-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
-231            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-231-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
-232            android:enabled="true"
-232-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
-233            android:exported="false"
-233-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
-234            android:permission="android.permission.BIND_JOB_SERVICE" />
-234-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\16eaefeb6d2f1bde5c591636e81b71d3\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
-235
-236        <meta-data
-236-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\152ba2e696f9409d7972d6f35d4def59\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-237            android:name="com.google.android.gms.version"
-237-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\152ba2e696f9409d7972d6f35d4def59\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-238            android:value="@integer/google_play_services_version" />
-238-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\152ba2e696f9409d7972d6f35d4def59\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-239
-240        <provider
-240-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\59b8ff5140c5e987f258fed05daee6fe\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-241            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-241-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\59b8ff5140c5e987f258fed05daee6fe\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-242            android:authorities="com.nsdevil.ubtmobilev3.lifecycle-process"
-242-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\59b8ff5140c5e987f258fed05daee6fe\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-243            android:exported="false"
-243-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\59b8ff5140c5e987f258fed05daee6fe\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-244            android:multiprocess="true" />
-244-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\59b8ff5140c5e987f258fed05daee6fe\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-245
-246        <service
-246-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
-247            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-247-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
-248            android:exported="false"
-248-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
-249            android:permission="android.permission.BIND_JOB_SERVICE" >
-249-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
-250        </service>
-251
-252        <receiver
-252-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
-253            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-253-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
-254            android:exported="false" />
-254-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\78289913ad3adf687d7a60a1e73b0f06\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
-255    </application>
-256
-257</manifest>
+39        android:theme="@style/Theme.UBTMobilev3"
+39-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:24:9-49
+40        android:usesCleartextTraffic="true" >
+40-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:25:9-44
+41        <activity
+41-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:27:9-40:20
+42            android:name="com.nsdevil.ubtmobilev3.MainActivity"
+42-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:27:19-47
+43            android:screenOrientation="userPortrait"
+43-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:28:13-53
+44            android:windowSoftInputMode="adjustPan" >
+44-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:29:13-52
+45            <intent-filter>
+45-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:31:13-39:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:32:17-69
+46-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:32:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:34:17-77
+48-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:34:27-74
+49
+50                <!--
+51                <category android:name="android.intent.category.HOME"/>
+52                <category android:name="android.intent.category.DEFAULT"/>
+53                -->
+54
+55            </intent-filter>
+56        </activity>
+57
+58        <service
+58-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:42:9-44:38
+59            android:name="com.nsdevil.ubtmobilev3.services.PoseNetService"
+59-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:43:13-52
+60            android:enabled="true" />
+60-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:44:13-35
+61
+62        <receiver android:name="com.nsdevil.ubtmobilev3.services.MyReceiver" />
+62-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:46:9-57
+62-->D:\WorkSpace\p_Android\UBTMobilev3\app\src\main\AndroidManifest.xml:46:19-54
+63
+64        <service
+64-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:24:9-30:19
+65            android:name="com.google.firebase.components.ComponentDiscoveryService"
+65-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:25:13-84
+66            android:directBootAware="true"
+66-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+67            android:exported="false" >
+67-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:26:13-37
+68            <meta-data
+68-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:27:13-29:85
+69                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+69-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:28:17-130
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.firebase:firebase-crashlytics-ktx:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\ccfe3eb65a3c22d0fedf76b85aae1983\jetified-firebase-crashlytics-ktx-17.3.1\AndroidManifest.xml:29:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\af98f33ba3494428829fc024fb6e773a\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:11:13-13:85
+72                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+72-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\af98f33ba3494428829fc024fb6e773a\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:12:17-126
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-analytics-ktx:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\af98f33ba3494428829fc024fb6e773a\jetified-firebase-analytics-ktx-18.0.2\AndroidManifest.xml:13:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8180f022e778d893dc48a0556a0934a5\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:15:13-17:85
+75                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+75-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8180f022e778d893dc48a0556a0934a5\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:16:17-113
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8180f022e778d893dc48a0556a0934a5\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:17:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\379dc8a2328a2b3ec8e710139847f27a\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:18:13-20:85
+78                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+78-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\379dc8a2328a2b3ec8e710139847f27a\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:19:17-115
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-crashlytics:17.3.1] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\379dc8a2328a2b3ec8e710139847f27a\jetified-firebase-crashlytics-17.3.1\AndroidManifest.xml:20:17-82
+80            <meta-data
+80-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8a9d910dccde657c0488939bd5a71ed9\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
+81                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+81-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8a9d910dccde657c0488939bd5a71ed9\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\8a9d910dccde657c0488939bd5a71ed9\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\22d41d1b5e2b83a0f0b0bc01b66c3821\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+84                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+84-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\22d41d1b5e2b83a0f0b0bc01b66c3821\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\22d41d1b5e2b83a0f0b0bc01b66c3821\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+86            <!--
+87                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+88                clients to use it as well, by defining this registrar in their own core/common library.
+89            -->
+90            <meta-data
+90-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+91                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+91-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+93        </service>
+94
+95        <activity
+95-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f24518597f1c277ee6b0f47776bda216\jetified-tedpermission-2.2.2\AndroidManifest.xml:10:9-14:67
+96            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+96-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f24518597f1c277ee6b0f47776bda216\jetified-tedpermission-2.2.2\AndroidManifest.xml:11:13-75
+97            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
+97-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f24518597f1c277ee6b0f47776bda216\jetified-tedpermission-2.2.2\AndroidManifest.xml:12:13-144
+98            android:screenOrientation="unspecified"
+98-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f24518597f1c277ee6b0f47776bda216\jetified-tedpermission-2.2.2\AndroidManifest.xml:13:13-52
+99            android:theme="@style/Theme.Transparent.Permission" />
+99-->[gun0912.ted:tedpermission:2.2.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f24518597f1c277ee6b0f47776bda216\jetified-tedpermission-2.2.2\AndroidManifest.xml:14:13-64
+100
+101        <provider
+101-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:31:9-37:35
+102            android:name="androidx.work.impl.WorkManagerInitializer"
+102-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:32:13-69
+103            android:authorities="com.nsdevil.ubtmobilev3.workmanager-init"
+103-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:33:13-68
+104            android:directBootAware="false"
+104-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:34:13-44
+105            android:exported="false"
+105-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:35:13-37
+106            android:multiprocess="true" />
+106-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:36:13-40
+107
+108        <service
+108-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:39:9-44:35
+109            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+109-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:40:13-88
+110            android:directBootAware="false"
+110-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:41:13-44
+111            android:enabled="@bool/enable_system_alarm_service_default"
+111-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:42:13-72
+112            android:exported="false" />
+112-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:43:13-37
+113        <service
+113-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:45:9-51:35
+114            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+114-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:46:13-84
+115            android:directBootAware="false"
+115-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:47:13-44
+116            android:enabled="@bool/enable_system_job_service_default"
+116-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:48:13-70
+117            android:exported="true"
+117-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:49:13-36
+118            android:permission="android.permission.BIND_JOB_SERVICE" />
+118-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:50:13-69
+119        <service
+119-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:52:9-57:35
+120            android:name="androidx.work.impl.foreground.SystemForegroundService"
+120-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:53:13-81
+121            android:directBootAware="false"
+121-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:54:13-44
+122            android:enabled="@bool/enable_system_foreground_service_default"
+122-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:55:13-77
+123            android:exported="false" />
+123-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:56:13-37
+124
+125        <receiver
+125-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:59:9-64:35
+126            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+126-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:60:13-88
+127            android:directBootAware="false"
+127-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:61:13-44
+128            android:enabled="true"
+128-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:62:13-35
+129            android:exported="false" />
+129-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:63:13-37
+130        <receiver
+130-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:65:9-75:20
+131            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+131-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:66:13-106
+132            android:directBootAware="false"
+132-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:67:13-44
+133            android:enabled="false"
+133-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:68:13-36
+134            android:exported="false" >
+134-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:69:13-37
+135            <intent-filter>
+135-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:71:13-74:29
+136                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+136-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:72:17-87
+136-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:72:25-84
+137                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+137-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:73:17-90
+137-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:73:25-87
+138            </intent-filter>
+139        </receiver>
+140        <receiver
+140-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:76:9-86:20
+141            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+141-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:77:13-104
+142            android:directBootAware="false"
+142-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:78:13-44
+143            android:enabled="false"
+143-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:79:13-36
+144            android:exported="false" >
+144-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:80:13-37
+145            <intent-filter>
+145-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:82:13-85:29
+146                <action android:name="android.intent.action.BATTERY_OKAY" />
+146-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:83:17-77
+146-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:83:25-74
+147                <action android:name="android.intent.action.BATTERY_LOW" />
+147-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:84:17-76
+147-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:84:25-73
+148            </intent-filter>
+149        </receiver>
+150        <receiver
+150-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:87:9-97:20
+151            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+151-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:88:13-104
+152            android:directBootAware="false"
+152-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:89:13-44
+153            android:enabled="false"
+153-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:90:13-36
+154            android:exported="false" >
+154-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:91:13-37
+155            <intent-filter>
+155-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:93:13-96:29
+156                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+156-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:94:17-83
+156-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:94:25-80
+157                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+157-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:95:17-82
+157-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:95:25-79
+158            </intent-filter>
+159        </receiver>
+160        <receiver
+160-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:98:9-107:20
+161            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+161-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:99:13-103
+162            android:directBootAware="false"
+162-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:100:13-44
+163            android:enabled="false"
+163-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:101:13-36
+164            android:exported="false" >
+164-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:102:13-37
+165            <intent-filter>
+165-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:104:13-106:29
+166                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+166-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:105:17-79
+166-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:105:25-76
+167            </intent-filter>
+168        </receiver>
+169        <receiver
+169-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:108:9-119:20
+170            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+170-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:109:13-88
+171            android:directBootAware="false"
+171-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:110:13-44
+172            android:enabled="false"
+172-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:111:13-36
+173            android:exported="false" >
+173-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:112:13-37
+174            <intent-filter>
+174-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:114:13-118:29
+175                <action android:name="android.intent.action.BOOT_COMPLETED" />
+175-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:115:17-79
+175-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:115:25-76
+176                <action android:name="android.intent.action.TIME_SET" />
+176-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:116:17-73
+176-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:116:25-70
+177                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+177-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:117:17-81
+177-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:117:25-78
+178            </intent-filter>
+179        </receiver>
+180        <receiver
+180-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:120:9-129:20
+181            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+181-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:121:13-99
+182            android:directBootAware="false"
+182-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:122:13-44
+183            android:enabled="@bool/enable_system_alarm_service_default"
+183-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:123:13-72
+184            android:exported="false" >
+184-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:124:13-37
+185            <intent-filter>
+185-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:126:13-128:29
+186                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+186-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:127:17-98
+186-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:127:25-95
+187            </intent-filter>
+188        </receiver>
+189        <receiver
+189-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:130:9-140:20
+190            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+190-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:131:13-78
+191            android:directBootAware="false"
+191-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:132:13-44
+192            android:enabled="true"
+192-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:133:13-35
+193            android:exported="true"
+193-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:134:13-36
+194            android:permission="android.permission.DUMP" >
+194-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:135:13-57
+195            <intent-filter>
+195-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:137:13-139:29
+196                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+196-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:138:17-88
+196-->[androidx.work:work-runtime:2.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\987077c151e20cb2708acc73392d840b\work-runtime-2.5.0\AndroidManifest.xml:138:25-85
+197            </intent-filter>
+198        </receiver>
+199
+200        <service
+200-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f56d637819dbd37b3267fae73bd6e314\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+201            android:name="androidx.room.MultiInstanceInvalidationService"
+201-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f56d637819dbd37b3267fae73bd6e314\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
+202            android:directBootAware="true"
+202-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f56d637819dbd37b3267fae73bd6e314\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+203            android:exported="false" />
+203-->[androidx.room:room-runtime:2.2.6] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\f56d637819dbd37b3267fae73bd6e314\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+204        <service
+204-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+205            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+205-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+206            android:exported="false" >
+206-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+207            <meta-data
+207-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+208                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+208-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+209                android:value="cct" />
+209-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\c4881ea73127a034a0dd6e4b0fc0d79a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+210        </service>
+211
+212        <provider
+212-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+213            android:name="com.google.firebase.provider.FirebaseInitProvider"
+213-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+214            android:authorities="com.nsdevil.ubtmobilev3.firebaseinitprovider"
+214-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+215            android:directBootAware="true"
+215-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+216            android:exported="false"
+216-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+217            android:initOrder="100" />
+217-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\db2b22eec8826238fe58bd593f37000f\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+218
+219        <receiver
+219-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
+220            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+220-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
+221            android:enabled="true"
+221-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
+222            android:exported="false" >
+222-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
+223        </receiver>
+224
+225        <service
+225-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
+226            android:name="com.google.android.gms.measurement.AppMeasurementService"
+226-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
+227            android:enabled="true"
+227-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
+228            android:exported="false" />
+228-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
+229        <service
+229-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
+230            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+230-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
+231            android:enabled="true"
+231-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
+232            android:exported="false"
+232-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
+233            android:permission="android.permission.BIND_JOB_SERVICE" />
+233-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\5dd5b7bd33175120adca77646b49403f\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
+234
+235        <meta-data
+235-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9af7feb66e5eb0defd19d14477736cb9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+236            android:name="com.google.android.gms.version"
+236-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9af7feb66e5eb0defd19d14477736cb9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+237            android:value="@integer/google_play_services_version" />
+237-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\9af7feb66e5eb0defd19d14477736cb9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+238
+239        <provider
+239-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\68b7df5d33c0136f7837c7fe94ed896f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+240            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+240-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\68b7df5d33c0136f7837c7fe94ed896f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+241            android:authorities="com.nsdevil.ubtmobilev3.lifecycle-process"
+241-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\68b7df5d33c0136f7837c7fe94ed896f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+242            android:exported="false"
+242-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\68b7df5d33c0136f7837c7fe94ed896f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+243            android:multiprocess="true" />
+243-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\68b7df5d33c0136f7837c7fe94ed896f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+244
+245        <service
+245-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+246            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+246-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+247            android:exported="false"
+247-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+248            android:permission="android.permission.BIND_JOB_SERVICE" >
+248-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+249        </service>
+250
+251        <receiver
+251-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+252            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+252-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
+253            android:exported="false" />
+253-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Moon\.gradle\caches\transforms-2\files-2.1\1eefcc2a7cda39c8a7e98f4df5e294ff\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+254    </application>
+255
+256</manifest>

@@ -4,7 +4,7 @@
             "outputFile": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\afd22fada0dd734cad28d07a97f3cb03\\media-1.0.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\f52dd1ee55fdde3c0b7a3915b2263c78\\media-1.0.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\d919914e579ac7caacaf2c55d070a73e\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Moon\\.gradle\\caches\\transforms-2\\files-2.1\\7291728aff547c2f5d41efef22a75651\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

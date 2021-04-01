@@ -26,6 +26,7 @@ abstract class BaseActivity : AppCompatActivity() {
     val aiAlertCheck get() = myReceiver.aiAlertCheck
 
     var aiUseCheck = true
+    var reTakeCheck = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,8 +68,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     fun customThrowableHandle(throwable: Throwable) {
         if(throwable.message.toString().contains("HTTP", true)) {
-            val httpError = throwable as HttpException
             try {
+                val httpError = throwable as HttpException
                 val customErrorBody = Gson().fromJson(httpError.response()?.errorBody()?.charStream(), CustomErrorBody::class.java)
                 simpleDialog("Warning", customErrorBody.message.toString(), ZAlertDialog.WARNING_TYPE)
             } catch (ex: Exception) {

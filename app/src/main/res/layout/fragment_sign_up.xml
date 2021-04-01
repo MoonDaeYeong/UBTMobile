@@ -143,7 +143,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    app:layout_constraintBottom_toTopOf="@id/btn_login"
+                    app:passwordToggleEnabled="true"
+                    app:layout_constraintBottom_toTopOf="@id/btn_sign_up"
                     app:layout_constraintTop_toBottomOf="@id/til_email">
 
                     <com.google.android.material.textfield.TextInputEditText

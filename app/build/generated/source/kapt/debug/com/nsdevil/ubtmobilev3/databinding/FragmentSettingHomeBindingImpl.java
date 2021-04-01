@@ -21,7 +21,6 @@ public class FragmentSettingHomeBindingImpl extends FragmentSettingHomeBinding  
         sViewsWithIds.put(R.id.card_content, 11);
         sViewsWithIds.put(R.id.btn_user_info, 12);
         sViewsWithIds.put(R.id.btn_password_change, 13);
-        sViewsWithIds.put(R.id.btn_ai_option, 14);
     }
     // views
     @NonNull
@@ -38,11 +37,10 @@ public class FragmentSettingHomeBindingImpl extends FragmentSettingHomeBinding  
     // Inverse Binding Event Handlers
 
     public FragmentSettingHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
     }
     private FragmentSettingHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[14]
             , (com.google.android.material.button.MaterialButton) bindings[13]
             , (com.google.android.material.button.MaterialButton) bindings[12]
             , (androidx.cardview.widget.CardView) bindings[11]
@@ -123,22 +121,26 @@ public class FragmentSettingHomeBindingImpl extends FragmentSettingHomeBinding  
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int androidxDatabindingViewDataBindingSafeUnboxProfileDataOrgCount = 0;
+        java.lang.Integer profileDataPoint = null;
         java.lang.String stringValueOfProfileDataOrgCount = null;
         java.lang.String profileDataImgUrl = null;
         java.lang.String stringValueOfProfileDataExamCount = null;
         java.lang.String mboundView4AndroidStringPointFormatProfileDataPoint = null;
-        int profileDataExamCount = 0;
-        int profileDataOrgCount = 0;
+        int androidxDatabindingViewDataBindingSafeUnboxProfileDataExamCount = 0;
+        java.lang.Integer profileDataExamCount = null;
+        java.lang.Integer profileDataOrgCount = null;
         java.lang.String profileDataUserEmail = null;
         java.lang.String profileDataUserName = null;
         com.nsdevil.ubtmobilev3.data.model.ProfileData profileData = mProfileData;
-        int profileDataPoint = 0;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
 
 
                 if (profileData != null) {
+                    // read profileData.point
+                    profileDataPoint = profileData.getPoint();
                     // read profileData.imgUrl
                     profileDataImgUrl = profileData.getImgUrl();
                     // read profileData.examCount
@@ -149,17 +151,21 @@ public class FragmentSettingHomeBindingImpl extends FragmentSettingHomeBinding  
                     profileDataUserEmail = profileData.getUserEmail();
                     // read profileData.userName
                     profileDataUserName = profileData.getUserName();
-                    // read profileData.point
-                    profileDataPoint = profileData.getPoint();
                 }
 
 
-                // read String.valueOf(profileData.examCount)
-                stringValueOfProfileDataExamCount = java.lang.String.valueOf(profileDataExamCount);
-                // read String.valueOf(profileData.orgCount)
-                stringValueOfProfileDataOrgCount = java.lang.String.valueOf(profileDataOrgCount);
                 // read @android:string/pointFormat
                 mboundView4AndroidStringPointFormatProfileDataPoint = mboundView4.getResources().getString(R.string.pointFormat, profileDataPoint);
+                // read androidx.databinding.ViewDataBinding.safeUnbox(profileData.examCount)
+                androidxDatabindingViewDataBindingSafeUnboxProfileDataExamCount = androidx.databinding.ViewDataBinding.safeUnbox(profileDataExamCount);
+                // read androidx.databinding.ViewDataBinding.safeUnbox(profileData.orgCount)
+                androidxDatabindingViewDataBindingSafeUnboxProfileDataOrgCount = androidx.databinding.ViewDataBinding.safeUnbox(profileDataOrgCount);
+
+
+                // read String.valueOf(androidx.databinding.ViewDataBinding.safeUnbox(profileData.examCount))
+                stringValueOfProfileDataExamCount = java.lang.String.valueOf(androidxDatabindingViewDataBindingSafeUnboxProfileDataExamCount);
+                // read String.valueOf(androidx.databinding.ViewDataBinding.safeUnbox(profileData.orgCount))
+                stringValueOfProfileDataOrgCount = java.lang.String.valueOf(androidxDatabindingViewDataBindingSafeUnboxProfileDataOrgCount);
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {

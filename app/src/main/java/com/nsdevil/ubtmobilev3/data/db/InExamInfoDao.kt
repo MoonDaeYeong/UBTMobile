@@ -22,6 +22,12 @@ interface InExamInfoDao {
     @Query("UPDATE InExamInfo SET submissionYN = 1 WHERE examCode = :examCode")
     suspend fun updateSubmitCheck(examCode: String)
 
+    @Query("UPDATE InExamInfo SET submissionYN = 0 AND remainTime = totalTime WHERE examCode = :examCode")
+    suspend fun updateRetakeInfo(examCode: String)
+
+    @Query("UPDATE InExamInfo SET remainTime = remainTime + :addTime WHERE examCode = :examCode")
+    suspend fun updateAddTime(examCode: String, addTime: Int)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertExamInfo(examInfo: InExamInfo)
 }

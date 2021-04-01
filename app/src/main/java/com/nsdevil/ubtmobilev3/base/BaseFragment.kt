@@ -39,4 +39,8 @@ abstract class BaseFragment : Fragment() {
     fun setAiUseCheck(check: Boolean) {
         (requireActivity() as MainActivity).aiUseCheck = check
     }
+
+    fun setReTakeCheck(check: Boolean) {
+        (requireActivity() as MainActivity).reTakeCheck = check
+    }
 }

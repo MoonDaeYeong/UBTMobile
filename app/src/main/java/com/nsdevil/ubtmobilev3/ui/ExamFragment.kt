@@ -16,6 +16,7 @@ import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
+import com.nsdevil.ubtmobilev3.MainActivity
 import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.base.BaseFragment
 import com.nsdevil.ubtmobilev3.databinding.FragmentExamBinding
@@ -43,6 +44,8 @@ class ExamFragment : BaseFragment() {
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View {
         binding = FragmentExamBinding.inflate(inflater,container,false)
         context ?: return binding.root
+
+        (requireActivity() as MainActivity).backPossible = false
 
         setBindItem()
         subscribeUi()

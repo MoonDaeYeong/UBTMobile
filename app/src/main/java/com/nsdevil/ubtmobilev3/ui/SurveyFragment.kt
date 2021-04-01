@@ -1,14 +1,12 @@
 package com.nsdevil.ubtmobilev3.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -22,7 +20,6 @@ import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.utilities.CommonUtils
 import com.nsdevil.ubtmobilev3.viewmodels.SurveyViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.math.max
 
 @AndroidEntryPoint
 class SurveyFragment : BaseFragment() {
@@ -56,6 +53,9 @@ class SurveyFragment : BaseFragment() {
             vpSurveyList.adapter = surveyViewPagerAdapter
 
             vpSurveyList.isUserInputEnabled = false
+
+            if(vpSurveyList.currentItem == researchList.size-1)
+                btnSurvey.text = "Submission"
 
             btnSurvey.setOnClickListener {
                 if(btnSurvey.text.toString().equals("Next",true)) {

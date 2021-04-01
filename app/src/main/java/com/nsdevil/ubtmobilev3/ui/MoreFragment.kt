@@ -114,6 +114,11 @@ class MoreFragment : BaseFragment() {
                 else
                     setAiUseCheck(false)
 
+                if(userExam.reTake.equals("no", true))
+                    setReTakeCheck(false)
+                else
+                    setReTakeCheck(true)
+
                 navigateToStandby()
             }
         }

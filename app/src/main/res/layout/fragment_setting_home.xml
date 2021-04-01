@@ -210,27 +210,6 @@
                     android:text="Password Change"
                     android:textSize="17sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="AI Option"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-
-                    <Button
-                        android:id="@+id/btn_ai_option"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="USE"/>
-
-                </LinearLayout>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

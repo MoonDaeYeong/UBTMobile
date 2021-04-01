@@ -2,6 +2,7 @@ package com.nsdevil.ubtmobilev3.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.nsdevil.ubtmobilev3.api.UbtService
 import com.nsdevil.ubtmobilev3.base.BaseViewModel
@@ -129,6 +130,18 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
                 }
             }
             readyCheck.value = true
+        }
+    }
+
+    fun reTake() = repository.reTakeExam(
+        onStart= {viewLoading.postValue(true)},
+        onComplete = {viewLoading.postValue(false)},
+        onThrowable = {getThrowable.postValue(it)}
+    ).asLiveData(viewModelScope.coroutineContext)
+
+    fun updateAddTime(addTime: Int) {
+        viewModelScope.launch {
+            repository.updateAddTime(addTime)
         }
     }
 

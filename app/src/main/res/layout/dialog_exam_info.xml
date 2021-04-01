@@ -16,11 +16,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/dialog_light"
             android:paddingHorizontal="10dp"
-            android:paddingVertical="10dp">
+            android:paddingVertical="10dp"
+            android:minHeight="300dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h_guide_1"
@@ -94,7 +95,7 @@
             <TextView
                 android:id="@+id/tv_exam_name"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="@font/josefinsans_bold"
                 android:gravity="center"
@@ -103,7 +104,7 @@
                 android:textSize="19sp"
                 app:layout_constraintBottom_toTopOf="@id/tv_exam_info"
                 app:layout_constraintTop_toTopOf="@id/h_guide_2"
-                tools:text="askdjflaskdjflaks먼이람나이러ㅣ나ㅓㅇㄹ리마ㅓㄴㅇ라ㅣ먼ㅇ라ㅣ먼ㅇㄻ니ㅏㅇㄹ마니ㅓㅇ" />
+                tools:text="askdjflaskdjflaks먼이람나이러ㅣ나ㅓㅇ\n\n\nㄹ리마ㅓㄴㅇ라ㅣ먼ㅇ라ㅣ먼ㅇㄻ니ㅏㅇㄹ마니ㅓㅇdfaf" />
 
             <TextView
                 android:id="@+id/tv_exam_info"

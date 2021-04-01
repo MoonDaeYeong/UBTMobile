@@ -20,6 +20,7 @@ class TextInputDialog(context: Context, private val lifecycleOwner: LifecycleOwn
     private val titleStr = MutableLiveData<String>()
     private val confirmStr = MutableLiveData<String>()
     private val cancelStr = MutableLiveData<String>()
+    private val hintStr = MutableLiveData<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +55,9 @@ class TextInputDialog(context: Context, private val lifecycleOwner: LifecycleOwn
         cancelStr.observe(lifecycleOwner) {
             binding.btnClose.text = it
         }
+        hintStr.observe(lifecycleOwner) {
+            binding.etTextCode.hint = it
+        }
     }
 
     fun setTitle(title: String) {
@@ -66,6 +70,10 @@ class TextInputDialog(context: Context, private val lifecycleOwner: LifecycleOwn
 
     fun setCancel(cancel: String) {
         cancelStr.postValue(cancel)
+    }
+
+    fun setHint(hint: String) {
+        hintStr.postValue(hint)
     }
 
     override fun onStart() {

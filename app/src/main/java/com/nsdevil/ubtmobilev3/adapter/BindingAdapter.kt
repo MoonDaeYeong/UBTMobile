@@ -50,15 +50,31 @@ fun bindStatusChangeText(tv: TextView, status: String?) {
 
 @BindingAdapter("image_from_url")
 fun bindImageFromUrl(iv: ImageView, url: String?) {
+    val context = iv.context
     if(!url.isNullOrEmpty()) {
-        Glide.with(iv).load(url).error(R.drawable.ic_ubt_logo).into(iv)
+        if (url.contains("http", true)) {
+            Glide.with(context)
+                .load(url)
+                .error(R.drawable.ic_ubt_logo)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(iv)
+        } else {
+            val newUrl = "https://ubtcloud.me/uploadingDir/organizicons/" + url
+            Glide.with(context)
+                .load(newUrl)
+                .error(R.drawable.ic_ubt_logo)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(iv)
+        }
     }
 }
 
 @BindingAdapter("exam_s_date", "exam_e_date")
 fun bindExamDate(tv: TextView, sDate: String?, eDate: String?) {
     if(!sDate.isNullOrEmpty() && !eDate.isNullOrEmpty()) {
-        val sdf = SimpleDateFormat("yyyy.MM.dd", Locale.getDefault())
+        val sdf = SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREAN)
 
         val sDay = sdf.format(Date(sDate.toLong()))
         val eDay = sdf.format(Date(eDate.toLong()))

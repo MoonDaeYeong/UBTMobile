@@ -39,20 +39,6 @@ class SettingHomeFragment : BaseFragment() {
                 val directions = SettingHomeFragmentDirections.actionSettingHomeFragmentToPassChangeFragment()
                 findNavController().navigate(directions)
             }
-
-            var aiOptionCheck = true
-            btnAiOption.setOnClickListener {
-                if(aiOptionCheck) {
-                    aiOptionCheck = false
-                    btnAiOption.text = "STOP"
-                    btnAiOption.setBackgroundColor(requireContext().getColorRes(R.color.error_stroke_color))
-                } else {
-                    aiOptionCheck = true
-                    btnAiOption.text = "USE"
-                    btnAiOption.setBackgroundColor(requireContext().getColorRes(R.color.colorPrimary))
-                }
-                setAiUseCheck(aiOptionCheck)
-            }
         }
     }
 }

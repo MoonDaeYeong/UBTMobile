@@ -30,6 +30,10 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateSubmitCheck;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateRetakeInfo;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateAddTime;
+
   public InExamInfoDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfInExamInfo = new EntityInsertionAdapter<InExamInfo>(__db) {
@@ -69,6 +73,20 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
       @Override
       public String createQuery() {
         final String _query = "UPDATE InExamInfo SET submissionYN = 1 WHERE examCode = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateRetakeInfo = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE InExamInfo SET submissionYN = 0 AND remainTime = totalTime WHERE examCode = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateAddTime = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE InExamInfo SET remainTime = remainTime + ? WHERE examCode = ?";
         return _query;
       }
     };
@@ -139,6 +157,59 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
         }
       }
     }, p1);
+  }
+
+  @Override
+  public Object updateRetakeInfo(final String examCode, final Continuation<? super Unit> p1) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateRetakeInfo.acquire();
+        int _argIndex = 1;
+        if (examCode == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, examCode);
+        }
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfUpdateRetakeInfo.release(_stmt);
+        }
+      }
+    }, p1);
+  }
+
+  @Override
+  public Object updateAddTime(final String examCode, final int addTime,
+      final Continuation<? super Unit> p2) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateAddTime.acquire();
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, addTime);
+        _argIndex = 2;
+        if (examCode == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, examCode);
+        }
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfUpdateAddTime.release(_stmt);
+        }
+      }
+    }, p2);
   }
 
   @Override

@@ -4,7 +4,6 @@ package com.nsdevil.ubtmobilev3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,9 +20,6 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentSettingHomeBinding extends ViewDataBinding {
-  @NonNull
-  public final Button btnAiOption;
-
   @NonNull
   public final MaterialButton btnPasswordChange;
 
@@ -58,12 +54,10 @@ public abstract class FragmentSettingHomeBinding extends ViewDataBinding {
   protected ProfileData mProfileData;
 
   protected FragmentSettingHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnAiOption, MaterialButton btnPasswordChange, MaterialButton btnUserInfo,
-      CardView cardContent, CardView cardTitle, ImageView ivPicture, LinearLayout llExams,
-      LinearLayout llOrganiztions, LinearLayout llPoint, TextView tvUserEmail,
-      TextView tvUserName) {
+      MaterialButton btnPasswordChange, MaterialButton btnUserInfo, CardView cardContent,
+      CardView cardTitle, ImageView ivPicture, LinearLayout llExams, LinearLayout llOrganiztions,
+      LinearLayout llPoint, TextView tvUserEmail, TextView tvUserName) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.btnAiOption = btnAiOption;
     this.btnPasswordChange = btnPasswordChange;
     this.btnUserInfo = btnUserInfo;
     this.cardContent = cardContent;

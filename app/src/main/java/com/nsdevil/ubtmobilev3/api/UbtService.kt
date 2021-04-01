@@ -99,8 +99,7 @@ interface UbtService {
 
     companion object {
         fun create(): UbtService {
-            val logger =
-                HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
+            val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
 
             val client = OkHttpClient.Builder()
                 .addInterceptor(logger)
@@ -120,8 +119,7 @@ interface UbtService {
         }
 
         fun downloadCreate(onAttachmentDownloadUpdate: (Int, String) -> Unit, fileName: String): UbtService {
-            val logger =
-                HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
+            val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
 
             val client = OkHttpClient.Builder()
                 .addInterceptor(logger)
@@ -140,10 +138,7 @@ interface UbtService {
                 .create(UbtService::class.java)
         }
 
-        private fun createOkHttpProgressClient(
-            onAttachmentDownloadUpdate: (Int, String) -> Unit,
-            fileName: String
-        ): OkHttpClient {
+        private fun createOkHttpProgressClient(onAttachmentDownloadUpdate: (Int, String) -> Unit,fileName: String): OkHttpClient {
             val builder = OkHttpClient.Builder()
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY

@@ -47,7 +47,23 @@
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/AppTheme.PopupOverlay"
                     app:title="@{orgData.organizName}"
-                    tools:title="Organization" />
+                    tools:title="Organization" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{orgData.organizName}"
+                        tools:text="asdfkjadlkf\nsafasfaf"
+                        android:lines="2"
+                        android:gravity="center|start"
+                        android:textColor="@color/white"
+                        android:background="@color/black"
+                        android:padding="3dp"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:includeFontPadding="false"
+                        android:textSize="20sp"/>
+
+                </com.google.android.material.appbar.MaterialToolbar>
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 

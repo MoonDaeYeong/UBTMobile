@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huangyz0918:androidwm:0.2.3@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08278c047a6c51a89017e01770cd8557/jetified-androidwm-0.2.3/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08278c047a6c51a89017e01770cd8557/jetified-androidwm-0.2.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08278c047a6c51a89017e01770cd8557/jetified-androidwm-0.2.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/217d03b8845c11ab29c050b08a45c1c5/jetified-androidwm-0.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/217d03b8845c11ab29c050b08a45c1c5/jetified-androidwm-0.2.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/217d03b8845c11ab29c050b08a45c1c5/jetified-androidwm-0.2.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huangyz0918/androidwm/0.2.3/662e10668d8583f212522342b9840ba0485e9b14/androidwm-0.2.3-javadoc.jar!/" />

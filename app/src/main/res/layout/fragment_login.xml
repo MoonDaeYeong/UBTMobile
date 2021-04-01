@@ -126,6 +126,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    app:passwordToggleEnabled="true"
                     app:layout_constraintBottom_toTopOf="@id/btn_login"
                     app:layout_constraintTop_toBottomOf="@id/til_email">
 

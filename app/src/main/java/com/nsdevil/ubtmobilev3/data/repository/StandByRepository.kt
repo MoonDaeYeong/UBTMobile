@@ -6,6 +6,8 @@ import com.nsdevil.ubtmobilev3.api.UbtService
 import com.nsdevil.ubtmobilev3.data.db.*
 import com.nsdevil.ubtmobilev3.data.response.QuestionResponse
 import com.nsdevil.ubtmobilev3.utilities.CommonUtils
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -26,6 +28,8 @@ class StandByRepository @Inject constructor(private val ubtService: UbtService, 
     suspend fun getMediaList() = dataDao.getMediaList(examCode)
 
     suspend fun insertExamInfo(examInfo: InExamInfo) = examInfoDao.insertExamInfo(examInfo)
+
+    suspend fun updateAddTime(addTime: Int) = examInfoDao.updateAddTime(examCode, addTime)
 
     suspend fun initInsertReadyData(questions: List<QuestionResponse.Result.Question>) {
 
@@ -75,4 +79,13 @@ class StandByRepository @Inject constructor(private val ubtService: UbtService, 
         questionDao.insertQuestion(inQ)
     }
 
+    fun reTakeExam(onStart:() -> Unit, onComplete:() -> Unit, onThrowable:(Throwable) -> Unit) = flow {
+        val examId = CommonUtils.userExam.examId
+        val examCode = CommonUtils.userExam.examCode
+
+        examInfoDao.updateRetakeInfo(examCode)
+        val response = ubtService.questionsSus(CommonUtils.tokenForm, examId).result.questions
+        initInsertReadyData(response)
+        emit("Retake Setting Complete")
+    }.onStart { onStart() }.onCompletion { onComplete() }.catch { e -> onThrowable(e)  }.flowOn(Dispatchers.IO)
 }

@@ -14,42 +14,46 @@ public class FragmentOrgBindingImpl extends FragmentOrgBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.app_bar, 4);
-        sViewsWithIds.put(R.id.toolbar_layout, 5);
-        sViewsWithIds.put(R.id.card_title, 6);
-        sViewsWithIds.put(R.id.rv_exams, 7);
-        sViewsWithIds.put(R.id.tv_empty, 8);
-        sViewsWithIds.put(R.id.bar, 9);
-        sViewsWithIds.put(R.id.fab, 10);
+        sViewsWithIds.put(R.id.app_bar, 5);
+        sViewsWithIds.put(R.id.toolbar_layout, 6);
+        sViewsWithIds.put(R.id.card_title, 7);
+        sViewsWithIds.put(R.id.rv_exams, 8);
+        sViewsWithIds.put(R.id.tv_empty, 9);
+        sViewsWithIds.put(R.id.bar, 10);
+        sViewsWithIds.put(R.id.fab, 11);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    @NonNull
+    private final android.widget.TextView mboundView3;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentOrgBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private FragmentOrgBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.appbar.AppBarLayout) bindings[4]
-            , (com.google.android.material.bottomappbar.BottomAppBar) bindings[9]
-            , (com.google.android.material.button.MaterialButton) bindings[3]
-            , (com.google.android.material.card.MaterialCardView) bindings[6]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[10]
+            , (com.google.android.material.appbar.AppBarLayout) bindings[5]
+            , (com.google.android.material.bottomappbar.BottomAppBar) bindings[10]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
+            , (com.google.android.material.card.MaterialCardView) bindings[7]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[11]
             , (android.widget.ImageView) bindings[1]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[7]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (com.google.android.material.appbar.MaterialToolbar) bindings[2]
-            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[5]
-            , (android.widget.TextView) bindings[8]
+            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[6]
+            , (android.widget.TextView) bindings[9]
             );
         this.btnJoin.setTag(null);
         this.ivCover.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (android.widget.TextView) bindings[3];
+        this.mboundView3.setTag(null);
         this.toolbar.setTag(null);
         setRootTag(root);
         // listeners
@@ -133,6 +137,7 @@ public class FragmentOrgBindingImpl extends FragmentOrgBinding  {
 
             com.nsdevil.ubtmobilev3.adapter.BindingAdapterKt.setVisibility(this.btnJoin, orgDataMy);
             com.nsdevil.ubtmobilev3.adapter.BindingAdapterKt.bindImageFromUrl(this.ivCover, orgDataCoverImage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, orgDataOrganizName);
             this.toolbar.setTitle(orgDataOrganizName);
         }
     }

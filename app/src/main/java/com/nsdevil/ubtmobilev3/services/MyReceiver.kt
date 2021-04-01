@@ -3,14 +3,15 @@ package com.nsdevil.ubtmobilev3.services
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.nsdevil.ubtmobilev3.dialog.AiAlertDialog
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 
 class MyReceiver : BroadcastReceiver() {
 
-    private var headCount = 30
-    private var facialCount = 30
+    private var headCount = 10
+    private var facialCount = 10
     private var onShowCheck = false
 
     val aiAlertCheck = MutableLiveData(false)
@@ -36,8 +37,8 @@ class MyReceiver : BroadcastReceiver() {
         zDialog.setSingleEventListener(object : AiAlertDialog.SingleEventListener {
             override fun confirmClick(dialogSelf: AiAlertDialog) {
                 onShowCheck = false
-                headCount = 30
-                facialCount = 30
+                headCount = 10
+                facialCount = 10
                 dialogSelf.dismiss()
                 aiAlertCheck.postValue(false)
             }
@@ -45,7 +46,12 @@ class MyReceiver : BroadcastReceiver() {
         if(!onShowCheck) {
             onShowCheck = true
             aiAlertCheck.postValue(true)
-            zDialog.show()
+            try {
+                zDialog.show()
+            } catch (ex: Exception) {
+                Toast.makeText(ctx, ex.message.toString(), Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 }

@@ -24,6 +24,10 @@
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_survey_answer.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_survey_answer.xml"
+    },
+    {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_more_org.xml.flat",
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_more_org.xml"
     },
@@ -34,10 +38,6 @@
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_survey.xml.flat",
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\fragment_survey.xml"
-    },
-    {
-        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_survey_answer.xml.flat",
-        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_survey_answer.xml"
     },
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_phone_forwarded_white.xml.flat",
@@ -106,6 +106,10 @@
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_red.xml.flat",
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_check_red.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_add_time.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_add_time.xml"
     },
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",

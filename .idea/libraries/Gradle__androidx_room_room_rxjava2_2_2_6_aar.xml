@@ -5,8 +5,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46bf9ecfc53fb44f9b7e021ced29904f/room-rxjava2-2.2.6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab484d50f48ca259245294df3344ec25/room-rxjava2-2.2.6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/950b526ef7c943d17e20df9aa6cee2e0/room-rxjava2-2.2.6/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/950b526ef7c943d17e20df9aa6cee2e0/room-rxjava2-2.2.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/950b526ef7c943d17e20df9aa6cee2e0/room-rxjava2-2.2.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d83b818e2305a76ee3434a88dc413c0/room-rxjava2-2.2.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0baf6605197135265a5655ebeb081ce8/room-rxjava2-2.2.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0baf6605197135265a5655ebeb081ce8/room-rxjava2-2.2.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0baf6605197135265a5655ebeb081ce8/room-rxjava2-2.2.6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

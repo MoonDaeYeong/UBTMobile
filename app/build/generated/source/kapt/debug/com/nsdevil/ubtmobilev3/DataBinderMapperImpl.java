@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.nsdevil.ubtmobilev3.databinding.ActivityMainBindingImpl;
+import com.nsdevil.ubtmobilev3.databinding.DialogAddTimeBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.DialogCodeRegisterBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.DialogExamInfoBindingImpl;
 import com.nsdevil.ubtmobilev3.databinding.DialogSignPadBindingImpl;
@@ -61,92 +62,95 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMAIN = 1;
 
-  private static final int LAYOUT_DIALOGCODEREGISTER = 2;
+  private static final int LAYOUT_DIALOGADDTIME = 2;
 
-  private static final int LAYOUT_DIALOGEXAMINFO = 3;
+  private static final int LAYOUT_DIALOGCODEREGISTER = 3;
 
-  private static final int LAYOUT_DIALOGSIGNPAD = 4;
+  private static final int LAYOUT_DIALOGEXAMINFO = 4;
 
-  private static final int LAYOUT_DIALOGTESTPREVIEW = 5;
+  private static final int LAYOUT_DIALOGSIGNPAD = 5;
 
-  private static final int LAYOUT_DIALOGTEXTINPUT = 6;
+  private static final int LAYOUT_DIALOGTESTPREVIEW = 6;
 
-  private static final int LAYOUT_DIALOGZALERT = 7;
+  private static final int LAYOUT_DIALOGTEXTINPUT = 7;
 
-  private static final int LAYOUT_FRAGMENTCATEGORY = 8;
+  private static final int LAYOUT_DIALOGZALERT = 8;
 
-  private static final int LAYOUT_FRAGMENTEDITPROFILE = 9;
+  private static final int LAYOUT_FRAGMENTCATEGORY = 9;
 
-  private static final int LAYOUT_FRAGMENTEXAM = 10;
+  private static final int LAYOUT_FRAGMENTEDITPROFILE = 10;
 
-  private static final int LAYOUT_FRAGMENTEXAMFINISH = 11;
+  private static final int LAYOUT_FRAGMENTEXAM = 11;
 
-  private static final int LAYOUT_FRAGMENTEXAMLIST = 12;
+  private static final int LAYOUT_FRAGMENTEXAMFINISH = 12;
 
-  private static final int LAYOUT_FRAGMENTEXAMTEST = 13;
+  private static final int LAYOUT_FRAGMENTEXAMLIST = 13;
 
-  private static final int LAYOUT_FRAGMENTHOME = 14;
+  private static final int LAYOUT_FRAGMENTEXAMTEST = 14;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 15;
+  private static final int LAYOUT_FRAGMENTHOME = 15;
 
-  private static final int LAYOUT_FRAGMENTMORE = 16;
+  private static final int LAYOUT_FRAGMENTLOGIN = 16;
 
-  private static final int LAYOUT_FRAGMENTORG = 17;
+  private static final int LAYOUT_FRAGMENTMORE = 17;
 
-  private static final int LAYOUT_FRAGMENTPASSCHANGE = 18;
+  private static final int LAYOUT_FRAGMENTORG = 18;
 
-  private static final int LAYOUT_FRAGMENTSETTING = 19;
+  private static final int LAYOUT_FRAGMENTPASSCHANGE = 19;
 
-  private static final int LAYOUT_FRAGMENTSETTINGHOME = 20;
+  private static final int LAYOUT_FRAGMENTSETTING = 20;
 
-  private static final int LAYOUT_FRAGMENTSIGNUP = 21;
+  private static final int LAYOUT_FRAGMENTSETTINGHOME = 21;
 
-  private static final int LAYOUT_FRAGMENTSTANDBY = 22;
+  private static final int LAYOUT_FRAGMENTSIGNUP = 22;
 
-  private static final int LAYOUT_FRAGMENTSURVEY = 23;
+  private static final int LAYOUT_FRAGMENTSTANDBY = 23;
 
-  private static final int LAYOUT_FRAGMENTSURVEYITEM = 24;
+  private static final int LAYOUT_FRAGMENTSURVEY = 24;
 
-  private static final int LAYOUT_FRAGMENTTESTQUESTION = 25;
+  private static final int LAYOUT_FRAGMENTSURVEYITEM = 25;
 
-  private static final int LAYOUT_LISTITEMANSWER = 26;
+  private static final int LAYOUT_FRAGMENTTESTQUESTION = 26;
 
-  private static final int LAYOUT_LISTITEMANSWERAUDIO = 27;
+  private static final int LAYOUT_LISTITEMANSWER = 27;
 
-  private static final int LAYOUT_LISTITEMANSWERIMG = 28;
+  private static final int LAYOUT_LISTITEMANSWERAUDIO = 28;
 
-  private static final int LAYOUT_LISTITEMANSWERMATH = 29;
+  private static final int LAYOUT_LISTITEMANSWERIMG = 29;
 
-  private static final int LAYOUT_LISTITEMANSWERTEXT = 30;
+  private static final int LAYOUT_LISTITEMANSWERMATH = 30;
 
-  private static final int LAYOUT_LISTITEMEXAMLIST = 31;
+  private static final int LAYOUT_LISTITEMANSWERTEXT = 31;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWA = 32;
+  private static final int LAYOUT_LISTITEMEXAMLIST = 32;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWATXT = 33;
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWA = 33;
 
-  private static final int LAYOUT_LISTITEMEXAMPREVIEWQ = 34;
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWATXT = 34;
 
-  private static final int LAYOUT_LISTITEMHOMEEXAM = 35;
+  private static final int LAYOUT_LISTITEMEXAMPREVIEWQ = 35;
 
-  private static final int LAYOUT_LISTITEMHOMEORG = 36;
+  private static final int LAYOUT_LISTITEMHOMEEXAM = 36;
 
-  private static final int LAYOUT_LISTITEMMOREEXAM = 37;
+  private static final int LAYOUT_LISTITEMHOMEORG = 37;
 
-  private static final int LAYOUT_LISTITEMMOREORG = 38;
+  private static final int LAYOUT_LISTITEMMOREEXAM = 38;
 
-  private static final int LAYOUT_LISTITEMORGEXAM = 39;
+  private static final int LAYOUT_LISTITEMMOREORG = 39;
 
-  private static final int LAYOUT_LISTITEMSURVEYANSWER = 40;
+  private static final int LAYOUT_LISTITEMORGEXAM = 40;
 
-  private static final int LAYOUT_LISTITEMSURVEYANSWERTXT = 41;
+  private static final int LAYOUT_LISTITEMSURVEYANSWER = 41;
 
-  private static final int LAYOUT_LISTITEMSURVEYQUESTION = 42;
+  private static final int LAYOUT_LISTITEMSURVEYANSWERTXT = 42;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(42);
+  private static final int LAYOUT_LISTITEMSURVEYQUESTION = 43;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(43);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_add_time, LAYOUT_DIALOGADDTIME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_code_register, LAYOUT_DIALOGCODEREGISTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_exam_info, LAYOUT_DIALOGEXAMINFO);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nsdevil.ubtmobilev3.R.layout.dialog_sign_pad, LAYOUT_DIALOGSIGNPAD);
@@ -204,6 +208,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMainBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_DIALOGADDTIME: {
+          if ("layout/dialog_add_time_0".equals(tag)) {
+            return new DialogAddTimeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for dialog_add_time is invalid. Received: " + tag);
         }
         case  LAYOUT_DIALOGCODEREGISTER: {
           if ("layout/dialog_code_register_0".equals(tag)) {
@@ -519,10 +529,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(42);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(43);
 
     static {
       sKeys.put("layout/activity_main_0", com.nsdevil.ubtmobilev3.R.layout.activity_main);
+      sKeys.put("layout/dialog_add_time_0", com.nsdevil.ubtmobilev3.R.layout.dialog_add_time);
       sKeys.put("layout/dialog_code_register_0", com.nsdevil.ubtmobilev3.R.layout.dialog_code_register);
       sKeys.put("layout/dialog_exam_info_0", com.nsdevil.ubtmobilev3.R.layout.dialog_exam_info);
       sKeys.put("layout/dialog_sign_pad_0", com.nsdevil.ubtmobilev3.R.layout.dialog_sign_pad);
