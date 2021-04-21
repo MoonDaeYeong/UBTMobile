@@ -40,6 +40,8 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
                     userEmail = email
                 }
                 point = it.point
+
+                phoneNumber = it.phone
             }, {
                 viewLoading.postValue(false)
                 getThrowable.postValue(it)
@@ -86,5 +88,6 @@ class HomeViewModel @Inject constructor (private val repository: HomeRepository)
         var point: Int? = 0
         var examCount: Int? = 0
         var orgCount: Int? = 0
+        var phoneNumber: String? = ""
     }
 }

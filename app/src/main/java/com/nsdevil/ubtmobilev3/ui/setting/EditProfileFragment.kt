@@ -13,15 +13,14 @@ import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.nsdevil.ubtmobilev3.R
 import com.nsdevil.ubtmobilev3.adapter.bindCirclePicUrl
 import com.nsdevil.ubtmobilev3.base.BaseFragment
 import com.nsdevil.ubtmobilev3.databinding.FragmentEditProfileBinding
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.ui.SettingFragment
-import com.nsdevil.ubtmobilev3.utilities.IMAGE_API_URL
 import com.nsdevil.ubtmobilev3.viewmodels.SettingViewModel
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class EditProfileFragment : BaseFragment() {
@@ -35,16 +34,36 @@ class EditProfileFragment : BaseFragment() {
     var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
-            val imageBitmap = data?.extras?.get("data") as Bitmap
 
-            viewModel.changePicture(imageBitmap, requireContext())
+            data?.extras?.get("data")?.let {
+                val imageBitmap = data.extras?.get("data") as Bitmap
+                viewModel.changePicture(imageBitmap, requireContext())
+                Glide.with(requireContext()).load(imageBitmap).apply(RequestOptions.circleCropTransform()).diskCacheStrategy(
+                    DiskCacheStrategy.NONE
+                ).skipMemoryCache(true).into(binding.ivPicture)
+            }
 
-            Glide.with(requireContext()).load(imageBitmap).apply(RequestOptions.circleCropTransform()).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(binding.ivPicture)
+            data?.data?.let { imgUri ->
+                if(imgUri.toString().contains("content:", true)) {
+                    try {
+                        val bitmap = MediaStore.Images.Media.getBitmap(requireContext().contentResolver, imgUri)
+                        viewModel.changePicture(bitmap, requireContext())
+                    } catch (ex: Exception) {
+                        simpleDialog("Warning", ex.message.toString(), ZAlertDialog.WARNING_TYPE)
+                    }
+
+                    Glide.with(requireContext()).load(imgUri).apply(RequestOptions.circleCropTransform()).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(binding.ivPicture)
+                }
+            }
         }
     }
 
 
-    override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentEditProfileBinding.inflate(inflater, container, false)
         context ?: return binding.root
 
@@ -59,6 +78,7 @@ class EditProfileFragment : BaseFragment() {
         binding.apply {
             tvEmail.text = settingFragment.profileForm.userEmail
             etName.setText(settingFragment.profileForm.userName)
+            etPhoneNumber.setText(settingFragment.profileForm.phoneNumber)
 
             btnSaveChange.setOnClickListener {
                 val name = binding.etName.text.toString()
@@ -68,12 +88,18 @@ class EditProfileFragment : BaseFragment() {
                     btnSaveChange.isEnabled = true
                 } else {
                     btnSaveChange.isEnabled = false
-                    viewModel.editProfile(name, binding.ccp.selectedCountryCodeWithPlus + phoneNumber)
+                    viewModel.editProfile(
+                        name,
+                        binding.ccp.selectedCountryCodeWithPlus + phoneNumber
+                    )
                 }
             }
 
             btnPicture.setOnClickListener {
                 dispatchPictureIntent()
+            }
+            btnAlbum.setOnClickListener {
+                dispatchAlbumIntent()
             }
         }
     }
@@ -119,5 +145,15 @@ class EditProfileFragment : BaseFragment() {
                 resultLauncher.launch(takePictureIntent)
             }
         }
+    }
+
+    private fun dispatchAlbumIntent() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        val mimeTypes = arrayOf("image/jpeg", "image/png")
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes)
+        resultLauncher.launch(intent)
+
+
     }
 }

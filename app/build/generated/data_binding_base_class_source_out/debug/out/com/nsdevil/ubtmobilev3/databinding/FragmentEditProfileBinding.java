@@ -25,6 +25,9 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
   public final Barrier bNameBottom;
 
   @NonNull
+  public final MaterialButton btnAlbum;
+
+  @NonNull
   public final MaterialButton btnPicture;
 
   @NonNull
@@ -76,13 +79,15 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
   public final Guideline vGuide3;
 
   protected FragmentEditProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier bNameBottom, MaterialButton btnPicture, MaterialButton btnSaveChange,
-      CountryCodePicker ccp, TextInputEditText etName, TextInputEditText etPhoneNumber,
-      Guideline hGuide1, Guideline hGuide2, Guideline hGuide3, Guideline hGuide4, Guideline hGuide5,
-      ImageView ivPicture, TextInputLayout tilName, TextInputLayout tilPhoneNumber,
-      TextView tvEmail, Guideline vGuide1, Guideline vGuide2, Guideline vGuide3) {
+      Barrier bNameBottom, MaterialButton btnAlbum, MaterialButton btnPicture,
+      MaterialButton btnSaveChange, CountryCodePicker ccp, TextInputEditText etName,
+      TextInputEditText etPhoneNumber, Guideline hGuide1, Guideline hGuide2, Guideline hGuide3,
+      Guideline hGuide4, Guideline hGuide5, ImageView ivPicture, TextInputLayout tilName,
+      TextInputLayout tilPhoneNumber, TextView tvEmail, Guideline vGuide1, Guideline vGuide2,
+      Guideline vGuide3) {
     super(_bindingComponent, _root, _localFieldCount);
     this.bNameBottom = bNameBottom;
+    this.btnAlbum = btnAlbum;
     this.btnPicture = btnPicture;
     this.btnSaveChange = btnSaveChange;
     this.ccp = ccp;

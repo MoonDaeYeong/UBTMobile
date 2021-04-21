@@ -185,7 +185,7 @@ class HomeFragment : BaseFragment() {
 
     private fun navigateToSetting() {
         with(HomeViewModel) {
-            val profileData = ProfileData(imgUrl, userName, userEmail, point, examCount, orgCount)
+            val profileData = ProfileData(imgUrl, userName, userEmail, point, examCount, orgCount, phoneNumber)
 
             val directions = HomeFragmentDirections.actionHomeFragmentToSettingFragment(Gson().toJson(profileData))
             findNavController().navigate(directions)

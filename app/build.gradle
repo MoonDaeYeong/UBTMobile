@@ -17,8 +17,8 @@ android {
         applicationId "com.nsdevil.ubtmobilev3"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 14
-        versionName "2.1.4"
+        versionCode 16
+        versionName "2.1.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions {

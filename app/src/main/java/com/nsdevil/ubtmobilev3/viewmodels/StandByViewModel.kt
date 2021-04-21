@@ -124,8 +124,16 @@ class StandByViewModel @Inject constructor (private val repository: StandByRepos
         ZipFile(zipFilePath).use { zip ->
             zip.entries().asSequence().forEach { entry ->
                 zip.getInputStream(entry).use { input ->
-                    File(targetPath, entry.name).outputStream().use { output ->
-                        input.copyTo(output)
+                    when {
+                        entry.name.startsWith("uestion") -> {
+                            val newPathName = String.format("question"+entry.name.substring(entry.name.indexOf("/"), entry.name.length)); File(targetPath, newPathName).outputStream().use { output -> input.copyTo(output) }
+                        }
+                        entry.name.startsWith("nswer") -> {
+                            val newPathName = String.format("answer"+entry.name.substring(entry.name.indexOf("/"), entry.name.length)); File(targetPath, newPathName).outputStream().use { output -> input.copyTo(output) }
+                        }
+                        else -> {
+                            File(targetPath, entry.name).outputStream().use { output -> input.copyTo(output) }
+                        }
                     }
                 }
             }

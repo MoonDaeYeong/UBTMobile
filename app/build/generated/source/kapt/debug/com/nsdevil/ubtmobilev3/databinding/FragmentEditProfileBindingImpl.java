@@ -25,13 +25,14 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
         sViewsWithIds.put(R.id.b_name_bottom, 9);
         sViewsWithIds.put(R.id.iv_picture, 10);
         sViewsWithIds.put(R.id.btn_picture, 11);
-        sViewsWithIds.put(R.id.tv_email, 12);
-        sViewsWithIds.put(R.id.til_name, 13);
-        sViewsWithIds.put(R.id.et_name, 14);
-        sViewsWithIds.put(R.id.ccp, 15);
-        sViewsWithIds.put(R.id.til_phone_number, 16);
-        sViewsWithIds.put(R.id.et_phone_number, 17);
-        sViewsWithIds.put(R.id.btn_save_change, 18);
+        sViewsWithIds.put(R.id.btn_album, 12);
+        sViewsWithIds.put(R.id.tv_email, 13);
+        sViewsWithIds.put(R.id.til_name, 14);
+        sViewsWithIds.put(R.id.et_name, 15);
+        sViewsWithIds.put(R.id.ccp, 16);
+        sViewsWithIds.put(R.id.til_phone_number, 17);
+        sViewsWithIds.put(R.id.et_phone_number, 18);
+        sViewsWithIds.put(R.id.btn_save_change, 19);
     }
     // views
     @NonNull
@@ -42,25 +43,26 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
     // Inverse Binding Event Handlers
 
     public FragmentEditProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private FragmentEditProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.constraintlayout.widget.Barrier) bindings[9]
+            , (com.google.android.material.button.MaterialButton) bindings[12]
             , (com.google.android.material.button.MaterialButton) bindings[11]
-            , (com.google.android.material.button.MaterialButton) bindings[18]
-            , (com.hbb20.CountryCodePicker) bindings[15]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[14]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[17]
+            , (com.google.android.material.button.MaterialButton) bindings[19]
+            , (com.hbb20.CountryCodePicker) bindings[16]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[15]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[18]
             , (androidx.constraintlayout.widget.Guideline) bindings[1]
             , (androidx.constraintlayout.widget.Guideline) bindings[2]
             , (androidx.constraintlayout.widget.Guideline) bindings[3]
             , (androidx.constraintlayout.widget.Guideline) bindings[4]
             , (androidx.constraintlayout.widget.Guideline) bindings[5]
             , (android.widget.ImageView) bindings[10]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[13]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[16]
-            , (android.widget.TextView) bindings[12]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[14]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[17]
+            , (android.widget.TextView) bindings[13]
             , (androidx.constraintlayout.widget.Guideline) bindings[6]
             , (androidx.constraintlayout.widget.Guideline) bindings[7]
             , (androidx.constraintlayout.widget.Guideline) bindings[8]

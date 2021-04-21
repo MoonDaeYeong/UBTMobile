@@ -25,6 +25,8 @@ public final class HomeViewModel extends com.nsdevil.ubtmobilev3.base.BaseViewMo
     private static java.lang.Integer examCount = 0;
     @org.jetbrains.annotations.Nullable()
     private static java.lang.Integer orgCount = 0;
+    @org.jetbrains.annotations.Nullable()
+    private static java.lang.String phoneNumber = "";
     @org.jetbrains.annotations.NotNull()
     public static final com.nsdevil.ubtmobilev3.viewmodels.HomeViewModel.Companion Companion = null;
     
@@ -62,7 +64,7 @@ public final class HomeViewModel extends com.nsdevil.ubtmobilev3.base.BaseViewMo
         super();
     }
     
-    @kotlin.Metadata(mv = {1, 4, 2}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0011\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001c\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001e\u0010\u0010\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0011\u0010\u0006\"\u0004\b\u0012\u0010\bR\u001e\u0010\u0013\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0014\u0010\u0006\"\u0004\b\u0015\u0010\bR\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0017\u0010\r\"\u0004\b\u0018\u0010\u000fR\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\r\"\u0004\b\u001b\u0010\u000f\u00a8\u0006\u001c"}, d2 = {"Lcom/nsdevil/ubtmobilev3/viewmodels/HomeViewModel$Companion;", "", "()V", "examCount", "", "getExamCount", "()Ljava/lang/Integer;", "setExamCount", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "imgUrl", "", "getImgUrl", "()Ljava/lang/String;", "setImgUrl", "(Ljava/lang/String;)V", "orgCount", "getOrgCount", "setOrgCount", "point", "getPoint", "setPoint", "userEmail", "getUserEmail", "setUserEmail", "userName", "getUserName", "setUserName", "app_debug"})
+    @kotlin.Metadata(mv = {1, 4, 2}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0014\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001c\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001e\u0010\u0010\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0011\u0010\u0006\"\u0004\b\u0012\u0010\bR\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\r\"\u0004\b\u0015\u0010\u000fR\u001e\u0010\u0016\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0017\u0010\u0006\"\u0004\b\u0018\u0010\bR\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\r\"\u0004\b\u001b\u0010\u000fR\u001c\u0010\u001c\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001d\u0010\r\"\u0004\b\u001e\u0010\u000f\u00a8\u0006\u001f"}, d2 = {"Lcom/nsdevil/ubtmobilev3/viewmodels/HomeViewModel$Companion;", "", "()V", "examCount", "", "getExamCount", "()Ljava/lang/Integer;", "setExamCount", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "imgUrl", "", "getImgUrl", "()Ljava/lang/String;", "setImgUrl", "(Ljava/lang/String;)V", "orgCount", "getOrgCount", "setOrgCount", "phoneNumber", "getPhoneNumber", "setPhoneNumber", "point", "getPoint", "setPoint", "userEmail", "getUserEmail", "setUserEmail", "userName", "getUserName", "setUserName", "app_debug"})
     public static final class Companion {
         
         @org.jetbrains.annotations.Nullable()
@@ -117,6 +119,15 @@ public final class HomeViewModel extends com.nsdevil.ubtmobilev3.base.BaseViewMo
         
         public final void setOrgCount(@org.jetbrains.annotations.Nullable()
         java.lang.Integer p0) {
+        }
+        
+        @org.jetbrains.annotations.Nullable()
+        public final java.lang.String getPhoneNumber() {
+            return null;
+        }
+        
+        public final void setPhoneNumber(@org.jetbrains.annotations.Nullable()
+        java.lang.String p0) {
         }
         
         private Companion() {

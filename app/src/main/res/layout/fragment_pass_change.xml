@@ -113,7 +113,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Repat Password"
+            android:hint="repeat Password"
             app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
             app:layout_constraintEnd_toEndOf="@id/v_guide_2"
             app:layout_constraintStart_toStartOf="@id/v_guide_1"
@@ -126,7 +126,6 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_save_change"

@@ -6,5 +6,6 @@ data class ProfileData (
     val userEmail: String?,
     val point: Int?,
     val examCount: Int?,
-    val orgCount: Int?
+    val orgCount: Int?,
+    val phoneNumber: String?
     )

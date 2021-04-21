@@ -47,6 +47,8 @@ class OrgFragment : BaseFragment() {
             orgData = organization
             executePendingBindings()
 
+            println("체크: $organization")
+
             btnJoin.setOnClickListener {
                 val dialog = TextInputDialog(requireContext(), viewLifecycleOwner) {
                     viewModel.registerOrg(organization.organizId, it)

@@ -2432,6 +2432,7 @@ id blocking
 id bottom
 id bottom_to_top
 id bounce
+id btn_album
 id btn_back_to_login
 id btn_close
 id btn_confirm
