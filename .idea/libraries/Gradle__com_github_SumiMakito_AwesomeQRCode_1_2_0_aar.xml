@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.SumiMakito:AwesomeQRCode:1.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4421cf967f682eb193940e6e43822b4c/jetified-AwesomeQRCode-1.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4421cf967f682eb193940e6e43822b4c/jetified-AwesomeQRCode-1.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4421cf967f682eb193940e6e43822b4c/jetified-AwesomeQRCode-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a64bb83e989cb2e3785ba78638e9dd9/jetified-AwesomeQRCode-1.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a64bb83e989cb2e3785ba78638e9dd9/jetified-AwesomeQRCode-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a64bb83e989cb2e3785ba78638e9dd9/jetified-AwesomeQRCode-1.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -416,6 +416,10 @@
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\ic_prev_black.xml"
     },
     {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_org_register.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\dialog_org_register.xml"
+    },
+    {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_success_circle.xml.flat",
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\drawable\\success_circle.xml"
     },
@@ -442,6 +446,10 @@
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_home_exam.xml.flat",
         "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_home_exam.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_answer_video.xml.flat",
+        "source": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\src\\main\\res\\layout\\list_item_answer_video.xml"
     },
     {
         "merged": "D:\\WorkSpace\\p_Android\\UBTMobilev3\\app\\build\\intermediates\\res\\merged\\debug\\font_josefinsans_bolditalic.ttf.flat",

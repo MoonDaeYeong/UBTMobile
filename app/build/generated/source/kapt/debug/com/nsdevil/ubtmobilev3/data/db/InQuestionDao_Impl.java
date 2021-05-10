@@ -1,6 +1,7 @@
 package com.nsdevil.ubtmobilev3.data.db;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.collection.ArrayMap;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
@@ -12,6 +13,7 @@ import androidx.room.util.DBUtil;
 import androidx.room.util.StringUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.nsdevil.ubtmobilev3.data.model.QuestionAnswer;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,6 +22,7 @@ import java.lang.String;
 import java.lang.StringBuilder;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
@@ -207,21 +210,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
           while(_cursor.moveToNext()) {
             final InQuestion _item;
             final String _tmpCategory;
-            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmpCategory = null;
+            } else {
+              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            }
             final String _tmpQuestion;
-            _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            if (_cursor.isNull(_cursorIndexOfQuestion)) {
+              _tmpQuestion = null;
+            } else {
+              _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            }
             final String _tmpHeaderText;
-            _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+              _tmpHeaderText = null;
+            } else {
+              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            }
             final String _tmpDifficultyLevel;
-            _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+              _tmpDifficultyLevel = null;
+            } else {
+              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            }
             final String _tmpAnswerType;
-            _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+              _tmpAnswerType = null;
+            } else {
+              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            }
             final String _tmpUserAnswers;
-            _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+              _tmpUserAnswers = null;
+            } else {
+              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            }
             final int _tmpCheckCount;
             _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
             final String _tmpControlNo;
-            _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            if (_cursor.isNull(_cursorIndexOfControlNo)) {
+              _tmpControlNo = null;
+            } else {
+              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            }
             final float _tmpPoint;
             _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
             final int _tmpViewOrder;
@@ -229,13 +260,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpCorrectRate;
-            _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+              _tmpCorrectRate = null;
+            } else {
+              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            }
             final String _tmpQuestionType;
-            _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+              _tmpQuestionType = null;
+            } else {
+              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            }
             final String _tmpIncorrectNote;
-            _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+              _tmpIncorrectNote = null;
+            } else {
+              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            }
             final String _tmpOption;
-            _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            if (_cursor.isNull(_cursorIndexOfOption)) {
+              _tmpOption = null;
+            } else {
+              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            }
             final int _tmpTime;
             _tmpTime = _cursor.getInt(_cursorIndexOfTime);
             final boolean _tmpUserCheck;
@@ -243,9 +290,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
             _tmpUserCheck = _tmp != 0;
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final String _tmpExamQACode;
-            _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+              _tmpExamQACode = null;
+            } else {
+              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            }
             _item = new InQuestion(_tmpCategory,_tmpQuestion,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             _result.add(_item);
           }
@@ -300,21 +355,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
           while(_cursor.moveToNext()) {
             final InQuestion _item;
             final String _tmpCategory;
-            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmpCategory = null;
+            } else {
+              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            }
             final String _tmpQuestion;
-            _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            if (_cursor.isNull(_cursorIndexOfQuestion)) {
+              _tmpQuestion = null;
+            } else {
+              _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            }
             final String _tmpHeaderText;
-            _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+              _tmpHeaderText = null;
+            } else {
+              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            }
             final String _tmpDifficultyLevel;
-            _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+              _tmpDifficultyLevel = null;
+            } else {
+              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            }
             final String _tmpAnswerType;
-            _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+              _tmpAnswerType = null;
+            } else {
+              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            }
             final String _tmpUserAnswers;
-            _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+              _tmpUserAnswers = null;
+            } else {
+              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            }
             final int _tmpCheckCount;
             _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
             final String _tmpControlNo;
-            _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            if (_cursor.isNull(_cursorIndexOfControlNo)) {
+              _tmpControlNo = null;
+            } else {
+              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            }
             final float _tmpPoint;
             _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
             final int _tmpViewOrder;
@@ -322,13 +405,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpCorrectRate;
-            _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+              _tmpCorrectRate = null;
+            } else {
+              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            }
             final String _tmpQuestionType;
-            _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+              _tmpQuestionType = null;
+            } else {
+              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            }
             final String _tmpIncorrectNote;
-            _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+              _tmpIncorrectNote = null;
+            } else {
+              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            }
             final String _tmpOption;
-            _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            if (_cursor.isNull(_cursorIndexOfOption)) {
+              _tmpOption = null;
+            } else {
+              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            }
             final int _tmpTime;
             _tmpTime = _cursor.getInt(_cursorIndexOfTime);
             final boolean _tmpUserCheck;
@@ -336,9 +435,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
             _tmpUserCheck = _tmp != 0;
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final String _tmpExamQACode;
-            _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+              _tmpExamQACode = null;
+            } else {
+              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            }
             _item = new InQuestion(_tmpCategory,_tmpQuestion,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             _result.add(_item);
           }
@@ -393,21 +500,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
           while(_cursor.moveToNext()) {
             final InQuestion _item;
             final String _tmpCategory;
-            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmpCategory = null;
+            } else {
+              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            }
             final String _tmpQuestion;
-            _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            if (_cursor.isNull(_cursorIndexOfQuestion)) {
+              _tmpQuestion = null;
+            } else {
+              _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            }
             final String _tmpHeaderText;
-            _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+              _tmpHeaderText = null;
+            } else {
+              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            }
             final String _tmpDifficultyLevel;
-            _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+              _tmpDifficultyLevel = null;
+            } else {
+              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            }
             final String _tmpAnswerType;
-            _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+              _tmpAnswerType = null;
+            } else {
+              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            }
             final String _tmpUserAnswers;
-            _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+              _tmpUserAnswers = null;
+            } else {
+              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            }
             final int _tmpCheckCount;
             _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
             final String _tmpControlNo;
-            _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            if (_cursor.isNull(_cursorIndexOfControlNo)) {
+              _tmpControlNo = null;
+            } else {
+              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            }
             final float _tmpPoint;
             _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
             final int _tmpViewOrder;
@@ -415,13 +550,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpCorrectRate;
-            _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+              _tmpCorrectRate = null;
+            } else {
+              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            }
             final String _tmpQuestionType;
-            _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+              _tmpQuestionType = null;
+            } else {
+              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            }
             final String _tmpIncorrectNote;
-            _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+              _tmpIncorrectNote = null;
+            } else {
+              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            }
             final String _tmpOption;
-            _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            if (_cursor.isNull(_cursorIndexOfOption)) {
+              _tmpOption = null;
+            } else {
+              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            }
             final int _tmpTime;
             _tmpTime = _cursor.getInt(_cursorIndexOfTime);
             final boolean _tmpUserCheck;
@@ -429,9 +580,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
             _tmpUserCheck = _tmp != 0;
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final String _tmpExamQACode;
-            _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+              _tmpExamQACode = null;
+            } else {
+              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            }
             _item = new InQuestion(_tmpCategory,_tmpQuestion,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             _result.add(_item);
           }
@@ -486,21 +645,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
           while(_cursor.moveToNext()) {
             final InQuestion _item;
             final String _tmpCategory;
-            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmpCategory = null;
+            } else {
+              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            }
             final String _tmpQuestion;
-            _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            if (_cursor.isNull(_cursorIndexOfQuestion)) {
+              _tmpQuestion = null;
+            } else {
+              _tmpQuestion = _cursor.getString(_cursorIndexOfQuestion);
+            }
             final String _tmpHeaderText;
-            _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+              _tmpHeaderText = null;
+            } else {
+              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+            }
             final String _tmpDifficultyLevel;
-            _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+              _tmpDifficultyLevel = null;
+            } else {
+              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+            }
             final String _tmpAnswerType;
-            _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+              _tmpAnswerType = null;
+            } else {
+              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            }
             final String _tmpUserAnswers;
-            _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+              _tmpUserAnswers = null;
+            } else {
+              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+            }
             final int _tmpCheckCount;
             _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
             final String _tmpControlNo;
-            _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            if (_cursor.isNull(_cursorIndexOfControlNo)) {
+              _tmpControlNo = null;
+            } else {
+              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+            }
             final float _tmpPoint;
             _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
             final int _tmpViewOrder;
@@ -508,13 +695,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpCorrectRate;
-            _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+              _tmpCorrectRate = null;
+            } else {
+              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+            }
             final String _tmpQuestionType;
-            _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+              _tmpQuestionType = null;
+            } else {
+              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            }
             final String _tmpIncorrectNote;
-            _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+              _tmpIncorrectNote = null;
+            } else {
+              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+            }
             final String _tmpOption;
-            _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            if (_cursor.isNull(_cursorIndexOfOption)) {
+              _tmpOption = null;
+            } else {
+              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+            }
             final int _tmpTime;
             _tmpTime = _cursor.getInt(_cursorIndexOfTime);
             final boolean _tmpUserCheck;
@@ -522,9 +725,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
             _tmpUserCheck = _tmp != 0;
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final String _tmpExamQACode;
-            _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+              _tmpExamQACode = null;
+            } else {
+              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            }
             _item = new InQuestion(_tmpCategory,_tmpQuestion,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             _result.add(_item);
           }
@@ -599,21 +810,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final InQuestion _tmpQuestion;
             if (! (_cursor.isNull(_cursorIndexOfCategory) && _cursor.isNull(_cursorIndexOfQuestion) && _cursor.isNull(_cursorIndexOfHeaderText) && _cursor.isNull(_cursorIndexOfDifficultyLevel) && _cursor.isNull(_cursorIndexOfAnswerType) && _cursor.isNull(_cursorIndexOfUserAnswers) && _cursor.isNull(_cursorIndexOfCheckCount) && _cursor.isNull(_cursorIndexOfControlNo) && _cursor.isNull(_cursorIndexOfPoint) && _cursor.isNull(_cursorIndexOfViewOrder) && _cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfCorrectRate) && _cursor.isNull(_cursorIndexOfQuestionType) && _cursor.isNull(_cursorIndexOfIncorrectNote) && _cursor.isNull(_cursorIndexOfOption) && _cursor.isNull(_cursorIndexOfTime) && _cursor.isNull(_cursorIndexOfUserCheck) && _cursor.isNull(_cursorIndexOfExamCode) && _cursor.isNull(_cursorIndexOfExamQACode))) {
               final String _tmpCategory;
-              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+              if (_cursor.isNull(_cursorIndexOfCategory)) {
+                _tmpCategory = null;
+              } else {
+                _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+              }
               final String _tmpQuestion_1;
-              _tmpQuestion_1 = _cursor.getString(_cursorIndexOfQuestion);
+              if (_cursor.isNull(_cursorIndexOfQuestion)) {
+                _tmpQuestion_1 = null;
+              } else {
+                _tmpQuestion_1 = _cursor.getString(_cursorIndexOfQuestion);
+              }
               final String _tmpHeaderText;
-              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+              if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+                _tmpHeaderText = null;
+              } else {
+                _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+              }
               final String _tmpDifficultyLevel;
-              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+              if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+                _tmpDifficultyLevel = null;
+              } else {
+                _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+              }
               final String _tmpAnswerType;
-              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+              if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+                _tmpAnswerType = null;
+              } else {
+                _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+              }
               final String _tmpUserAnswers;
-              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+              if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+                _tmpUserAnswers = null;
+              } else {
+                _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+              }
               final int _tmpCheckCount;
               _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
               final String _tmpControlNo;
-              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+              if (_cursor.isNull(_cursorIndexOfControlNo)) {
+                _tmpControlNo = null;
+              } else {
+                _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+              }
               final float _tmpPoint;
               _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
               final int _tmpViewOrder;
@@ -621,13 +860,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
               final int _tmpId;
               _tmpId = _cursor.getInt(_cursorIndexOfId);
               final String _tmpCorrectRate;
-              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+              if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+                _tmpCorrectRate = null;
+              } else {
+                _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+              }
               final String _tmpQuestionType;
-              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+              if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+                _tmpQuestionType = null;
+              } else {
+                _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+              }
               final String _tmpIncorrectNote;
-              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+              if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+                _tmpIncorrectNote = null;
+              } else {
+                _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+              }
               final String _tmpOption;
-              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+              if (_cursor.isNull(_cursorIndexOfOption)) {
+                _tmpOption = null;
+              } else {
+                _tmpOption = _cursor.getString(_cursorIndexOfOption);
+              }
               final int _tmpTime;
               _tmpTime = _cursor.getInt(_cursorIndexOfTime);
               final boolean _tmpUserCheck;
@@ -635,9 +890,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
               _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
               _tmpUserCheck = _tmp != 0;
               final String _tmpExamCode;
-              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+              if (_cursor.isNull(_cursorIndexOfExamCode)) {
+                _tmpExamCode = null;
+              } else {
+                _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+              }
               final String _tmpExamQACode;
-              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+              if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+                _tmpExamQACode = null;
+              } else {
+                _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+              }
               _tmpQuestion = new InQuestion(_tmpCategory,_tmpQuestion_1,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             }  else  {
               _tmpQuestion = null;
@@ -682,7 +945,8 @@ public final class InQuestionDao_Impl implements InQuestionDao {
     } else {
       _statement.bindString(_argIndex, examCode);
     }
-    return CoroutinesRoom.execute(__db, false, new Callable<List<QuestionAnswer>>() {
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<QuestionAnswer>>() {
       @Override
       public List<QuestionAnswer> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, true, null);
@@ -723,21 +987,49 @@ public final class InQuestionDao_Impl implements InQuestionDao {
             final InQuestion _tmpQuestion;
             if (! (_cursor.isNull(_cursorIndexOfCategory) && _cursor.isNull(_cursorIndexOfQuestion) && _cursor.isNull(_cursorIndexOfHeaderText) && _cursor.isNull(_cursorIndexOfDifficultyLevel) && _cursor.isNull(_cursorIndexOfAnswerType) && _cursor.isNull(_cursorIndexOfUserAnswers) && _cursor.isNull(_cursorIndexOfCheckCount) && _cursor.isNull(_cursorIndexOfControlNo) && _cursor.isNull(_cursorIndexOfPoint) && _cursor.isNull(_cursorIndexOfViewOrder) && _cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfCorrectRate) && _cursor.isNull(_cursorIndexOfQuestionType) && _cursor.isNull(_cursorIndexOfIncorrectNote) && _cursor.isNull(_cursorIndexOfOption) && _cursor.isNull(_cursorIndexOfTime) && _cursor.isNull(_cursorIndexOfUserCheck) && _cursor.isNull(_cursorIndexOfExamCode) && _cursor.isNull(_cursorIndexOfExamQACode))) {
               final String _tmpCategory;
-              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+              if (_cursor.isNull(_cursorIndexOfCategory)) {
+                _tmpCategory = null;
+              } else {
+                _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+              }
               final String _tmpQuestion_1;
-              _tmpQuestion_1 = _cursor.getString(_cursorIndexOfQuestion);
+              if (_cursor.isNull(_cursorIndexOfQuestion)) {
+                _tmpQuestion_1 = null;
+              } else {
+                _tmpQuestion_1 = _cursor.getString(_cursorIndexOfQuestion);
+              }
               final String _tmpHeaderText;
-              _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+              if (_cursor.isNull(_cursorIndexOfHeaderText)) {
+                _tmpHeaderText = null;
+              } else {
+                _tmpHeaderText = _cursor.getString(_cursorIndexOfHeaderText);
+              }
               final String _tmpDifficultyLevel;
-              _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+              if (_cursor.isNull(_cursorIndexOfDifficultyLevel)) {
+                _tmpDifficultyLevel = null;
+              } else {
+                _tmpDifficultyLevel = _cursor.getString(_cursorIndexOfDifficultyLevel);
+              }
               final String _tmpAnswerType;
-              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+              if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+                _tmpAnswerType = null;
+              } else {
+                _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+              }
               final String _tmpUserAnswers;
-              _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+              if (_cursor.isNull(_cursorIndexOfUserAnswers)) {
+                _tmpUserAnswers = null;
+              } else {
+                _tmpUserAnswers = _cursor.getString(_cursorIndexOfUserAnswers);
+              }
               final int _tmpCheckCount;
               _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
               final String _tmpControlNo;
-              _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+              if (_cursor.isNull(_cursorIndexOfControlNo)) {
+                _tmpControlNo = null;
+              } else {
+                _tmpControlNo = _cursor.getString(_cursorIndexOfControlNo);
+              }
               final float _tmpPoint;
               _tmpPoint = _cursor.getFloat(_cursorIndexOfPoint);
               final int _tmpViewOrder;
@@ -745,13 +1037,29 @@ public final class InQuestionDao_Impl implements InQuestionDao {
               final int _tmpId;
               _tmpId = _cursor.getInt(_cursorIndexOfId);
               final String _tmpCorrectRate;
-              _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+              if (_cursor.isNull(_cursorIndexOfCorrectRate)) {
+                _tmpCorrectRate = null;
+              } else {
+                _tmpCorrectRate = _cursor.getString(_cursorIndexOfCorrectRate);
+              }
               final String _tmpQuestionType;
-              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+              if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+                _tmpQuestionType = null;
+              } else {
+                _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+              }
               final String _tmpIncorrectNote;
-              _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+              if (_cursor.isNull(_cursorIndexOfIncorrectNote)) {
+                _tmpIncorrectNote = null;
+              } else {
+                _tmpIncorrectNote = _cursor.getString(_cursorIndexOfIncorrectNote);
+              }
               final String _tmpOption;
-              _tmpOption = _cursor.getString(_cursorIndexOfOption);
+              if (_cursor.isNull(_cursorIndexOfOption)) {
+                _tmpOption = null;
+              } else {
+                _tmpOption = _cursor.getString(_cursorIndexOfOption);
+              }
               final int _tmpTime;
               _tmpTime = _cursor.getInt(_cursorIndexOfTime);
               final boolean _tmpUserCheck;
@@ -759,9 +1067,17 @@ public final class InQuestionDao_Impl implements InQuestionDao {
               _tmp = _cursor.getInt(_cursorIndexOfUserCheck);
               _tmpUserCheck = _tmp != 0;
               final String _tmpExamCode;
-              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+              if (_cursor.isNull(_cursorIndexOfExamCode)) {
+                _tmpExamCode = null;
+              } else {
+                _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+              }
               final String _tmpExamQACode;
-              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+              if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+                _tmpExamQACode = null;
+              } else {
+                _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+              }
               _tmpQuestion = new InQuestion(_tmpCategory,_tmpQuestion_1,_tmpHeaderText,_tmpDifficultyLevel,_tmpAnswerType,_tmpUserAnswers,_tmpCheckCount,_tmpControlNo,_tmpPoint,_tmpViewOrder,_tmpId,_tmpCorrectRate,_tmpQuestionType,_tmpIncorrectNote,_tmpOption,_tmpTime,_tmpUserCheck,_tmpExamCode,_tmpExamQACode);
             }  else  {
               _tmpQuestion = null;
@@ -864,6 +1180,10 @@ public final class InQuestionDao_Impl implements InQuestionDao {
     });
   }
 
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+
   private void __fetchRelationshipInAnswerAscomNsdevilUbtmobilev3DataDbInAnswer(
       final ArrayMap<String, ArrayList<InAnswer>> _map) {
     final Set<String> __mapKeySet = _map.keySet();
@@ -914,128 +1234,104 @@ public final class InQuestionDao_Impl implements InQuestionDao {
       if (_itemKeyIndex == -1) {
         return;
       }
-      final int _cursorIndexOfAnswerFlag = CursorUtil.getColumnIndex(_cursor, "answerFlag");
-      final int _cursorIndexOfAnswerTrueData = CursorUtil.getColumnIndex(_cursor, "answerTrueData");
-      final int _cursorIndexOfAnswer = CursorUtil.getColumnIndex(_cursor, "answer");
-      final int _cursorIndexOfOptionNumber = CursorUtil.getColumnIndex(_cursor, "optionNumber");
-      final int _cursorIndexOfQuestionType = CursorUtil.getColumnIndex(_cursor, "questionType");
-      final int _cursorIndexOfId = CursorUtil.getColumnIndex(_cursor, "id");
-      final int _cursorIndexOfOrder = CursorUtil.getColumnIndex(_cursor, "order");
-      final int _cursorIndexOfAnswerType = CursorUtil.getColumnIndex(_cursor, "answerType");
-      final int _cursorIndexOfCheckCount = CursorUtil.getColumnIndex(_cursor, "checkCount");
-      final int _cursorIndexOfQuestionId = CursorUtil.getColumnIndex(_cursor, "questionId");
-      final int _cursorIndexOfExamCode = CursorUtil.getColumnIndex(_cursor, "examCode");
-      final int _cursorIndexOfViewOrder = CursorUtil.getColumnIndex(_cursor, "viewOrder");
-      final int _cursorIndexOfUserChk = CursorUtil.getColumnIndex(_cursor, "userChk");
-      final int _cursorIndexOfTextAnswer = CursorUtil.getColumnIndex(_cursor, "textAnswer");
-      final int _cursorIndexOfFileName = CursorUtil.getColumnIndex(_cursor, "fileName");
-      final int _cursorIndexOfMediaType = CursorUtil.getColumnIndex(_cursor, "mediaType");
-      final int _cursorIndexOfExamQACode = CursorUtil.getColumnIndex(_cursor, "examQACode");
+      final int _cursorIndexOfAnswerFlag = CursorUtil.getColumnIndexOrThrow(_cursor, "answerFlag");
+      final int _cursorIndexOfAnswerTrueData = CursorUtil.getColumnIndexOrThrow(_cursor, "answerTrueData");
+      final int _cursorIndexOfAnswer = CursorUtil.getColumnIndexOrThrow(_cursor, "answer");
+      final int _cursorIndexOfOptionNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "optionNumber");
+      final int _cursorIndexOfQuestionType = CursorUtil.getColumnIndexOrThrow(_cursor, "questionType");
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfOrder = CursorUtil.getColumnIndexOrThrow(_cursor, "order");
+      final int _cursorIndexOfAnswerType = CursorUtil.getColumnIndexOrThrow(_cursor, "answerType");
+      final int _cursorIndexOfCheckCount = CursorUtil.getColumnIndexOrThrow(_cursor, "checkCount");
+      final int _cursorIndexOfQuestionId = CursorUtil.getColumnIndexOrThrow(_cursor, "questionId");
+      final int _cursorIndexOfExamCode = CursorUtil.getColumnIndexOrThrow(_cursor, "examCode");
+      final int _cursorIndexOfViewOrder = CursorUtil.getColumnIndexOrThrow(_cursor, "viewOrder");
+      final int _cursorIndexOfUserChk = CursorUtil.getColumnIndexOrThrow(_cursor, "userChk");
+      final int _cursorIndexOfTextAnswer = CursorUtil.getColumnIndexOrThrow(_cursor, "textAnswer");
+      final int _cursorIndexOfFileName = CursorUtil.getColumnIndexOrThrow(_cursor, "fileName");
+      final int _cursorIndexOfMediaType = CursorUtil.getColumnIndexOrThrow(_cursor, "mediaType");
+      final int _cursorIndexOfExamQACode = CursorUtil.getColumnIndexOrThrow(_cursor, "examQACode");
       while(_cursor.moveToNext()) {
         final String _tmpKey = _cursor.getString(_itemKeyIndex);
         ArrayList<InAnswer> _tmpRelation = _map.get(_tmpKey);
         if (_tmpRelation != null) {
           final InAnswer _item_1;
           final String _tmpAnswerFlag;
-          if (_cursorIndexOfAnswerFlag == -1) {
+          if (_cursor.isNull(_cursorIndexOfAnswerFlag)) {
             _tmpAnswerFlag = null;
           } else {
             _tmpAnswerFlag = _cursor.getString(_cursorIndexOfAnswerFlag);
           }
           final String _tmpAnswerTrueData;
-          if (_cursorIndexOfAnswerTrueData == -1) {
+          if (_cursor.isNull(_cursorIndexOfAnswerTrueData)) {
             _tmpAnswerTrueData = null;
           } else {
             _tmpAnswerTrueData = _cursor.getString(_cursorIndexOfAnswerTrueData);
           }
           final String _tmpAnswer;
-          if (_cursorIndexOfAnswer == -1) {
+          if (_cursor.isNull(_cursorIndexOfAnswer)) {
             _tmpAnswer = null;
           } else {
             _tmpAnswer = _cursor.getString(_cursorIndexOfAnswer);
           }
           final String _tmpOptionNumber;
-          if (_cursorIndexOfOptionNumber == -1) {
+          if (_cursor.isNull(_cursorIndexOfOptionNumber)) {
             _tmpOptionNumber = null;
           } else {
             _tmpOptionNumber = _cursor.getString(_cursorIndexOfOptionNumber);
           }
           final String _tmpQuestionType;
-          if (_cursorIndexOfQuestionType == -1) {
+          if (_cursor.isNull(_cursorIndexOfQuestionType)) {
             _tmpQuestionType = null;
           } else {
             _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
           }
           final int _tmpId;
-          if (_cursorIndexOfId == -1) {
-            _tmpId = 0;
-          } else {
-            _tmpId = _cursor.getInt(_cursorIndexOfId);
-          }
+          _tmpId = _cursor.getInt(_cursorIndexOfId);
           final int _tmpOrder;
-          if (_cursorIndexOfOrder == -1) {
-            _tmpOrder = 0;
-          } else {
-            _tmpOrder = _cursor.getInt(_cursorIndexOfOrder);
-          }
+          _tmpOrder = _cursor.getInt(_cursorIndexOfOrder);
           final String _tmpAnswerType;
-          if (_cursorIndexOfAnswerType == -1) {
+          if (_cursor.isNull(_cursorIndexOfAnswerType)) {
             _tmpAnswerType = null;
           } else {
             _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
           }
           final int _tmpCheckCount;
-          if (_cursorIndexOfCheckCount == -1) {
-            _tmpCheckCount = 0;
-          } else {
-            _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
-          }
+          _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
           final int _tmpQuestionId;
-          if (_cursorIndexOfQuestionId == -1) {
-            _tmpQuestionId = 0;
-          } else {
-            _tmpQuestionId = _cursor.getInt(_cursorIndexOfQuestionId);
-          }
+          _tmpQuestionId = _cursor.getInt(_cursorIndexOfQuestionId);
           final String _tmpExamCode;
-          if (_cursorIndexOfExamCode == -1) {
+          if (_cursor.isNull(_cursorIndexOfExamCode)) {
             _tmpExamCode = null;
           } else {
             _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
           }
           final int _tmpViewOrder;
-          if (_cursorIndexOfViewOrder == -1) {
-            _tmpViewOrder = 0;
-          } else {
-            _tmpViewOrder = _cursor.getInt(_cursorIndexOfViewOrder);
-          }
+          _tmpViewOrder = _cursor.getInt(_cursorIndexOfViewOrder);
           final boolean _tmpUserChk;
-          if (_cursorIndexOfUserChk == -1) {
-            _tmpUserChk = false;
-          } else {
-            final int _tmp;
-            _tmp = _cursor.getInt(_cursorIndexOfUserChk);
-            _tmpUserChk = _tmp != 0;
-          }
+          final int _tmp;
+          _tmp = _cursor.getInt(_cursorIndexOfUserChk);
+          _tmpUserChk = _tmp != 0;
           final String _tmpTextAnswer;
-          if (_cursorIndexOfTextAnswer == -1) {
+          if (_cursor.isNull(_cursorIndexOfTextAnswer)) {
             _tmpTextAnswer = null;
           } else {
             _tmpTextAnswer = _cursor.getString(_cursorIndexOfTextAnswer);
           }
           final String _tmpFileName;
-          if (_cursorIndexOfFileName == -1) {
+          if (_cursor.isNull(_cursorIndexOfFileName)) {
             _tmpFileName = null;
           } else {
             _tmpFileName = _cursor.getString(_cursorIndexOfFileName);
           }
           final String _tmpMediaType;
-          if (_cursorIndexOfMediaType == -1) {
+          if (_cursor.isNull(_cursorIndexOfMediaType)) {
             _tmpMediaType = null;
           } else {
             _tmpMediaType = _cursor.getString(_cursorIndexOfMediaType);
           }
           final String _tmpExamQACode;
-          if (_cursorIndexOfExamQACode == -1) {
+          if (_cursor.isNull(_cursorIndexOfExamQACode)) {
             _tmpExamQACode = null;
           } else {
             _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);

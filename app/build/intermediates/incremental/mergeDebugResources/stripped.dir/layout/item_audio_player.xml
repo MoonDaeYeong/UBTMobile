@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.exoplayer2.ui.PlayerView
+    android:id="@+id/audio_player_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:controller_layout_id="@layout/item_audio_controller"
+    app:hide_on_touch="false"
+    app:show_timeout="0"
+    app:use_controller="true" />

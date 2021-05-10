@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                       
+                                                  
+                                              
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_exam_list_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".ui.exam.ExamListFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_exam_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/ti_exam_list_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout="@layout/item_exam_list_tab" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/ti_exam_list_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout="@layout/item_exam_list_tab" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/ti_exam_list_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout="@layout/item_exam_list_tab" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/ti_exam_list_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout="@layout/item_exam_list_tab" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/shadow"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1" />
+
+        <TextView
+            android:id="@+id/tv_tab_category_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/righteous_regular"
+            android:includeFontPadding="false"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1"
+            tools:text="Tab_Category" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_preview"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_marginEnd="10dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Preview"
+            app:icon="@drawable/ic_preview"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_2"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_exam_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+            app:layout_constraintTop_toTopOf="@id/h_guide_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/top_shadow"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_3" />
+
+        <Button
+            android:id="@+id/btn_submission"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="submission"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guide_3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+         

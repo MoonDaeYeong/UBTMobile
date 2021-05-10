@@ -14,6 +14,7 @@ import com.nsdevil.ubtmobilev3.data.response.HomeDataResponse
 import com.nsdevil.ubtmobilev3.data.response.OrgExamListResponse
 import com.nsdevil.ubtmobilev3.databinding.FragmentOrgBinding
 import com.nsdevil.ubtmobilev3.dialog.CodeRegisterDialog
+import com.nsdevil.ubtmobilev3.dialog.OrgRegisterDialog
 import com.nsdevil.ubtmobilev3.dialog.TextInputDialog
 import com.nsdevil.ubtmobilev3.dialog.ZAlertDialog
 import com.nsdevil.ubtmobilev3.viewmodels.OrgViewModel
@@ -47,16 +48,13 @@ class OrgFragment : BaseFragment() {
             orgData = organization
             executePendingBindings()
 
-            println("체크: $organization")
-
             btnJoin.setOnClickListener {
-                val dialog = TextInputDialog(requireContext(), viewLifecycleOwner) {
-                    viewModel.registerOrg(organization.organizId, it)
+                val orgRegisterDialog = OrgRegisterDialog(requireContext()) {
+                    it.dismiss()
+                    viewModel.registerOrg(organization.organizId, "12345678")
                 }
-                dialog.setConfirm("Register")
-                dialog.setCancel("Cancel")
-                dialog.setTitle("Input Student Code")
-                dialog.show()
+                if(!OrgRegisterDialog.showCheck)
+                    orgRegisterDialog.show()
             }
 
             fab.setOnClickListener {

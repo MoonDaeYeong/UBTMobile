@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                       
+                                                   
+
+    
+
+                 
+                                
+                                                       
+
+                 
+                               
+                                                                                            
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="180dp"
+        android:layout_height="210dp"
+        android:layout_margin="1dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp" android:tag="layout/list_item_home_exam_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_simple"
+            android:layout_margin="5dp"
+            android:tag="binding_1"           >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <TextView
+                android:id="@+id/tv_exam_code"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:tag="binding_2"                
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toStartOf="@id/tv_status"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="EXAM_CODE" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center|end"
+                android:includeFontPadding="false"
+                android:tag="binding_3"                            
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_exam_code"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="PREPARE" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:src="@drawable/ic_ubt_logo"
+                android:tag="binding_4"                         
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+                app:layout_constraintTop_toTopOf="@id/h_guide_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="3"
+                android:textStyle="bold"
+                android:tag="binding_5"                
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+                app:layout_constraintTop_toTopOf="@id/h_guide_2"
+                tools:text="시험ㄴ영러ㅣㅏ더ㅑㅐ먼이라키러ㅑㅐ더ㅣ라넝키ㅓ댜ㅐㄹ다까라 헤이 그사람" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center|end"
+                android:tag="binding_6"                    
+                                                           
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_guide_3"
+                tools:text="2021.01.14 ~ 2021.01.17" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+         

@@ -1,14 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: :posenet:@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9601a9808ee079e3e40df624f0de9387/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4086541eb14210e0b62d5ac5f97257a9/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96e67f2c7726b6450988bd9efdbcc561/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/872ea971061e18284c2cdc1431a0c247/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af252d8cd1efa4fdb1a65016a3f4f0be/jetified-posenet/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eac763212d91f8a7bf8fb87b29d884d8/jetified-posenet/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eac763212d91f8a7bf8fb87b29d884d8/jetified-posenet/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eac763212d91f8a7bf8fb87b29d884d8/jetified-posenet/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2321132cae14e333a74b9e10ed535b26/jetified-posenet/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9f808b59109fbba5950af7022562fb84/jetified-posenet/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2321132cae14e333a74b9e10ed535b26/jetified-posenet/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2321132cae14e333a74b9e10ed535b26/jetified-posenet/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

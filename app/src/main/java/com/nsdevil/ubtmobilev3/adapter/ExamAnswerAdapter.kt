@@ -18,7 +18,8 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
         val getAnswerImgView = ExamAnswerImgViewHolder(ListItemAnswerImgBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         val getAnswerAudioView = ExamAnswerAudioViewHolder(ListItemAnswerAudioBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         val getAnswerMathView = ExamAnswerMathViewHolder(ListItemAnswerMathBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-        return when(viewType) { 2-> getAnswerTextView 3-> getAnswerImgView 4-> getAnswerAudioView 5-> getAnswerMathView else -> getAnswerView }
+        val getAnswerVideoView = ExamAnswerVideoViewHolder(ListItemAnswerVideoBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return when(viewType) { 2-> getAnswerTextView 3-> getAnswerImgView 4-> getAnswerAudioView 5-> getAnswerMathView 6-> getAnswerVideoView else -> getAnswerView }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -28,6 +29,7 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
             3 -> (holder as ExamAnswerImgViewHolder).bind(item)
             4 -> (holder as ExamAnswerAudioViewHolder).bind(item)
             5 -> (holder as ExamAnswerMathViewHolder).bind(item)
+            6 -> (holder as ExamAnswerVideoViewHolder).bind(item)
             else -> (holder as ExamAnswerViewHolder).bind(item)
         }
     }
@@ -37,6 +39,7 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
         else if (!currentList[position].fileName.isNullOrEmpty() && currentList[position].mediaType.equals("image", true)) 3
         else if (!currentList[position].fileName.isNullOrEmpty() && currentList[position].mediaType.equals("audio", true)) 4
         else if (currentList[position].answerType == "math") 5
+        else if (!currentList[position].fileName.isNullOrEmpty() && currentList[position].mediaType.equals("video", true)) 6
         else super.getItemViewType(position)
     }
 
@@ -122,6 +125,25 @@ class ExamAnswerAdapter(private val newList: (List<InAnswer>) -> Unit, private v
     }
 
     inner class ExamAnswerAudioViewHolder(private val binding: ListItemAnswerAudioBinding) : RecyclerView.ViewHolder (binding.root) {
+        init {
+            binding.setClickListener {
+                binding.answer?.let { answer ->
+                    answer.userChk = !answer.userChk
+                    subscribeButton(answer)
+                }
+            }
+        }
+
+        fun bind(item: InAnswer) {
+            binding.apply {
+                answer = item
+                itemPlayer(playerView, currentList, adapterPosition)
+                executePendingBindings()
+            }
+        }
+    }
+
+    inner class ExamAnswerVideoViewHolder(private val binding: ListItemAnswerVideoBinding) : RecyclerView.ViewHolder (binding.root) {
         init {
             binding.setClickListener {
                 binding.answer?.let { answer ->

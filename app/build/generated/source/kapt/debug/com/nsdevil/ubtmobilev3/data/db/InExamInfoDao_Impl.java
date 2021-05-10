@@ -1,6 +1,7 @@
 package com.nsdevil.ubtmobilev3.data.db;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
@@ -9,12 +10,15 @@ import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -260,7 +264,8 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
     } else {
       _statement.bindString(_argIndex, examCode);
     }
-    return CoroutinesRoom.execute(__db, false, new Callable<InExamInfo>() {
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<InExamInfo>() {
       @Override
       public InExamInfo call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
@@ -276,9 +281,17 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
             final int _tmpExamId;
             _tmpExamId = _cursor.getInt(_cursorIndexOfExamId);
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final String _tmpExamName;
-            _tmpExamName = _cursor.getString(_cursorIndexOfExamName);
+            if (_cursor.isNull(_cursorIndexOfExamName)) {
+              _tmpExamName = null;
+            } else {
+              _tmpExamName = _cursor.getString(_cursorIndexOfExamName);
+            }
             final int _tmpTotalTime;
             _tmpTotalTime = _cursor.getInt(_cursorIndexOfTotalTime);
             final int _tmpRemainTime;
@@ -298,5 +311,9 @@ public final class InExamInfoDao_Impl implements InExamInfoDao {
         }
       }
     }, p1);
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

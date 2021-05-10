@@ -5,13 +5,13 @@
     "kind": "Directory"
   },
   "applicationId": "com.nsdevil.ubtmobilev3",
-  "variantName": "processDebugResources",
+  "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 16,
-      "versionName": "2.1.6",
+      "versionCode": 18,
+      "versionName": "2.1.8",
       "outputFile": "app-debug.apk"
     }
   ]

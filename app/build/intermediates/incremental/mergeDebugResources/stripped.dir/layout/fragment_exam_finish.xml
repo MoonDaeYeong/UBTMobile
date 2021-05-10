@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                  
+                                                       
+                                           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_exam_finish_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" tools:context=".ui.ExamFinishFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.125" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_3" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="22dp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_4"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="30dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_inner_guide_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_inner_guide_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.9" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/bg_exam_end"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_1"/>
+
+
+                <TextView
+                    android:id="@+id/tv_no_survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No survey items"
+                    android:textColor="@color/draw_color_red"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:textSize="20sp"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintTop_toTopOf="@id/h_inner_guide_1"
+                    app:layout_constraintBottom_toTopOf="@id/tv_survey_info"/>
+                <TextView
+                    android:id="@+id/tv_survey_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="There is a survey.\n Would you like to take the survey?"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_no_survey"
+                    app:layout_constraintBottom_toTopOf="@id/btn_survey"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Going to do a survey"
+                    app:layout_constraintTop_toBottomOf="@id/tv_survey_info"
+                    app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_2"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_go_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="Go to Home"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@id/h_inner_guide_2"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

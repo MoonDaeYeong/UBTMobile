@@ -1,6 +1,7 @@
 package com.nsdevil.ubtmobilev3.data.db;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
@@ -9,6 +10,7 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.nsdevil.ubtmobilev3.data.response.QuestionResponse;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Integer;
 import java.lang.Object;
@@ -16,6 +18,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -124,18 +127,34 @@ public final class InDataDao_Impl implements InDataDao {
               _tmpDataOrder = _cursor.getInt(_cursorIndexOfDataOrder);
             }
             final String _tmpDataText;
-            _tmpDataText = _cursor.getString(_cursorIndexOfDataText);
+            if (_cursor.isNull(_cursorIndexOfDataText)) {
+              _tmpDataText = null;
+            } else {
+              _tmpDataText = _cursor.getString(_cursorIndexOfDataText);
+            }
             final String _tmpDataType;
-            _tmpDataType = _cursor.getString(_cursorIndexOfDataType);
+            if (_cursor.isNull(_cursorIndexOfDataType)) {
+              _tmpDataType = null;
+            } else {
+              _tmpDataType = _cursor.getString(_cursorIndexOfDataType);
+            }
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final int _tmpViewOrder;
             _tmpViewOrder = _cursor.getInt(_cursorIndexOfViewOrder);
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final QuestionResponse.Result.Question.Data.MediaX _tmpMedia;
             final String _tmp;
-            _tmp = _cursor.getString(_cursorIndexOfMedia);
+            if (_cursor.isNull(_cursorIndexOfMedia)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getString(_cursorIndexOfMedia);
+            }
             _tmpMedia = __converters.stringToMedia(_tmp);
             _item = new InData(_tmpDataOrder,_tmpDataText,_tmpDataType,_tmpId,_tmpViewOrder,_tmpExamCode,_tmpMedia);
             _result.add(_item);
@@ -164,7 +183,8 @@ public final class InDataDao_Impl implements InDataDao {
     } else {
       _statement.bindString(_argIndex, examCode);
     }
-    return CoroutinesRoom.execute(__db, false, new Callable<List<QuestionResponse.Result.Question.Data.MediaX>>() {
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<QuestionResponse.Result.Question.Data.MediaX>>() {
       @Override
       public List<QuestionResponse.Result.Question.Data.MediaX> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
@@ -173,7 +193,11 @@ public final class InDataDao_Impl implements InDataDao {
           while(_cursor.moveToNext()) {
             final QuestionResponse.Result.Question.Data.MediaX _item;
             final String _tmp;
-            _tmp = _cursor.getString(0);
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getString(0);
+            }
             _item = __converters.stringToMedia(_tmp);
             _result.add(_item);
           }
@@ -184,5 +208,9 @@ public final class InDataDao_Impl implements InDataDao {
         }
       }
     }, p1);
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

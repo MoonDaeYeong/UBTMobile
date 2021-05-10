@@ -1,6 +1,7 @@
 package com.nsdevil.ubtmobilev3.data.db;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
@@ -12,12 +13,14 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import java.lang.Boolean;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -327,7 +330,8 @@ public final class InAnswerDao_Impl implements InAnswerDao {
     } else {
       _statement.bindString(_argIndex, examCode);
     }
-    return CoroutinesRoom.execute(__db, false, new Callable<List<InAnswer>>() {
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<InAnswer>>() {
       @Override
       public List<InAnswer> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
@@ -353,27 +357,55 @@ public final class InAnswerDao_Impl implements InAnswerDao {
           while(_cursor.moveToNext()) {
             final InAnswer _item;
             final String _tmpAnswerFlag;
-            _tmpAnswerFlag = _cursor.getString(_cursorIndexOfAnswerFlag);
+            if (_cursor.isNull(_cursorIndexOfAnswerFlag)) {
+              _tmpAnswerFlag = null;
+            } else {
+              _tmpAnswerFlag = _cursor.getString(_cursorIndexOfAnswerFlag);
+            }
             final String _tmpAnswerTrueData;
-            _tmpAnswerTrueData = _cursor.getString(_cursorIndexOfAnswerTrueData);
+            if (_cursor.isNull(_cursorIndexOfAnswerTrueData)) {
+              _tmpAnswerTrueData = null;
+            } else {
+              _tmpAnswerTrueData = _cursor.getString(_cursorIndexOfAnswerTrueData);
+            }
             final String _tmpAnswer;
-            _tmpAnswer = _cursor.getString(_cursorIndexOfAnswer);
+            if (_cursor.isNull(_cursorIndexOfAnswer)) {
+              _tmpAnswer = null;
+            } else {
+              _tmpAnswer = _cursor.getString(_cursorIndexOfAnswer);
+            }
             final String _tmpOptionNumber;
-            _tmpOptionNumber = _cursor.getString(_cursorIndexOfOptionNumber);
+            if (_cursor.isNull(_cursorIndexOfOptionNumber)) {
+              _tmpOptionNumber = null;
+            } else {
+              _tmpOptionNumber = _cursor.getString(_cursorIndexOfOptionNumber);
+            }
             final String _tmpQuestionType;
-            _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            if (_cursor.isNull(_cursorIndexOfQuestionType)) {
+              _tmpQuestionType = null;
+            } else {
+              _tmpQuestionType = _cursor.getString(_cursorIndexOfQuestionType);
+            }
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final int _tmpOrder;
             _tmpOrder = _cursor.getInt(_cursorIndexOfOrder);
             final String _tmpAnswerType;
-            _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            if (_cursor.isNull(_cursorIndexOfAnswerType)) {
+              _tmpAnswerType = null;
+            } else {
+              _tmpAnswerType = _cursor.getString(_cursorIndexOfAnswerType);
+            }
             final int _tmpCheckCount;
             _tmpCheckCount = _cursor.getInt(_cursorIndexOfCheckCount);
             final int _tmpQuestionId;
             _tmpQuestionId = _cursor.getInt(_cursorIndexOfQuestionId);
             final String _tmpExamCode;
-            _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            if (_cursor.isNull(_cursorIndexOfExamCode)) {
+              _tmpExamCode = null;
+            } else {
+              _tmpExamCode = _cursor.getString(_cursorIndexOfExamCode);
+            }
             final int _tmpViewOrder;
             _tmpViewOrder = _cursor.getInt(_cursorIndexOfViewOrder);
             final boolean _tmpUserChk;
@@ -381,13 +413,29 @@ public final class InAnswerDao_Impl implements InAnswerDao {
             _tmp = _cursor.getInt(_cursorIndexOfUserChk);
             _tmpUserChk = _tmp != 0;
             final String _tmpTextAnswer;
-            _tmpTextAnswer = _cursor.getString(_cursorIndexOfTextAnswer);
+            if (_cursor.isNull(_cursorIndexOfTextAnswer)) {
+              _tmpTextAnswer = null;
+            } else {
+              _tmpTextAnswer = _cursor.getString(_cursorIndexOfTextAnswer);
+            }
             final String _tmpFileName;
-            _tmpFileName = _cursor.getString(_cursorIndexOfFileName);
+            if (_cursor.isNull(_cursorIndexOfFileName)) {
+              _tmpFileName = null;
+            } else {
+              _tmpFileName = _cursor.getString(_cursorIndexOfFileName);
+            }
             final String _tmpMediaType;
-            _tmpMediaType = _cursor.getString(_cursorIndexOfMediaType);
+            if (_cursor.isNull(_cursorIndexOfMediaType)) {
+              _tmpMediaType = null;
+            } else {
+              _tmpMediaType = _cursor.getString(_cursorIndexOfMediaType);
+            }
             final String _tmpExamQACode;
-            _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            if (_cursor.isNull(_cursorIndexOfExamQACode)) {
+              _tmpExamQACode = null;
+            } else {
+              _tmpExamQACode = _cursor.getString(_cursorIndexOfExamQACode);
+            }
             _item = new InAnswer(_tmpAnswerFlag,_tmpAnswerTrueData,_tmpAnswer,_tmpOptionNumber,_tmpQuestionType,_tmpId,_tmpOrder,_tmpAnswerType,_tmpCheckCount,_tmpQuestionId,_tmpExamCode,_tmpViewOrder,_tmpUserChk,_tmpTextAnswer,_tmpFileName,_tmpMediaType,_tmpExamQACode);
             _result.add(_item);
           }
@@ -398,5 +446,9 @@ public final class InAnswerDao_Impl implements InAnswerDao {
         }
       }
     }, p1);
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                 
+                               
+                                                                                            
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/dialog_exam_info_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/dialog_light"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:minHeight="300dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <TextView
+                android:id="@+id/tv_exam_code"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/josefinsans_bolditalic"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:tag="binding_1"                
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toStartOf="@id/tv_exam_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ExamCode란" />
+
+            <TextView
+                android:id="@+id/tv_exam_status"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:gravity="center|end"
+                android:includeFontPadding="false"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_exam_code"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tag="binding_2"                            
+                tools:text="Status 란" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:tag="binding_3"                         
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_2"
+                app:layout_constraintTop_toTopOf="@id/h_guide_1"
+                tools:src="@drawable/ic_ubt_logo" />
+
+            <TextView
+                android:id="@+id/tv_exam_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:tag="binding_4"                
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_exam_info"
+                app:layout_constraintTop_toTopOf="@id/h_guide_2"
+                tools:text="askdjflaskdjflaks먼이람나이러ㅣ나ㅓㅇ\n\n\nㄹ리마ㅓㄴㅇ라ㅣ먼ㅇ라ㅣ먼ㅇㄻ니ㅏㅇㄹ마니ㅓㅇdfaf" />
+
+            <TextView
+                android:id="@+id/tv_exam_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_italic"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+                app:layout_constraintTop_toBottomOf="@id/tv_exam_name"
+                android:tag="binding_5"                                 
+                tools:text="end of exam" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:tag="binding_6"                    
+                                                           
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_4"
+                app:layout_constraintTop_toTopOf="@id/h_guide_3"
+                tools:text="2021.01.10 ~ 2021.01.31" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:text="Close"
+                android:textStyle="bold"
+                app:backgroundTint="@color/grey_60"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_take_an_exam"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_guide_4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_take_an_exam"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:text="Take an exam"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.6"
+                app:layout_constraintStart_toEndOf="@id/btn_close"
+                app:layout_constraintTop_toTopOf="@id/h_guide_4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+         

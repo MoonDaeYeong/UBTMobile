@@ -2442,6 +2442,7 @@ id btn_join
 id btn_login
 id btn_my_exam_more
 id btn_my_org_more
+id btn_no
 id btn_number
 id btn_other_exam_more
 id btn_other_org_more
@@ -2459,6 +2460,7 @@ id btn_survey
 id btn_take_an_exam
 id btn_time_add
 id btn_user_info
+id btn_yes
 id buttonPanel
 id cache_measures
 id cancel
@@ -3111,6 +3113,7 @@ layout design_text_input_start_icon
 layout dialog_add_time
 layout dialog_code_register
 layout dialog_exam_info
+layout dialog_org_register
 layout dialog_sign_pad
 layout dialog_test_preview
 layout dialog_text_input
@@ -3153,6 +3156,7 @@ layout list_item_answer_audio
 layout list_item_answer_img
 layout list_item_answer_math
 layout list_item_answer_text
+layout list_item_answer_video
 layout list_item_exam_list
 layout list_item_exam_preview_a
 layout list_item_exam_preview_a_txt
@@ -3313,6 +3317,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

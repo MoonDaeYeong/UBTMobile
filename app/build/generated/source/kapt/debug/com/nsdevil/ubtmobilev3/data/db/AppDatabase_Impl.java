@@ -14,11 +14,14 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @SuppressWarnings({"unchecked", "deprecation"})
@@ -213,6 +216,16 @@ public final class AppDatabase_Impl extends AppDatabase {
         _db.execSQL("VACUUM");
       }
     }
+  }
+
+  @Override
+  protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
+    final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
+    _typeConvertersMap.put(InAnswerDao.class, InAnswerDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(InDataDao.class, InDataDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(InExamInfoDao.class, InExamInfoDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(InQuestionDao.class, InQuestionDao_Impl.getRequiredConverters());
+    return _typeConvertersMap;
   }
 
   @Override

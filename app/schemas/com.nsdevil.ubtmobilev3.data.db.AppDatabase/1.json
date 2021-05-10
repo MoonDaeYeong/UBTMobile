@@ -1,0 +1,366 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "f88c4e61953dca957280a3da4746efdc",
+    "entities": [
+      {
+        "tableName": "InAnswer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`answerFlag` TEXT, `answerTrueData` TEXT, `answer` TEXT NOT NULL, `optionNumber` TEXT NOT NULL, `questionType` TEXT NOT NULL, `id` INTEGER NOT NULL, `order` INTEGER NOT NULL, `answerType` TEXT NOT NULL, `checkCount` INTEGER NOT NULL, `questionId` INTEGER NOT NULL, `examCode` TEXT NOT NULL, `viewOrder` INTEGER NOT NULL, `userChk` INTEGER NOT NULL, `textAnswer` TEXT, `fileName` TEXT, `mediaType` TEXT, `examQACode` TEXT NOT NULL, PRIMARY KEY(`id`, `examCode`))",
+        "fields": [
+          {
+            "fieldPath": "answerFlag",
+            "columnName": "answerFlag",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "answerTrueData",
+            "columnName": "answerTrueData",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "answer",
+            "columnName": "answer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "optionNumber",
+            "columnName": "optionNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionType",
+            "columnName": "questionType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "order",
+            "columnName": "order",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerType",
+            "columnName": "answerType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "checkCount",
+            "columnName": "checkCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examCode",
+            "columnName": "examCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "viewOrder",
+            "columnName": "viewOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userChk",
+            "columnName": "userChk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "textAnswer",
+            "columnName": "textAnswer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "fileName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mediaType",
+            "columnName": "mediaType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "examQACode",
+            "columnName": "examQACode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id",
+            "examCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "InData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`dataOrder` INTEGER, `dataText` TEXT, `dataType` TEXT, `id` INTEGER NOT NULL, `viewOrder` INTEGER NOT NULL, `examCode` TEXT NOT NULL, `media` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "dataOrder",
+            "columnName": "dataOrder",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dataText",
+            "columnName": "dataText",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dataType",
+            "columnName": "dataType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "viewOrder",
+            "columnName": "viewOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examCode",
+            "columnName": "examCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "media",
+            "columnName": "media",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "InExamInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`examId` INTEGER NOT NULL, `examCode` TEXT NOT NULL, `examName` TEXT NOT NULL, `totalTime` INTEGER NOT NULL, `remainTime` INTEGER NOT NULL, `submissionYN` INTEGER NOT NULL, PRIMARY KEY(`examCode`))",
+        "fields": [
+          {
+            "fieldPath": "examId",
+            "columnName": "examId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examCode",
+            "columnName": "examCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examName",
+            "columnName": "examName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalTime",
+            "columnName": "totalTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remainTime",
+            "columnName": "remainTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "submissionYN",
+            "columnName": "submissionYN",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "examCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "InQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`category` TEXT, `question` TEXT NOT NULL, `headerText` TEXT NOT NULL, `difficultyLevel` TEXT NOT NULL, `answerType` TEXT NOT NULL, `userAnswers` TEXT, `checkCount` INTEGER NOT NULL, `controlNo` TEXT NOT NULL, `point` REAL NOT NULL, `viewOrder` INTEGER NOT NULL, `id` INTEGER NOT NULL, `correctRate` TEXT NOT NULL, `questionType` TEXT NOT NULL, `incorrectNote` TEXT NOT NULL, `option` TEXT, `time` INTEGER NOT NULL, `userCheck` INTEGER NOT NULL, `examCode` TEXT NOT NULL, `examQACode` TEXT NOT NULL, PRIMARY KEY(`id`, `examCode`))",
+        "fields": [
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "question",
+            "columnName": "question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "headerText",
+            "columnName": "headerText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerType",
+            "columnName": "answerType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userAnswers",
+            "columnName": "userAnswers",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkCount",
+            "columnName": "checkCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "controlNo",
+            "columnName": "controlNo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "point",
+            "columnName": "point",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "viewOrder",
+            "columnName": "viewOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctRate",
+            "columnName": "correctRate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionType",
+            "columnName": "questionType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "incorrectNote",
+            "columnName": "incorrectNote",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "option",
+            "columnName": "option",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userCheck",
+            "columnName": "userCheck",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examCode",
+            "columnName": "examCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examQACode",
+            "columnName": "examQACode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id",
+            "examCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f88c4e61953dca957280a3da4746efdc')"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                       
+                                                   
+
+    
+                 
+                                
+                                                       
+
+                 
+                      
+                                                                
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="2dp"
+        app:cardElevation="5dp" android:tag="layout/list_item_exam_list_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_simple"
+            android:tag="binding_1"           >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_primary_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tag="binding_2"             />
+
+            <TextView
+                android:id="@+id/tv_exam_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textSize="20sp"
+                android:tag="binding_3"                        
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shadow"
+                app:layout_constraintBottom_toBottomOf="@id/tv_exam_number" />
+
+            <TextView
+                android:id="@+id/tv_user_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorPrimary"
+                android:ellipsize="end"
+                android:lines="1"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:tag="binding_4"              
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="가나다라, 마바사"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+         
